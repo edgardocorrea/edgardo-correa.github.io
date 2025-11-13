@@ -8,21 +8,30 @@
 
 // 1. Remove o fundo branco e as margens que estão cobrindo o wallpaper
 .page {
-  background-color: transparent; // Torna o fundo da página transparente
+  background-color: transparent;
 }
 
 .page__inner {
-  background-color: transparent; // Garante que o conteúdo interno também não tenha fundo branco
-  padding: 0; // Remove o padding padrão
+  background-color: transparent;
+  padding: 0;
 }
 
 // 2. Controla o tamanho do cabeçalho (hero image)
 .page__hero {
-  height: 100vh; // Faz o cabeçalho ocupar 100% da altura da tela
-  overflow: hidden; // Garante que nada "vaze" para fora
+  height: 100vh;
+  overflow: hidden;
 }
 
-// 3. Reduz o tamanho do rodapé
+// 3. CONTROLE DEFINITIVO DO RODAPÉ (A NOVA PARTE)
 .page__footer {
-  padding: 1em 0; // Reduz o padding do rodapé para um valor menor
+  padding: 0 !important; // Força o padding a ser zero
+}
+
+.page__footer-follow {
+  margin: 0 !important; // Remove a margem da seção de links do rodapé
+}
+
+.page__footer-copyright {
+  margin: 0 !important; // Remove a margem da seção de copyright
+  padding: 0.5em 0 !important; // Adiciona um padding muito pequeno só para não ficar colado
 }
