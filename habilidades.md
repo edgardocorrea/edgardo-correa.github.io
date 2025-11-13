@@ -10,7 +10,7 @@ layout: single
   <h4>Infraestrutura & Redes</h4>
   <ul>
     <li>Configuração de switches, routers e firewalls</li>
-    <li>Mikrotik,TP-Link</li>
+    <li>Mikrotik, TP-Link</li>
     <li>Protocolos: TCP/IP, VLANs, OSPF, BGP</li>
     <li>Segurança de rede e VPN</li>
   </ul>
