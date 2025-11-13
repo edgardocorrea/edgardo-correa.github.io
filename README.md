@@ -24,7 +24,7 @@ Este projeto foi construído com as seguintes tecnologias:
 
 Uma visão geral da estrutura de pastas e arquivos principais do projeto:
 
-```Shell
+```
 /
 ├── _config.yml          # Arquivo de configuração principal do Jekyll.
 ├── _data/               # Arquivos de dados (ex: menu de navegação).
@@ -69,3 +69,4 @@ Este projeto utiliza o fantástico tema [Minimal Mistakes](https://github.com/mm
 
 
 ```
+
