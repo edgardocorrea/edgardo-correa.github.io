@@ -8,7 +8,7 @@ Nesta página, apresento as minhas certificações profissionais, que validam as
 
 ---
 
-## Redes e Cloud
+## Redes
 
 <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="232a032a-8675-4fbd-9752-b74219f08ad8" data-share-badge-host="https://www.credly.com"></div>
 
