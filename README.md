@@ -6,11 +6,11 @@
 
 > Este repositório contém o código-fonte do meu portfólio profissional, desenvolvido com Jekyll e o tema Minimal Mistakes. O site foi criado para apresentar meus projetos, habilidades técnicas e certificações na área de infraestrutura de TI e redes.
 
-## 🖼️ Preview do Site
+##  Preview do Site
 
 ![Preview do Portfólio](./assets/images/screenshot-do-site.png)
 
-## 🛠️ Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 Este projeto foi construído com as seguintes tecnologias:
 
@@ -20,7 +20,7 @@ Este projeto foi construído com as seguintes tecnologias:
 -   **Markdown:** Linguagem de marcação para criar o conteúdo das páginas.
 -   **HTML5 / SASS:** Estrutura e estilização do tema.
 
-## 📂 Estrutura do Projeto
+##  Estrutura do Projeto
 
 Uma visão geral da estrutura de pastas e arquivos principais do projeto:
 
@@ -38,7 +38,7 @@ Uma visão geral da estrutura de pastas e arquivos principais do projeto:
 └── certificacoes.md     # Página para exibir os badges do Credly.
 ```
 
-## 💻 Como Executar Localmente (exemplo)
+##  Como Executar Localmente (exemplo)
 
 Para rodar este portfólio em sua máquina local, siga os passos abaixo:
 
@@ -61,11 +61,12 @@ Para rodar este portfólio em sua máquina local, siga os passos abaixo:
 
 4.  Acesse o site no seu navegador: `http://localhost:4000`
 
-## 🙏 Agradecimentos
+##  Agradecimentos
 
 Este projeto utiliza o fantástico tema [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) desenvolvido por [Michael Rose](https://github.com/mmistakes).
 
 ---
+
 
 
 
