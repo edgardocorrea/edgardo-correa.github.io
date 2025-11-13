@@ -1,9 +1,40 @@
----
-# Only the main Sass file needs front matter (the dashes are enough)
-search: false
----
+// Importa os estilos do tema Minimal Mistakes. É ESSENCIAL que esta linha seja a primeira.
+@import "minimal-mistakes";
 
-@charset "utf-8";
+// Estilo para a página inicial (layout: splash)
+.page__hero--overlay {
+  // Dentro desta área
+  position: relative; 
+}
 
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
-@import "minimal-mistakes"; // main partials
+.page__hero-inner {
+  // Remove o padding padrão
+  padding: 0;
+  
+  // Posiciona sobre a tela do notebook
+  .text-wrapper {
+    // Posiciona o container de forma absoluta em relação à .page__hero
+    position: absolute;
+    
+    // Centraliza o container. Ajuste estes valores.
+    top: 50%;       // Move o topo do container para o meio da imagem
+    left: 50%;      // Move a esquerda do container para o meio da imagem
+    transform: translate(-50%, -50%); // Cria o deslocamento
+    
+    // Define a largura do container para ser aproximadamente a largura da tela do notebook
+    width: 55%; 
+    
+    // Impede que o texto fique muito largo em telas grandes
+    max-width: 600px;
+    
+    // Adiciona um pouco de espaço dentro do container
+    padding: 1rem;
+    
+    // Alinha o texto ao centro
+    text-align: center;
+    
+    // Texto fique legível sobre a imagem
+    color: #ffffff; // Texto branco
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7); // Sombra no texto para dar contraste
+  }
+}
