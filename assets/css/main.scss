@@ -1,40 +1,24 @@
-// Importa os estilos do tema Minimal Mistakes. É ESSENCIAL que esta linha seja a primeira.
+---
+---
+
+// Importa os estilos do tema. NÃO APAGUE ESTA LINHA.
 @import "minimal-mistakes";
 
-// Estilo para a página inicial (layout: splash)
-.page__hero--overlay {
-  // Dentro desta área
-  position: relative; 
-}
+// --- SEUS ESTILOS CUSTOMIZADOS ---
 
-.page__hero-inner {
-  // Remove o padding padrão
-  padding: 0;
-  
-  // Posiciona sobre a tela do notebook
-  .text-wrapper {
-    // Posiciona o container de forma absoluta em relação à .page__hero
-    position: absolute;
-    
-    // Centraliza o container. Ajuste estes valores.
-    top: 50%;       // Move o topo do container para o meio da imagem
-    left: 50%;      // Move a esquerda do container para o meio da imagem
-    transform: translate(-50%, -50%); // Cria o deslocamento
-    
-    // Define a largura do container para ser aproximadamente a largura da tela do notebook
-    width: 55%; 
-    
-    // Impede que o texto fique muito largo em telas grandes
-    max-width: 600px;
-    
-    // Adiciona um pouco de espaço dentro do container
-    padding: 1rem;
-    
-    // Alinha o texto ao centro
-    text-align: center;
-    
-    // Texto fique legível sobre a imagem
-    color: #ffffff; // Texto branco
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.7); // Sombra no texto para dar contraste
-  }
+.text-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%; /* Ajuste a largura se necessário */
+  max-width: 650px;
+  padding: 2rem;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.8); /* Sombra mais forte para legibilidade */
+
+  /* --- LINHA DE TESTE --- */
+  /* Descomente a linha abaixo para ver se o CSS funciona. Uma borda amarela deve aparecer. */
+  /* border: 3px solid yellow; */
 }
