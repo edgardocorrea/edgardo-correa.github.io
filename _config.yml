@@ -26,5 +26,11 @@ author:
       icon: "fas fa-fw fa-certificate" # Ícone de certificado
       url: "https://www.credly.com/users/edgardo.correa/badges"
 
+# Portfolio
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:name/
+
 # Aparência do Tema
 minimal_mistakes_skin    : "contrast" # Opções: "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise". Teste as que mais gostar!
