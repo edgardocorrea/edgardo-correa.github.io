@@ -3,7 +3,9 @@ main:
     url: /
   - title: "Projetos"
     url: /portfolio/
+  - title: "Habilidades" # NOVO
+    url: /habilidades/     # NOVO
   - title: "Certificações"
     url: /certificacoes/
-  - title: "Currículo (PDF)" # Opcional: link para um PDF
+  - title: "Currículo (PDF)"
     url: /assets/files/curriculo-edgardo-correa.pdf
