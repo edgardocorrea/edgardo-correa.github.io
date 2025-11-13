@@ -10,7 +10,3 @@ header:
       url: "/portfolio/"
 excerpt: "Analista de Sistemas com base em infraestrutura de TI com sólida experiência em redes, sistemas e automação. Apaixonado por construir soluções robustas e eficientes."
 ---
-
-# Desabilita elementos que aumentam o tamanho da página
-toc: false
-author_profile: false
