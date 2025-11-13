@@ -6,19 +6,31 @@
 
 // --- SEUS ESTILOS CUSTOMIZADOS ---
 
+// 1. Garante que o banner da imagem não corte o conteúdo posicionado
+.page__hero {
+  overflow: visible !important; // Força a caixa a mostrar o conteúdo que sai dela
+}
+
+.page__hero--overlay {
+  overflow: visible !important;
+}
+
+// 2. Estiliza o container do texto
 .text-wrapper {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 60%; /* Ajuste a largura se necessário */
-  max-width: 650px;
+  
+  // Define a largura. Use porcentagem para ser responsivo.
+  width: 70%; 
+  max-width: 700px; // Impede que fique muito largo em telas grandes
+  
   padding: 2rem;
   text-align: center;
   color: #ffffff;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.8); /* Sombra mais forte para legibilidade */
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
 
-  /* --- LINHA DE TESTE --- */
-  /* Descomente a linha abaixo para ver se o CSS funciona. Uma borda amarela deve aparecer. */
-   border: 3px solid yellow;
+  // Deixe a linha de teste descomentada para ver o contorno total
+  border: 3px solid yellow; 
 }
