@@ -2,7 +2,6 @@
 title: "Meus Projetos"
 layout: single
 permalink: /portfolio/
-classes: wide
 author_profile: false
 sidebar: null
 ---
@@ -28,19 +27,8 @@ sidebar: null
 /* ====================MUDANÇA FEITA ==================== */
 
 /* Customizações só para /portfolio/ */
-.page--portfolio {
-  /* CORREÇÃO PRINCIPAL: Centralizar a COLUNA INTEIRA (título + conteúdo) */
-  main.grid__item {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    max-width: 1100px; /* Largura máxima desejada para todo o bloco */
-    padding-left: 20px;  /* Espaçamento nas laterais */
-    padding-right: 20px;
-    box-sizing: border-box;
-  }
 
-  /* A regra antiga para .page__content não é mais necessária,
-     pois o contêiner pai (main.grid__item) já está centralizado. */
+
 
   /* CORREÇÃO DOS BOTÕES: Organizar verticalmente */
   .project-buttons {
@@ -56,7 +44,7 @@ sidebar: null
     max-width: 240px;
     text-align: center;
   }
-}
+
 
 
 /* ==================== TÍTULO PRINCIPAL ==================== */
@@ -295,6 +283,7 @@ sidebar: null
 .project-card:nth-child(3) { animation-delay: 0.3s; }
 .project-card:nth-child(4) { animation-delay: 0.4s; }
 </style>
+
 
 <!-- Introdução -->
 <p class="intro-text">
