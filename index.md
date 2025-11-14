@@ -3,7 +3,6 @@ layout: splash
 title: "" # Força título vazio
 excerpt: "" # Força excerpt vazio
 header:
-  overlay_color: "rgba(0, 0, 0, 0.5)"
   overlay_image: /assets/images/banner-home.jpg
   image_description: "" # Remove alt text
 ---
@@ -90,6 +89,7 @@ header:
   }
 }
 </style>
+
 
 
 
