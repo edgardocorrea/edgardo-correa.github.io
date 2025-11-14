@@ -4,9 +4,9 @@
 // Importa os estilos do tema. NÃO APAGUE ESTA LINHA.
 @import "minimal-mistakes";
 
-// --- SEUS ESTILOS CUSTOMIZADOS  ---
+// ==================== ESTILOS CUSTOMIZADOS ====================
 
-// 1. Remove o fundo branco e as margens que estão cobrindo o wallpaper
+// 1. Remove o fundo branco e margens
 .page {
   background-color: transparent;
 }
@@ -16,19 +16,19 @@
   padding: 0;
 }
 
-// 2. Controla o tamanho do cabeçalho (hero image) para ocupar a tela inteira
+// 2. Hero ocupa tela inteira
 .page__hero {
   height: 100vh;
   overflow: hidden;
+  position: relative;
 }
 
-// 3. CORREÇÃO DO HEADER (TOPO) - 
+// 3. HEADER (TOPO) - Compacto
 .masthead {
-// Alteração: Zera o padding vertical (topo e base) para remover o espaço extra.
-  padding: 0px 16px !important;
+  padding: 0px 16px !important; // Zero padding vertical
   
   .site-title {
-    font-size: 19px !important; // Título do site menor
+    font-size: 19px !important;
     line-height: 1.2 !important;
   }
   
@@ -36,73 +36,35 @@
     min-height: auto !important;
     
     a {
-      padding: 8px 12px !important; // Reduz o padding dos links do menu
+      padding: 8px 12px !important;
     }
   }
 }
 
-// 4. CORREÇÃO DO HERO/BANNER - Posicionamento do texto
+// 4. ESCONDE title e excerpt padrão do Jekyll (usaremos HTML customizado)
+.page__hero--overlay {
+  .page__title {
+    display: none !important; // Esconde título padrão
+  }
+  
+  .page__lead {
+    display: none !important; // Esconde excerpt padrão
+  }
+  
+  .page__hero-caption {
+    display: none !important; // Esconde container padrão
+  }
+}
+
+// 5. POSICIONAMENTO DO HERO INNER (para o HTML customizado funcionar)
 .page__hero-inner {
   padding: 0;
-  
-// Cria um container para o texto e o posiciona sobre a tela do notebook
-.text-wrapper {
-  position: absolute;
-  
-  // Ajuste para altura visual (alinhado com a tela do notebook na imagem)
-  top: 38%; 
-  
-  // Move o bloco para a direita do centro.
-  // Mude para 50% se quiser de volta ao centro
-  left: 60%; 
-  
-  // Mantém a centralização perfeita do bloco no ponto (38%, 60%)
-  transform: translate(-50%, -50%); 
-  
-  width: 55%; 
-  max-width: 600px;
-  text-align: center;
-  color: #ffffff; 
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.8); 
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 
-}
-
-// 5. CONTROLE DO TAMANHO DO TÍTULO E TEXTO 
-.page__hero--overlay .page__title {
-  font-size: 28px !important; // Título em desktops
-  line-height: 1.2 !important;
-}
-
-.page__hero--overlay .page__lead {
-  font-size: 16px !important; // Texto em desktops
-  line-height: 1.5 !important;
-}
-
-// Para Tablets
-@media (max-width: 768px) {
-  .page__hero--overlay .page__title {
-    font-size: 28px !important;
-  }
-  .page__hero--overlay .page__lead {
-    font-size: 18px !important;
-  }
-  .masthead {
-    padding: 2px 4px !important;
-  }
-}
-
-// Para Celulares
-@media (max-width: 480px) {
-  .page__hero--overlay .page__title {
-    font-size: 28px !important;
-  }
-  .page__hero--overlay .page__lead {
-    font-size: 16px !important;
-  }
-}
-
-// 6. CORREÇÃO DO BOTÃO PRIMÁRIO (AZUL ESCURO)
+// 6. BOTÃO PRIMÁRIO (Azul escuro)
 .btn--primary {
   background-color: #004d99 !important;
   color: #ffffff !important;
@@ -115,16 +77,30 @@
   }
 }
 
-// 7. CORREÇÃO DO FOOTER (RODAPÉ) - 
+// 7. POSICIONA OS BOTÕES DE AÇÃO (Se houver)
+.page__hero-actions {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 11;
+  
+  .btn {
+    margin: 5px 10px;
+  }
+}
+
+// 8. FOOTER (RODAPÉ) - Compacto
 .page__footer {
-	padding: 2 0 !important;
-	margin-top: 2 !important;
+  padding: 2px 0 !important;
+  margin-top: 2px !important;
   
   footer {
     padding: 0 0 !important;
     
     .page__footer-follow {
       margin-bottom: 2px !important;
+      
       ul {
         margin-bottom: 0px !important;
       }
@@ -138,10 +114,10 @@
   }
 }
 
-// 8. AJUSTES GERAIS - 
+// 9. AJUSTES GERAIS
 .layout--splash {
   .feature__wrapper {
-    padding: 2px 0 !important; // Reduz espaçamento
+    padding: 2px 0 !important;
     
     .feature__item {
       margin-bottom: 0 !important;
@@ -150,7 +126,34 @@
 }
 
 .page__content {
-  // Alteração: Zera todo o padding interno do conteúdo principal
-  padding: 0 !important; 
+  padding: 0 !important; // Zero padding
 }
 
+// 10. RESPONSIVIDADE - Tablets
+@media (max-width: 768px) {
+  .masthead {
+    padding: 2px 4px !important;
+  }
+  
+  .page__hero-actions {
+    bottom: 10%;
+    
+    .btn {
+      font-size: 14px !important;
+      padding: 8px 16px !important;
+    }
+  }
+}
+
+// 11. RESPONSIVIDADE - Celulares
+@media (max-width: 480px) {
+  .page__hero-actions {
+    bottom: 8%;
+    
+    .btn {
+      font-size: 13px !important;
+      padding: 6px 14px !important;
+      margin: 3px 5px;
+    }
+  }
+}
