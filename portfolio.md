@@ -9,7 +9,6 @@ author_profile: false
 <style>
 /* ====================MUDANÇA FEITA ==================== */
 
-
 /* Customizações só para /portfolio/ */
 .page--portfolio {
   .page__content {
@@ -21,9 +20,17 @@ author_profile: false
     box-sizing: border-box;
   }
 
+  /* Centraliza o hero text se existir */
+  .custom-hero-text {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
   .project-buttons {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* empilha verticalmente */
     gap: 10px;
     align-items: center;
   }
@@ -34,7 +41,6 @@ author_profile: false
     text-align: center;
   }
 }
-
 
 /* ==================== TÍTULO PRINCIPAL ==================== */
 .page__title {
@@ -66,14 +72,14 @@ author_profile: false
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   margin: 40px auto;
-  padding: 0 15px; /* evita overflow horizontal */
+  padding: 0 15px;
   width: 100%;
-  box-sizing: border-box; /* importante para padding */
+  box-sizing: border-box;
 }
 
 /* ==================== CARD DE PROJETO ==================== */
 .project-card {
-  width: 100%; /* garante que não ultrapasse a coluna */
+  width: 100%;
   box-sizing: border-box;
   background: linear-gradient(145deg, rgba(20, 40, 80, 0.8), rgba(10, 20, 40, 0.9));
   border: 2px solid transparent;
@@ -85,110 +91,17 @@ author_profile: false
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
 }
 
-.project-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 15px;
-  padding: 2px;
-  background: linear-gradient(135deg, #4da6ff, #00ccff, #4da6ff);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.project-card:hover::before {
-  opacity: 1;
-}
-
-.project-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 15px 50px rgba(77, 166, 255, 0.4);
-}
-
-/* ==================== ÍCONE DO PROJETO ==================== */
-.project-icon {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #4da6ff, #0088cc);
-  border-radius: 20px;
-  font-size: 40px;
-  box-shadow: 0 5px 20px rgba(77, 166, 255, 0.3);
-}
-
-/* ==================== TÍTULO DO PROJETO ==================== */
-.project-title {
-  font-size: 28px !important;
-  color: #ffffff !important;
-  margin: 20px 0 15px 0 !important;
-  text-align: center;
-  font-weight: 700;
-}
-
-/* ==================== DESCRIÇÃO ==================== */
-.project-description {
-  color: #cccccc;
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-/* ==================== TAGS DE TECNOLOGIA ==================== */
-.tech-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  margin: 20px 0;
-}
-
-.tech-tag {
-  background: rgba(77, 166, 255, 0.2);
-  border: 1px solid #4da6ff;
-  color: #4da6ff;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 13px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.tech-tag:hover {
-  background: rgba(77, 166, 255, 0.3);
-  transform: scale(1.05);
-}
-
 /* ==================== BOTÕES ==================== */
 .project-buttons {
   display: flex;
+  flex-direction: column; /* empilha verticalmente */
   gap: 10px;
   justify-content: center;
+  align-items: center;
   margin-top: 25px;
 }
 
-.btn-custom {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-size: 15px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  border: 2px solid;
-}
-
+/* Ordem: GitHub primeiro, depois Documentação */
 .btn-github {
   background: linear-gradient(135deg, #333333, #1a1a1a);
   color: #ffffff;
@@ -211,20 +124,6 @@ author_profile: false
 .btn-demo:hover {
   background: rgba(77, 166, 255, 0.1);
   transform: translateY(-2px);
-}
-
-/* ==================== STATUS BADGE ==================== */
-.status-badge {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: linear-gradient(135deg, #00cc66, #00aa55);
-  color: #ffffff;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: 700;
-  box-shadow: 0 3px 10px rgba(0, 204, 102, 0.3);
 }
 
 /* ==================== RESPONSIVO ==================== */
@@ -256,28 +155,8 @@ author_profile: false
     justify-content: center;
   }
 }
-
-/* ==================== ANIMAÇÃO DE ENTRADA ==================== */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.project-card {
-  animation: fadeInUp 0.6s ease backwards;
-}
-
-.project-card:nth-child(1) { animation-delay: 0.1s; }
-.project-card:nth-child(2) { animation-delay: 0.2s; }
-.project-card:nth-child(3) { animation-delay: 0.3s; }
-.project-card:nth-child(4) { animation-delay: 0.4s; }
 </style>
+
 
 <!-- Introdução -->
 <p class="intro-text">
