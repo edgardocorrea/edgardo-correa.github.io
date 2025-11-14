@@ -3,19 +3,36 @@ title: "Minhas Habilidades"
 permalink: /habilidades/
 layout: single
 ---
-
 <style>
 /* ==================== FUNDO NEON ANIMADO PARA HABILIDADES ==================== */
-body.page--habilidades {
+body {
   background: #142850;
   overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+  font-family: sans-serif;
 }
 
-/* Conteúdo principal e blocos de habilidades com estilo de cards */
-body.page--habilidades .initial-content,
-body.page--habilidades .notice--info,
-body.page--habilidades .notice--success,
-body.page--habilidades .notice--warning {
+/* Camada de fundo neon animada */
+body::before {
+  content: "";
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, #4da6ff, #00ccff, #0088cc, #4da6ff);
+  opacity: 0.1;
+  filter: blur(120px);
+  animation: neonBackground 10s linear infinite;
+  z-index: 0;
+}
+
+/* Conteúdo principal */
+.initial-content,
+.notice--info,
+.notice--success,
+.notice--warning {
   background: linear-gradient(145deg, rgba(20, 40, 80, 0.8), rgba(10, 20, 40, 0.9));
   border-radius: 15px;
   padding: 30px 25px;
@@ -24,13 +41,14 @@ body.page--habilidades .notice--warning {
   overflow: hidden;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
   transition: all 0.4s ease;
+  z-index: 1;
 }
 
-/* Camada neon animada */
-body.page--habilidades .initial-content::before,
-body.page--habilidades .notice--info::before,
-body.page--habilidades .notice--success::before,
-body.page--habilidades .notice--warning::before {
+/* Camada neon nos blocos */
+.initial-content::before,
+.notice--info::before,
+.notice--success::before,
+.notice--warning::before {
   content: "";
   position: absolute;
   top: -50%;
@@ -48,16 +66,16 @@ body.page--habilidades .notice--warning::before {
 }
 
 /* Hover nos blocos */
-body.page--habilidades .initial-content:hover,
-body.page--habilidades .notice--info:hover,
-body.page--habilidades .notice--success:hover,
-body.page--habilidades .notice--warning:hover {
+.initial-content:hover,
+.notice--info:hover,
+.notice--success:hover,
+.notice--warning:hover {
   box-shadow: 0 15px 50px rgba(77, 166, 255, 0.5);
   transform: translateY(-5px) scale(1.02);
 }
 
-/* ==================== TÍTULOS DAS HABILIDADES ==================== */
-body.page--habilidades h4 {
+/* Títulos neon */
+h4 {
   position: relative;
   z-index: 1;
   color: #4da6ff;
@@ -69,8 +87,8 @@ body.page--habilidades h4 {
   margin-bottom: 10px;
 }
 
-/* ==================== ITENS DE LISTA ==================== */
-body.page--habilidades li {
+/* Itens da lista */
+li {
   position: relative;
   z-index: 1;
   color: #cccccc;
@@ -78,8 +96,8 @@ body.page--habilidades li {
   margin-bottom: 8px;
 }
 
-/* Marcador neon antes do item */
-body.page--habilidades li::before {
+/* Marcadores neon */
+li::before {
   content: "•";
   position: absolute;
   left: 0;
@@ -91,30 +109,37 @@ body.page--habilidades li::before {
     0 0 10px #00ccff;
 }
 
-/* ==================== ANIMAÇÃO NEON ==================== */
+/* ==================== ANIMAÇÕES ==================== */
 @keyframes neonGlow {
-  0%, 100% {
-    transform: rotate(0deg) translate(-50%, -50%);
-  }
-  50% {
-    transform: rotate(45deg) translate(-50%, -50%);
-  }
+  0%, 100% { transform: rotate(0deg) translate(-50%, -50%); }
+  50% { transform: rotate(45deg) translate(-50%, -50%); }
+}
+
+@keyframes neonBackground {
+  0% { transform: rotate(0deg) translate(-50%, -50%); }
+  25% { transform: rotate(30deg) translate(-50%, -50%); }
+  50% { transform: rotate(60deg) translate(-50%, -50%); }
+  75% { transform: rotate(30deg) translate(-50%, -50%); }
+  100% { transform: rotate(0deg) translate(-50%, -50%); }
 }
 
 /* ==================== RESPONSIVO ==================== */
 @media (max-width: 768px) {
-  body.page--habilidades .initial-content,
-  body.page--habilidades .notice--info,
-  body.page--habilidades .notice--success,
-  body.page--habilidades .notice--warning {
+  .initial-content,
+  .notice--info,
+  .notice--success,
+  .notice--warning {
     padding: 20px 15px;
   }
 
-  body.page--habilidades h4 {
+  h4 {
     font-size: 20px;
   }
 }
 </style>
+
+
+
 
 
 ## 💻 Principais Habilidades
