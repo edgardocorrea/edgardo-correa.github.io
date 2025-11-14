@@ -8,19 +8,7 @@ author_profile: false
 
 <style>
 /* ==================== BACKGROUND ESCURO COM GRADIENTE ==================== */
-body {
-  background: linear-gradient(135deg, #0a0a0a 0%, #001a33 100%);
-  color: #ffffff;
-}
 
-.page {
-  background-color: transparent;
-}
-
-.page__content {
-  background-color: transparent;
-  padding: 40px 20px;
-}
 
 /* ==================== TÍTULO PRINCIPAL ==================== */
 .page__title {
@@ -49,16 +37,18 @@ body {
 /* ==================== GRID DE PROJETOS ==================== */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  margin: 40px 0;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 40px auto;
+  padding: 0 15px; /* evita overflow horizontal */
+  width: 100%;
+  box-sizing: border-box; /* importante para padding */
 }
 
 /* ==================== CARD DE PROJETO ==================== */
 .project-card {
+  width: 100%; /* garante que não ultrapasse a coluna */
+  box-sizing: border-box;
   background: linear-gradient(145deg, rgba(20, 40, 80, 0.8), rgba(10, 20, 40, 0.9));
   border: 2px solid transparent;
   border-radius: 15px;
@@ -359,19 +349,4 @@ body {
     </div>
   </div>
 
-</div>
-
-<!-- Rodapé -->
-<div style="text-align: center; margin-top: 60px; padding: 30px; background: rgba(20, 40, 80, 0.5); border-radius: 15px; border: 1px solid rgba(77, 166, 255, 0.3);">
-  <p style="color: #cccccc; font-size: 16px; margin-bottom: 15px;">
-    💡 <strong>Gostou dos projetos?</strong> Confira mais no meu GitHub ou entre em contato!
-  </p>
-  <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-    <a href="https://github.com/edgardocorrea" class="btn-custom btn-github" target="_blank">
-      <i class="fab fa-github"></i> GitHub
-    </a>
-    <a href="https://www.linkedin.com/in/edgardocorrea" class="btn-custom" style="background: #0077b5; border-color: #0077b5; color: white;" target="_blank">
-      <i class="fab fa-linkedin"></i> LinkedIn
-    </a>
-  </div>
 </div>
