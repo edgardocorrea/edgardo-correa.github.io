@@ -8,6 +8,23 @@ sidebar: null
 ---
 
 <style>
+/* ====================  FORÇAR CENTRALIZAÇÃO VIA CSS ==================== */
+
+/* 1. Oculta completamente a barra lateral e seu contêiner */
+.sidebar, .sidebar__wrapper {
+  display: none !important;
+}
+
+/* 2. Força o conteúdo principal a ocupar a largura total da grade */
+.page--portfolio main.grid__item {
+  grid-column: 1 / -1; /* Isso significa "começar na primeira linha da grade e ir até a última" */
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1100px; /* Mantém seu controle de largura máxima */
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 /* ====================MUDANÇA FEITA ==================== */
 
 /* Customizações só para /portfolio/ */
