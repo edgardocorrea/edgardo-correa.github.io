@@ -8,11 +8,6 @@ layout: single
 /* ==================== FUNDO AZUL PARA INITIAL-CONTENT ==================== */
 .initial-content {
   background: linear-gradient(145deg, rgba(20, 40, 80, 0.8), rgba(10, 20, 40, 0.9));
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
-  transition: all 0.4s ease;
-  box-sizing: border-box;
 }
 
 /* ==================== FUNDO NEON ANIMADO PARA HABILIDADES ==================== */
