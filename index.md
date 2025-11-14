@@ -33,7 +33,7 @@ header:
 }
 
 .custom-title {
-  font-size: 28px !important;
+  font-size: 8px !important;
   line-height: 1.2 !important;
   color: #ffffff !important;
   margin: 0 0 15px 0 !important;
@@ -89,6 +89,7 @@ header:
   }
 }
 </style>
+
 
 
 
