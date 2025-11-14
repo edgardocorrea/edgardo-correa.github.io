@@ -140,7 +140,7 @@
     padding: 2px 0 !important; // Reduz espaçamento
     
     .feature__item {
-      margin-bottom: 6px !important;
+      margin-bottom: 0 !important;
     }
   }
 }
@@ -149,3 +149,4 @@
   // Alteração: Zera todo o padding interno do conteúdo principal
   padding: 0 !important; 
 }
+
