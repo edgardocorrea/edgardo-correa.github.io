@@ -49,8 +49,6 @@ body.page--portfolio .initial-content {
     text-align: center;
   }
 
-
-
 /* ==================== TÍTULO PRINCIPAL ==================== */
 .page__title {
   text-align: center;
@@ -292,7 +290,7 @@ body.page--portfolio .initial-content {
 
 <!-- Introdução -->
 <p class="intro-text">
-  🚀 Confira alguns dos meus projetos mais relevantes em <strong>infraestrutura, redes e automação</strong>. Cada projeto foi desenvolvido com foco em eficiência, automação e boas práticas de desenvolvimento.
+  Confira alguns dos meus projetos mais relevantes em <strong>infraestrutura, redes e automação</strong>. Cada projeto foi desenvolvido com foco em eficiência, automação e boas práticas de desenvolvimento.
 </p>
 
 <!-- Grid de Projetos -->
