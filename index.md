@@ -43,7 +43,7 @@ header:
 }
 
 .custom-excerpt {
-  font-size: 16px !important;
+  font-size: max(13px, 2.5vw) !important;
   line-height: 1.5 !important;
   color: #e6e6e6 !important;
   margin: 0 !important;
@@ -90,5 +90,6 @@ header:
   }
 }
 </style>
+
 
 
