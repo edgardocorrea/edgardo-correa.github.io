@@ -6,238 +6,184 @@ layout: single
 
 <style>
 /* ============================================================
-   FUNDO GERAL DA PÁGINA (com movimento neon leve)
-   ============================================================ */
+   FUNDO COMPLETO DA PÁGINA COM MOVIMENTO
+============================================================ */
 body.page--certificacoes {
   background: #142850 !important;
   overflow-x: hidden;
-}
-
-.initial-content {
   position: relative;
-  background: linear-gradient(145deg, rgba(20,40,80,0.8), rgba(10,20,40,0.9));
-  padding: 30px 25px;
-  border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.6);
-  overflow: hidden;
 }
 
-/* Movimento neon no fundo */
-.initial-content::before {
+body.page--certificacoes::before {
   content: "";
-  position: absolute;
-  top: -40%;
-  left: -40%;
-  width: 180%;
-  height: 180%;
+  position: fixed;
+  top: -30%;
+  left: -30%;
+  width: 160%;
+  height: 160%;
   background: linear-gradient(135deg, #4da6ff, #00ccff, #4da6ff);
-  filter: blur(60px);
-  opacity: 0.18;
-  animation: neonMove 10s linear infinite;
+  filter: blur(120px);
+  opacity: 0.15;
+  animation: bgMove 16s linear infinite;
   z-index: 0;
 }
-@keyframes neonMove {
+
+@keyframes bgMove {
   0% { transform: rotate(0deg) translate(0,0); }
-  50% { transform: rotate(45deg) translate(80px, 80px); }
+  50% { transform: rotate(35deg) translate(150px, 150px); }
   100% { transform: rotate(0deg) translate(0,0); }
 }
 
 /* ============================================================
+   CONTEÚDO PRINCIPAL
+============================================================ */
+.initial-content {
+  position: relative;
+  background: rgba(10,20,40,0.85);
+  padding: 30px 25px;
+  border-radius: 20px;
+  backdrop-filter: blur(3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+  z-index: 2;
+  overflow: hidden;
+}
+
+/* Texto "Nesta página..." */
+.initial-content p,
+.initial-content strong,
+.initial-content a {
+  color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+/* ============================================================
    TÍTULO PRINCIPAL EM NEON
-   ============================================================ */
+============================================================ */
 .page__title {
   text-align: center;
   font-size: 48px !important;
   background: linear-gradient(90deg, #4da6ff, #00ccff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 2px 2px 12px rgba(77, 166, 255, 0.7);
+  text-shadow: 0 0 12px rgba(77,166,255,0.7);
   margin-bottom: 25px;
 }
 
 /* ============================================================
-   CARDS DE CERTIFICADO (com neon e movimento)
-   ============================================================ */
-.cert-card {
-  background: linear-gradient(145deg, rgba(20,40,80,0.85), rgba(10,20,40,0.95));
-  border-radius: 15px;
-  padding: 25px;
-  margin-bottom: 25px;
-  position: relative;
-  overflow: hidden;
-  transition: 0.4s ease;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
-}
-
-/* Camada neon animada */
-.cert-card::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(135deg, #4da6ff, #00ccff, #4da6ff, #00ccff);
-  filter: blur(50px);
-  opacity: 0.2;
-  animation: neonCardMove 8s linear infinite;
-  z-index: 0;
-}
-@keyframes neonCardMove {
-  0% { transform: rotate(0deg) translate(-50%, -50%); }
-  50% { transform: rotate(45deg) translate(-30%, -30%); }
-  100% { transform: rotate(0deg) translate(-50%, -50%); }
-}
-
-/* Hover neon */
-.cert-card:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 15px 55px rgba(77, 166, 255, 0.7);
-}
-
-/* ============================================================
-   TÍTULOS EM NEON (Categorias e nomes dos certificados)
-   ============================================================ */
-.cert-section-title,
-.cert-title,
-h2, h3, h4 {
-  position: relative;
-  z-index: 2;
+   TÍTULOS DAS SEÇÕES (Redes / Segurança / IA)
+   → brancos, sem neon
+============================================================ */
+.initial-content h2,
+.initial-content h3 {
   color: #ffffff !important;
+  text-shadow: none !important;
   font-weight: 700;
-  text-shadow:
-    0 0 8px #4da6ff,
-    0 0 16px #00ccff,
-    0 0 32px #4da6ff;
+  margin-top: 35px;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 3;
 }
 
 /* ============================================================
-   TEXTOS DENTRO DOS CARDS
-   ============================================================ */
-.cert-description,
-.cert-provider,
-.cert-card p {
+   BADGES DO CREDLY — ENVOLTÓRIO NEON
+============================================================ */
+.credly-badge-wrapper {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 16px;
+  background: rgba(20,40,80,0.85);
+  margin: 12px;
   position: relative;
-  z-index: 2;
-  color: #cccccc;
+  box-shadow:
+    0 0 8px #4da6ff66,
+    0 0 16px #00ccff44;
+  transition: 0.3s ease-in-out;
 }
 
-/* ============================================================
-   LISTAS (somente dentro dos cards)
-   ============================================================ */
-.cert-card ul li {
-  position: relative;
-  z-index: 2;
-  color: #e0e0e0;
-  padding-left: 15px;
-  margin-bottom: 6px;
+.credly-badge-wrapper:hover {
+  transform: scale(1.06);
+  box-shadow:
+    0 0 14px #4da6ffcc,
+    0 0 28px #00ccff99;
 }
 
-.cert-card ul li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  font-size: 18px;
-  color: #4da6ff;
-  text-shadow: 
-    0 0 5px #4da6ff,
-    0 0 12px #00ccff;
+.credly-badge-wrapper iframe {
+  border-radius: 12px !important;
+  border: 2px solid #4da6ff !important;
 }
 
 /* ============================================================
    RESPONSIVO
-   ============================================================ */
+============================================================ */
 @media (max-width: 768px) {
-  .page__title {
-    font-size: 36px !important;
-  }
-  .cert-card {
-    padding: 20px;
-  }
+  .page__title { font-size: 36px !important; }
 }
-
-/* ============================================================
-   TITULOS DOS CERTIFICADOS — BRANCO PURO (SEM NEON)
-   ============================================================ */
-.cert-title,
-.cert-section-title,
-.cert-provider,
-.cert-card h3,
-.cert-card h4 {
-  color: #ffffff !important;
-  font-weight: 700;
-  position: relative;
-  z-index: 3;
-  text-shadow: none !important; /* remove o neon */
-}
-
-/* ============================================================
-   BADGES (IMAGENS) — BORDA NEON + EFEITO HOVER
-   ============================================================ */
-.cert-card img {
-  display: block;
-  width: 110px;
-  height: auto;
-  margin-bottom: 15px;
-  
-  border-radius: 12px;
-  padding: 4px;
-
-  background: transparent;
-  border: 2px solid #4da6ff;
-  box-shadow:
-    0 0 8px rgba(77,166,255,0.6),
-    0 0 15px rgba(0,204,255,0.5);
-
-  transition: 0.35s ease-in-out;
-  position: relative;
-  z-index: 3;
-}
-
-/* HOVER NEON MAIS FORTE */
-.cert-card img:hover {
-  transform: scale(1.06);
-  box-shadow:
-    0 0 12px rgba(77,166,255,0.9),
-    0 0 25px rgba(0,204,255,0.8),
-    0 0 45px rgba(0,204,255,0.4);
-  border-color: #00ccff;
-}
-  
 </style>
 
 
-
-
-Nesta página, apresento as minhas certificações profissionais, que validam as minhas competências em diversas áreas da tecnologia. Para mais detalhes ou para verificar a autenticidade, visite meu perfil completo no [Credly](https://www.credly.com/users/edgardo.correa).
+Nesta página, apresento as minhas certificações profissionais, que validam as minhas competências em diversas áreas da tecnologia.  
+Para consultar todas as certificações diretamente, acesse meu perfil no  
+**[Credly](https://www.credly.com/users/edgardo.correa)**.
 
 ---
 
 ## Redes
 
-<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="232a032a-8675-4fbd-9752-b74219f08ad8" data-share-badge-host="https://www.credly.com"></div>
+<div class="credly-badge-wrapper">
+  <div data-iframe-width="150" data-iframe-height="270"
+    data-share-badge-id="232a032a-8675-4fbd-9752-b74219f08ad8"
+    data-share-badge-host="https://www.credly.com"></div>
+</div>
 
-<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="5c6077c7-6f57-4196-b648-e7d3b5b82624" data-share-badge-host="https://www.credly.com"></div>
+<div class="credly-badge-wrapper">
+  <div data-iframe-width="150" data-iframe-height="270"
+    data-share-badge-id="5c6077c7-6f57-4196-b648-e7d3b5b82624"
+    data-share-badge-host="https://www.credly.com"></div>
+</div>
 
-<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="e0ee1601-18f3-41d2-97f3-67a836bfe4c9" data-share-badge-host="https://www.credly.com"></div>
+<div class="credly-badge-wrapper">
+  <div data-iframe-width="150" data-iframe-height="270"
+    data-share-badge-id="e0ee1601-18f3-41d2-97f3-67a836bfe4c9"
+    data-share-badge-host="https://www.credly.com"></div>
+</div>
 
 ---
 
 ## Segurança da Informação
 
-<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="d44d5772-1fee-4491-9326-ab1aa4a908ca" data-share-badge-host="https://www.credly.com"></div>
+<div class="credly-badge-wrapper">
+  <div data-iframe-width="150" data-iframe-height="270"
+    data-share-badge-id="d44d5772-1fee-4491-9326-ab1aa4a908ca"
+    data-share-badge-host="https://www.credly.com"></div>
+</div>
 
-<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="02abd07a-71a8-4024-8316-0dd40691fa74" data-share-badge-host="https://www.credly.com"></div>
+<div class="credly-badge-wrapper">
+  <div data-iframe-width="150" data-iframe-height="270"
+    data-share-badge-id="02abd07a-71a8-4024-8316-0dd40691fa74"
+    data-share-badge-host="https://www.credly.com"></div>
+</div>
 
 ---
 
 ## Inteligência Artificial e Metodologias Ágeis
 
-<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="aa5e1665-af74-4d59-9567-409b890991f4" data-share-badge-host="https://www.credly.com"></div>
+<div class="credly-badge-wrapper">
+  <div data-iframe-width="150" data-iframe-height="270"
+    data-share-badge-id="aa5e1665-af74-4d59-9567-409b890991f4"
+    data-share-badge-host="https://www.credly.com"></div>
+</div>
 
-<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="bdb8bcd3-8357-4d2e-8894-f1fe4e36e079" data-share-badge-host="https://www.credly.com"></div>
+<div class="credly-badge-wrapper">
+  <div data-iframe-width="150" data-iframe-height="270"
+    data-share-badge-id="bdb8bcd3-8357-4d2e-8894-f1fe4e36e079"
+    data-share-badge-host="https://www.credly.com"></div>
+</div>
 
-<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="24f3cc92-a5fb-469b-820d-d2d85b4d487c" data-share-badge-host="https://www.credly.com"></div>
+<div class="credly-badge-wrapper">
+  <div data-iframe-width="150" data-iframe-height="270"
+    data-share-badge-id="24f3cc92-a5fb-469b-820d-d2d85b4d487c"
+    data-share-badge-host="https://www.credly.com"></div>
+</div>
 
-<!-- Script do Credly para renderizar todos os badges acima. Apenas um é necessário por página. -->
+<!-- Script do Credly -->
 <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
