@@ -1,7 +1,6 @@
 <style>
 /* ====================MUDANÇA FEITA ==================== */
 
-
 /* Customizações só para /portfolio/ */
 .page--portfolio {
   /* CORREÇÃO 1: Forçar a página a usar uma coluna e centralizar o conteúdo */
