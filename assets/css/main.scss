@@ -47,13 +47,14 @@
   
   .text-wrapper {
     position: absolute;
-    top: 38%; // Mantém o ajuste de altura que fizemos antes
+    // O 38% da altura estava perfeito para a tela do notebook
+    top: 38%; 
     
-    // === ALTERAÇÃO: MOVE PARA A DIREITA ===
-    left: 60%; // Define o ponto de âncora a 60% da esquerda
-    // Ajusta o deslocamento X em 100% para que a BORDA DIREITA fique ancorada em 60%
-    transform: translate(-100%, -50%); 
-    // =====================================
+    // === ALTERAÇÃO: MOVE O BLOCO PARA A DIREITA (60% da tela) ===
+    left: 60%; 
+    // Mantém o translate para que o CENTRO DO BLOCO fique em 60%
+    transform: translate(-50%, -50%); 
+    // ==========================================================
     
     width: 60%;
     max-width: 650px;
