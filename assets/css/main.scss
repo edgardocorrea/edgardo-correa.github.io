@@ -180,3 +180,73 @@
     }
   }
 }
+
+
+//
+/* === Hero como <img> sem cortes === */
+.hero-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-height: 85vh;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Texto sobre a imagem */
+.custom-hero-text {
+  position: absolute;
+  top: 50%; /* centraliza verticalmente */
+  left: 50%; /* centraliza horizontalmente */
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 45%;
+  max-width: 600px;
+  background: rgba(0,0,0,0.65);
+  padding: 20px 30px;
+  border: 2px solid #ffcc00;
+  border-radius: 8px;
+  backdrop-filter: blur(2px);
+}
+
+/* Títulos */
+.custom-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: white;
+}
+
+.custom-excerpt {
+  font-size: 16px;
+  color: #e6e6e6;
+  line-height: 1.5;
+}
+
+/* Responsivo - Tablet */
+@media (max-width: 768px) {
+  .custom-hero-text {
+    width: 70%;
+  }
+
+  .custom-title {
+    font-size: 22px;
+  }
+}
+
+/* Responsivo - Mobile */
+@media (max-width: 480px) {
+  .custom-hero-text {
+    width: 85%;
+    padding: 15px 20px;
+  }
+
+  .custom-title {
+    font-size: 20px;
+  }
+}
+
