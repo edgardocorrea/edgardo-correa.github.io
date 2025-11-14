@@ -10,6 +10,10 @@ header:
       url: "/portfolio/"
       class: "btn--primary"
 excerpt: "Atuo com infraestrutura, redes e automação, sempre buscando formas simples e eficientes de fazer as coisas funcionarem bem. Gosto de transformar processos complicados em soluções práticas."
+# Desabilita elementos que aumentam a página
+toc: false
+author_profile: false
+classes: wide
 ---
 
 
