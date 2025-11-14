@@ -20,8 +20,8 @@
 
 .page__hero,
 .page__hero--overlay {
-  height: 40vh !important;
-  min-height: 400px !important;
+  height: 70vh !important;
+  min-height: 500px !important;
   background-size: cover !important;
   background-position: center center !important;
 }
@@ -95,27 +95,47 @@
 
 // 8. FOOTER (RODAPÉ) - Compacto
 .page__footer {
-  padding: 2px 0 !important;
-  margin-top: 2px !important;
-  
-  footer {
-    padding: 0 0 !important;
-    
-    .page__footer-follow {
-      margin-bottom: 2px !important;
-      
-      ul {
-        margin-bottom: 0px !important;
-      }
-    }
-    
-    .page__footer-copyright {
-      margin-top: 2px !important;
-      margin-bottom: 0 !important;
-      font-size: 11px !important;
-    }
-  }
+  padding: 0 !important;
+  margin: 0 !important;
 }
+
+.page__footer footer {
+  padding: 0 !important;
+  margin: 0 !important;
+  line-height: 1 !important;
+}
+
+/* Remove espaços internos da área de follow (ícones) */
+.page__footer-follow {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.page__footer-follow ul {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.page__footer-follow li {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Ícones do social mais pequenos */
+.page__footer-follow svg {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+/* Texto do copyright super compacto */
+.page__footer-copyright {
+  font-size: 10px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.2 !important;
+  text-align: center !important;
+}
+
 
 // 9. AJUSTES GERAIS
 .layout--splash {
