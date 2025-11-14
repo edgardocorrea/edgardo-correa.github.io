@@ -13,6 +13,8 @@ header:
   </p>
 </div>
 
+<style>
+/* Estilo para o texto customizado */
 .custom-hero-text {
   position: absolute;
   top: 50%;   /* CENTRALIZA NA TELA DO NOTEBOOK */
@@ -86,5 +88,6 @@ header:
   }
 }
 </style>
+
 
 
