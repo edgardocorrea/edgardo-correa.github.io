@@ -1,103 +1,87 @@
----
----
-
 // Importa os estilos do tema. NÃO APAGUE ESTA LINHA.
 @import "minimal-mistakes";
 
-// ==================== PÁGINA ESTÁTICA SEM SCROLL ====================
+// ==================== PÁGINA ESTÁTICA QUE PREENCHE 100% DA TELA ====================
 
-// 1. Remove TODOS os scrolls
+// 1. BLOQUEIA QUALQUER SCROLL NA PÁGINA INTEIRA
 html, body {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden !important; // BLOQUEIA scroll vertical e horizontal
-  position: fixed; // Fixa a página
+  overflow: hidden; // A regra mais importante para impedir o scroll
   background: linear-gradient(135deg, #0a0a0a 0%, #001a33 100%);
   color: #ffffff;
 }
 
-// 2. Container principal ocupa 100% da tela
+// 2. ESTRUTURA FLEXBOX PRINCIPAL
+// Este container vai organizar header, hero e footer verticalmente
 .layout--splash {
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden !important;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; // Alinha os filhos (header, main, footer) em coluna
+  height: 100vh; // Ocupa 100% da altura da viewport
+  width: 100vw; // Ocupa 100% da largura da viewport
 }
 
-// 3. Remove fundo branco
-.page {
-  background-color: transparent;
-  height: 100vh;
-  overflow: hidden !important;
-  display: flex;
-  flex-direction: column;
-}
-
-.page__inner {
+// 3. REMOVE FUNDO BRANCO PADRÃO DO TEMA
+.page, .page__inner {
   background-color: transparent;
   padding: 0;
-  height: 100%;
-  overflow: hidden !important;
+  margin: 0;
 }
 
-// 4. HEADER - Compacto e fixo no topo
+// 4. HEADER (CABEÇALHO) - Item fixo no topo do Flexbox
 .masthead {
-  padding: 8px 16px !important;
-  background-color: rgba(0, 0, 0, 0.85) !important;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 999;
+  // Não precisa mais de position: fixed. O Flexbox o mantém no topo.
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 10; // Apenas para ficar sobre o conteúdo se necessário
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-  height: 50px; // Altura fixa
+  flex-shrink: 0; // NÃO permite que o header encolha
   
   .site-title {
-    font-size: 18px !important;
-    line-height: 1.2 !important;
-    color: #ffffff !important;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #ffffff;
   }
   
   .greedy-nav {
-    min-height: auto !important;
-    background-color: transparent !important;
+    min-height: auto;
+    background-color: transparent;
     
     a {
-      padding: 6px 10px !important;
-      color: #ffffff !important;
-      font-size: 14px !important;
+      padding: 6px 10px;
+      color: #ffffff;
+      font-size: 14px;
       transition: all 0.3s ease;
       
       &:hover {
-        color: #4da6ff !important;
+        color: #4da6ff;
         background-color: rgba(77, 166, 255, 0.1);
       }
     }
     
     .visible-links {
-      background-color: transparent !important;
+      background-color: transparent;
     }
     
     .greedy-nav__toggle {
-      color: #ffffff !important;
+      color: #ffffff;
     }
   }
 }
 
-// 5. HERO - Ocupa todo espaço entre header e footer
+// 5. HERO (CONTEÚDO PRINCIPAL) - Item que cresce para preencher o espaço
 .page__hero {
-  height: calc(100vh - 100px) !important; // 100vh - (header 50px + footer 50px)
-  min-height: auto !important;
-  max-height: none !important;
-  overflow: hidden !important;
-  position: relative;
+  // A mágica acontece aqui: este elemento vai crescer para ocupar todo o espaço livre
+  flex-grow: 1;
+  
+  // Centraliza o conteúdo DENTRO do hero
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 50px; // Espaço do header
+  
+  position: relative;
+  overflow: hidden;
   
   // Overlay escuro com efeito azul
   &::after {
@@ -115,45 +99,44 @@ html, body {
 
 // 6. CAIXA DE TEXTO CENTRALIZADA (Retângulo Amarelo)
 .page__hero--overlay {
+  width: 100%;
   height: 100%;
-  overflow: hidden !important;
+  display: flex; // Usa flex para centralizar a caption
+  align-items: center;
+  justify-content: center;
   
   .page__hero-caption {
     position: relative;
     z-index: 1;
     width: 85%;
     max-width: 850px;
-    margin: 0 auto;
     padding: 25px 35px;
     background-color: rgba(0, 0, 0, 0.75);
-    border: 3px solid #ffcc00; // BORDA AMARELA
+    border: 3px solid #ffcc00;
     border-radius: 8px;
     box-shadow: 0 8px 30px rgba(255, 204, 0, 0.3);
     
-    // Título principal (;D)
     .page__title {
-      font-size: 36px !important;
-      line-height: 1.2 !important;
-      color: #ffffff !important;
-      margin-bottom: 15px !important;
-      margin-top: 0 !important;
+      font-size: 36px;
+      line-height: 1.2;
+      color: #ffffff;
+      margin-bottom: 15px;
+      margin-top: 0;
       font-weight: 700;
       text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
     }
     
-    // Texto descritivo
     .page__lead {
-      font-size: 16px !important;
-      line-height: 1.5 !important;
-      color: #e6e6e6 !important;
-      margin-bottom: 20px !important;
-      margin-top: 0 !important;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #e6e6e6;
+      margin-bottom: 20px;
+      margin-top: 0;
       text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
       text-align: left;
       padding: 0 10px;
     }
     
-    // Container de botões
     .page__hero-actions {
       margin-top: 20px;
       margin-bottom: 0;
@@ -165,39 +148,33 @@ html, body {
   }
 }
 
-// 7. FOOTER - Fixo no rodapé
+// 7. FOOTER (RODAPÉ) - Item fixo na base do Flexbox
 .page__footer {
-  padding: 10px 0 !important;
-  margin-top: 0 !important;
-  background-color: rgba(0, 0, 0, 0.85) !important;
+  // Não precisa mais de position: fixed. O Flexbox o mantém na base.
+  background-color: rgba(0, 0, 0, 0.85);
   border-top: 1px solid rgba(77, 166, 255, 0.3);
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 999;
-  height: 50px; // Altura fixa
+  flex-shrink: 0; // NÃO permite que o footer encolha
   
   footer {
-    padding: 5px 15px !important;
+    padding: 10px 15px;
     
     .page__footer-follow {
-      margin-bottom: 5px !important;
+      margin-bottom: 5px;
       
       ul {
-        margin-bottom: 0 !important;
+        margin-bottom: 0;
         
         li {
           display: inline-block;
           margin: 0 8px;
           
           a {
-            color: #ffffff !important;
-            font-size: 13px !important;
+            color: #ffffff;
+            font-size: 13px;
             transition: all 0.3s ease;
             
             &:hover {
-              color: #4da6ff !important;
+              color: #4da6ff;
             }
           }
         }
@@ -205,64 +182,59 @@ html, body {
     }
     
     .page__footer-copyright {
-      margin-top: 5px !important;
-      margin-bottom: 0 !important;
-      font-size: 11px !important;
-      color: #cccccc !important;
+      margin-top: 5px;
+      margin-bottom: 0;
+      font-size: 11px;
+      color: #cccccc;
     }
   }
 }
 
 // 8. BOTÃO PRIMÁRIO
 .btn--primary {
-  background-color: #004d99 !important;
-  color: #ffffff !important;
-  border: 2px solid #004d99 !important;
-  padding: 10px 24px !important;
-  font-size: 15px !important;
-  font-weight: 600 !important;
-  border-radius: 6px !important;
-  transition: all 0.3s ease !important;
+  background-color: #004d99;
+  color: #ffffff;
+  border: 2px solid #004d99;
+  padding: 10px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   
   &:hover {
-    background-color: #003366 !important;
-    border-color: #4da6ff !important;
-    color: #ffffff !important;
+    background-color: #003366;
+    border-color: #4da6ff;
+    color: #ffffff;
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(77, 166, 255, 0.4);
   }
 }
 
-// 9. Remove qualquer conteúdo que cause scroll
-.page__content {
-  display: none !important; // Esconde conteúdo adicional
+// 9. REMOVE ELEMENTOS DO TEMA QUE PODERIAM QUEBRAR O LAYOUT
+.breadcrumbs, .page__meta, .page__share, .page__related, .sidebar, .toc, .author-profile {
+  display: none;
 }
 
-.layout--splash .feature__wrapper {
-  display: none !important; // Esconde seções extras
+// 10. ESCONDE CONTEÚDO ADICIONAL DA PÁGINA
+.page__content, .layout--splash .feature__wrapper {
+  display: none;
 }
 
-// 10. RESPONSIVIDADE - Tablets
+// 11. RESPONSIVIDADE - Tablets
 @media (max-width: 768px) {
   .masthead {
-    height: 45px;
-    padding: 6px 12px !important;
+    padding: 6px 12px;
     
     .site-title {
-      font-size: 16px !important;
+      font-size: 16px;
     }
     
     .greedy-nav a {
-      padding: 5px 8px !important;
-      font-size: 13px !important;
+      padding: 5px 8px;
+      font-size: 13px;
     }
-  }
-  
-  .page__hero {
-    height: calc(100vh - 95px) !important; // Ajusta para header/footer menores
-    margin-top: 45px;
   }
   
   .page__hero--overlay .page__hero-caption {
@@ -271,53 +243,30 @@ html, body {
     border-width: 2px;
     
     .page__title {
-      font-size: 28px !important;
-      margin-bottom: 12px !important;
+      font-size: 28px;
+      margin-bottom: 12px;
     }
     
     .page__lead {
-      font-size: 14px !important;
-      margin-bottom: 15px !important;
-    }
-    
-    .page__hero-actions .btn {
-      font-size: 14px !important;
-      padding: 8px 20px !important;
-    }
-  }
-  
-  .page__footer {
-    height: 50px;
-    
-    footer .page__footer-follow ul li a {
-      font-size: 12px !important;
-    }
-    
-    .page__footer-copyright {
-      font-size: 10px !important;
+      font-size: 14px;
+      margin-bottom: 15px;
     }
   }
 }
 
-// 11. RESPONSIVIDADE - Celulares
+// 12. RESPONSIVIDADE - Celulares
 @media (max-width: 480px) {
   .masthead {
-    height: 40px;
-    padding: 4px 8px !important;
+    padding: 4px 8px;
     
     .site-title {
-      font-size: 14px !important;
+      font-size: 14px;
     }
     
     .greedy-nav a {
-      padding: 4px 6px !important;
-      font-size: 12px !important;
+      padding: 4px 6px;
+      font-size: 12px;
     }
-  }
-  
-  .page__hero {
-    height: calc(100vh - 85px) !important;
-    margin-top: 40px;
   }
   
   .page__hero--overlay .page__hero-caption {
@@ -325,64 +274,14 @@ html, body {
     padding: 15px 20px;
     
     .page__title {
-      font-size: 22px !important;
-      margin-bottom: 10px !important;
+      font-size: 22px;
+      margin-bottom: 10px;
     }
     
     .page__lead {
-      font-size: 13px !important;
-      line-height: 1.4 !important;
-      margin-bottom: 12px !important;
-    }
-    
-    .page__hero-actions .btn {
-      font-size: 13px !important;
-      padding: 8px 18px !important;
-      margin: 4px 6px;
+      font-size: 13px;
+      line-height: 1.4;
+      margin-bottom: 12px;
     }
   }
-  
-  .page__footer {
-    height: 45px;
-    
-    footer {
-      padding: 3px 10px !important;
-      
-      .page__footer-follow ul li {
-        margin: 0 5px;
-        
-        a {
-          font-size: 11px !important;
-        }
-      }
-    }
-    
-    .page__footer-copyright {
-      font-size: 9px !important;
-    }
-  }
-}
-
-// 12. Remove elementos que podem aparecer
-.breadcrumbs,
-.page__meta,
-.page__share,
-.page__related,
-.sidebar,
-.toc,
-.author-profile {
-  display: none !important;
-}
-
-// 13. Garante que nada cause overflow
-* {
-  max-width: 100vw;
-  box-sizing: border-box;
-}
-
-// 14. Remove margens/paddings extras
-.initial-content,
-.page__inner-wrap {
-  margin: 0 !important;
-  padding: 0 !important;
 }
