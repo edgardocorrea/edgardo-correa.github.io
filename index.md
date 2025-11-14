@@ -3,14 +3,10 @@ layout: splash
 header:
   overlay_color: "rgba(0, 0, 0, 0.5)"
   overlay_image: /assets/images/banner-home.jpg
-  actions:
-    - label: "Ver Meus Projetos"
-      url: "/portfolio/"
 ---
 
 <!-- Texto customizado posicionado sobre a tela do notebook -->
 <div class="custom-hero-text">
-  <h1 class="custom-title">Olá, eu sou Edgardo Correa</h1>
   <p class="custom-excerpt">
     Analista de Sistemas com base em infraestrutura de TI com sólida experiência em redes, sistemas e automação. Apaixonado por construir soluções robustas e eficientes.
   </p>
@@ -21,7 +17,7 @@ header:
 .custom-hero-text {
   position: absolute;
   top: 38%; /* Ajuste conforme necessário */
-  left: 60%; /* Ajuste conforme necessário */
+  left: 45%; /* Ajuste conforme necessário */
   transform: translate(-50%, -50%);
   width: 55%;
   max-width: 600px;
@@ -35,7 +31,7 @@ header:
 }
 
 .custom-title {
-  font-size: 28px !important;
+  font-size: 18px !important;
   line-height: 1.2 !important;
   color: #ffffff !important;
   margin: 0 0 15px 0 !important;
@@ -44,7 +40,7 @@ header:
 }
 
 .custom-excerpt {
-  font-size: 16px !important;
+  font-size: 12px !important;
   line-height: 1.5 !important;
   color: #e6e6e6 !important;
   margin: 0 !important;
@@ -91,3 +87,4 @@ header:
   }
 }
 </style>
+
