@@ -7,25 +7,35 @@ sidebar: null
 ---
 
 <style>
+/* ====================  FORÇAR CENTRALIZAÇÃO VIA CSS ==================== */
+
+/* 1. Oculta completamente a barra lateral e seu contêiner */
+.sidebar, .sidebar__wrapper {
+  display: none !important;
+}
+
+/* 2. Força o conteúdo principal a ocupar a largura total da grade */
+.page--portfolio main.grid__item {
+  grid-column: 1 / -1; /* Isso significa "começar na primeira linha da grade e ir até a última" */
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1100px; /* Mantém seu controle de largura máxima */
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 /* ==================== FUNDO ESCURO APENAS PARA O PORTFOLIO ==================== */
-body.page--portfolio .initial-content {
+/* Força o fundo preto em toda a área de conteúdo principal */
+body.page--portfolio .initial-content,
+body.page--portfolio .page__content {
   background-color: #000000 !important;
   background-image: none !important;
+ /* border-radius: 0; Remove bordas arredondadas que o tema possa adicionar */
 }
 
 /* ====================MUDANÇA FEITA ==================== */
 
 /* Customizações só para /portfolio/ */
-.page--portfolio {
-  /* CORREÇÃO PRINCIPAL: Centralizar a COLUNA INTEIRA (título + conteúdo) */
-  main.grid__item {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    max-width: 1100px; /* Largura máxima desejada para todo o bloco */
-    padding-left: 20px;  /* Espaçamento nas laterais */
-    padding-right: 20px;
-    box-sizing: border-box;
-  }
 
   /* CORREÇÃO DOS BOTÕES: Organizar verticalmente */
   .project-buttons {
@@ -41,8 +51,6 @@ body.page--portfolio .initial-content {
     max-width: 240px;
     text-align: center;
   }
-}
-
 
 /* ==================== TÍTULO PRINCIPAL ==================== */
 .page__title {
@@ -107,7 +115,7 @@ body.page--portfolio .initial-content {
   mask-composite: exclude;
   opacity: 0;
   transition: opacity 0.4s ease;
-  pointer-events: none;
+  pointer-events: none; 
 }
 
 .project-card:hover::before {
@@ -177,6 +185,8 @@ body.page--portfolio .initial-content {
 }
 
 /* ==================== BOTÕES ==================== */
+/* A regra .project-buttons foi movida para dentro de .page--portfolio para evitar conflitos. */
+
 .btn-custom {
   display: inline-flex;
   align-items: center;
