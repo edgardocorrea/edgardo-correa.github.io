@@ -17,7 +17,7 @@ header:
 .custom-hero-text {
   position: absolute;
   top: 38%; /* Ajuste conforme necessário */
-  left: 45%; /* Ajuste conforme necessário */
+  left: 52%; /* Ajuste conforme necessário */
   transform: translate(-50%, -50%);
   width: 55%;
   max-width: 600px;
@@ -31,7 +31,7 @@ header:
 }
 
 .custom-title {
-  font-size: 18px !important;
+  font-size: 20px !important;
   line-height: 1.2 !important;
   color: #ffffff !important;
   margin: 0 0 15px 0 !important;
@@ -40,7 +40,7 @@ header:
 }
 
 .custom-excerpt {
-  font-size: 12px !important;
+  font-size: 18px !important;
   line-height: 1.5 !important;
   color: #e6e6e6 !important;
   margin: 0 !important;
@@ -87,4 +87,5 @@ header:
   }
 }
 </style>
+
 
