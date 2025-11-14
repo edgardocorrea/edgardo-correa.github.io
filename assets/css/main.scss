@@ -18,9 +18,8 @@
 
 // 2. Hero ocupa tela inteira E centraliza imagem
 .page__hero {
-  height: 100vh;
+  height: 110vh; // O banner será 10% maior que a tela
   overflow: hidden;
-  position: relative;
   
   // FORÇA centralização da imagem de fundo
   background-position: center center !important;
