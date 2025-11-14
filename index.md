@@ -1,9 +1,11 @@
 ---
 title: "" # Força título vazio
 excerpt: "" # Força excerpt vazio
+layout: splash
 header:
-  overlay_color: "rgba(0, 0, 0, 0.3)"
-  overlay_image: /assets/images/banner-home.jpg
+  overlay_color: "rgba(0,0,0,0.4)"
+  overlay_image: "/assets/images/banner-home.jpg"
+  overlay_filter: 0.3
   image_description: "" # Remove alt text
 ---
 <!-- Texto customizado posicionado sobre a tela do notebook -->
@@ -88,6 +90,7 @@ header:
   }
 }
 </style>
+
 
 
 
