@@ -11,19 +11,6 @@ header:
 <div class="hero-image-wrapper">
   <canvas id="noiseCanvas"></canvas>
   <img src="/assets/images/banner-home.jpg" alt="Notebook Banner" class="hero-img">
-
-  <div class="custom-hero-text">
-    <span class="prompt-blue">edgardo@career:~$</span>
-    <span id="typewriter"></span>
-    <span class="cursor-blink"></span>
-
-    <div id="textBlock" style="display: none;">
-      <p class="custom-excerpt">
-        Analista de Sistemas com sólida experiência em infraestrutura, redes e automação.
-        Apaixonado por soluções eficientes.
-      </p>
-    </div>
-  </div>
 </div>
 
 <style>
@@ -128,7 +115,7 @@ header:
 
 <script>
 // Frase que será "digitada"
-const text = `read -p "May I know your name please?" name ; echo "Hello $name, let us be friends"`;
+const text = `read -p "Analista de Sistemas com experiência em infra, redes e automação." name ; echo "Apaixonado por soluções eficientes"`;
 let i = 0;
 
 function typeWriterEffect() {
