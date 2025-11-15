@@ -116,25 +116,30 @@ header:
 /* Responsivo - Celulares */
 @media (max-width: 480px) {
   .custom-hero-text {
-    width: 85%;
-    top: 45%;
-    padding: 10px 12px;
+    display: inline-block;       /* Permite ajustar ao conteúdo */
+    width: fit-content;          /* Largura se adapta ao texto */
+    max-width: 90%;              /* Nunca ultrapassa 90% da tela */
+    top: 40%;                    /* Ajusta posição vertical */
+    padding: 6px 10px;           /* Espaço interno */
+    overflow-wrap: break-word;   /* Quebra palavras longas */
+    text-align: center;          /* Centraliza o texto dentro do retângulo */
   }
+
   #textBlock .custom-excerpt {
-    font-size: px;
+    font-size: 14px;             /* Ajuste de fonte */
     line-height: 1.3;
   }
+
   #typewriter, .prompt-blue {
     font-size: 12px;
   }
+
   .cursor-blink {
     width: 6px;
     height: 16px;
   }
-  .custom-hero-text {
-    overflow-wrap: break-word;
-  }
 }
+
 </style>
 
 <script>
