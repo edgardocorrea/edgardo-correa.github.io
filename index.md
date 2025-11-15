@@ -25,6 +25,21 @@ header:
 </div>
 
 <style>
+/* ==================== FUNDO ESCURO APENAS PARA O PORTFOLIO ==================== */
+/* Fundo azul escuro para o portfólio */
+body.page--portfolio {
+  background: linear-gradient(90deg, #4da6ff, #00ccff);
+  text-shadow: 2px 2px 10px rgba(77, 166, 255, 0.5);
+}
+
+body.page--portfolio main.grid__item {
+  background-color: #142850 !important;
+}
+
+
+
+
+
 /* Canvas de ruído digital */
 #noiseCanvas {
   position: absolute;
