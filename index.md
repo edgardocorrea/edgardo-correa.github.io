@@ -126,12 +126,12 @@ header:
   }
 
   #textBlock .custom-excerpt {
-    font-size: 14px;             /* Ajuste de fonte */
-    line-height: 1.3;
+    font-size: 8px;             /* Ajuste de fonte */
+    line-height: 1.2;
   }
 
   #typewriter, .prompt-blue {
-    font-size: 12px;
+    font-size: 7px;
   }
 
   .cursor-blink {
