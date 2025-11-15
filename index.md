@@ -121,15 +121,15 @@ header:
     padding: 10px 12px;
   }
   #textBlock .custom-excerpt {
-    font-size: 6px;
+    font-size: px;
     line-height: 1.3;
   }
   #typewriter, .prompt-blue {
-    font-size: 6px;
+    font-size: 12px;
   }
   .cursor-blink {
     width: 6px;
-    height: 8px;
+    height: 16px;
   }
   .custom-hero-text {
     overflow-wrap: break-word;
