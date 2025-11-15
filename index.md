@@ -118,9 +118,9 @@ header:
   .custom-hero-text {
     display: inline-block;       /* Permite ajustar ao conteúdo */
     width: fit-content;          /* Largura se adapta ao texto */
-    max-width: 90%;              /* Nunca ultrapassa 90% da tela */
-    top: 40%;                    /* Ajusta posição vertical */
-    padding: 6px 10px;           /* Espaço interno */
+    max-width: 70%;              /* Nunca ultrapassa 90% da tela */
+    top: 50%;                    /* Ajusta posição vertical */
+    padding: 1px 3px;           /* Espaço interno */
     overflow-wrap: break-word;   /* Quebra palavras longas */
     text-align: center;          /* Centraliza o texto dentro do retângulo */
   }
