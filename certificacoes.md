@@ -1,28 +1,11 @@
 ---
-layout: single
-permalink: /certificacoes/
-classes: wide
 title: "Certificações e Badges"
-author_profile: false
+permalink: /certificacoes/
+layout: single
 toc: false
 ---
 
 <style>
-/* ==================== FORÇA REMOVER TOC ==================== */
-.toc,
-.toc__menu,
-.sidebar__right,
-nav.toc,
-aside.sidebar__right {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  height: 0 !important;
-  width: 0 !important;
-  overflow: hidden !important;
-}
-
-
 /* ============================================================
    FUNDO LEVE COM MOVIMENTO
 ============================================================ */
