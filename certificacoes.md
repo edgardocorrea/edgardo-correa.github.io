@@ -57,24 +57,6 @@ body.page--certificacoes {
   text-decoration: underline;
 }
 
-a {
-  color: #ffffff !important;           /* Branco luminoso */
-  font-weight: 700;                     /* Negrito */
-  margin-top: 35px;
-  margin-bottom: 15px;
-  text-shadow: 0 0 6px rgba(255,255,255,0.7); /* Neon leve */
-  transition: 0.3s ease;                /* Transição suave */
-  text-decoration: none;                /* Remove sublinhado, opcional */
-}
-
-a:hover {
-  color: #00ccff !important;            /* Neon puro ao passar mouse */
-  text-shadow:
-    0 0 5px #00ccff,
-    0 0 10px #00ccff,
-    0 0 20px #00ccff,
-    0 0 40px #00ccff;
-}
 
 /* ============================================================
    TÍTULOS DAS SEÇÕES
