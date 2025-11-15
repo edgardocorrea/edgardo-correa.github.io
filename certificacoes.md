@@ -31,15 +31,10 @@ body.page--certificacoes {
   text-align: center;
   font-size: 48px !important;
   font-weight: 900;
-  background: linear-gradient(90deg, #4da6ff, #00ccff, #4da6ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #ffffff; /* branco normal */
   text-shadow:
-     0 0 5px #4da6ff,
-     0 0 10px #4da6ff,
-     0 0 20px #00ccff,
-     0 0 30px #00ccff,
-     0 0 40px #4da6ff;
+     0 0 3px rgba(255,255,255,0.5),
+     0 0 6px rgba(255,255,255,0.3); /* neon suave */
   margin-bottom: 25px;
 }
 
@@ -51,13 +46,14 @@ body.page--certificacoes {
 }
 
 .initial-content a {
-  color: #ffffff; /* Branco luminoso */
+  color: #ffffff; /* branco luminoso */
   text-decoration: none;
 }
 
 .initial-content a:hover {
   text-decoration: underline;
 }
+
 
 /* ============================================================
    TÍTULOS DAS SEÇÕES
