@@ -27,13 +27,8 @@ header:
 <style>
 /* ==================== FUNDO ESCURO APENAS PARA O PORTFOLIO ==================== */
 /* Fundo gradiente azul para o hero e para o body */
-body {
-  background: linear-gradient(90deg, #4da6ff, #00ccff);
-  color: #ffffff; /* garante visibilidade do texto */
-}
-
 .hero-image-wrapper {
-  background: linear-gradient(90deg, #142850, #4da6ff);
+  background-color: #142850 !important;
   position: relative;  /* já estava, mas garante sobreposição do canvas e da imagem */
   overflow: hidden;
 }
