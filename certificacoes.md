@@ -23,20 +23,14 @@ aside.sidebar__right {
   overflow: hidden !important;
 }
 
-/* ==================== BACKGROUND ==================== */
-body {
-  background: linear-gradient(135deg, #0a0a0a 0%, #001a33 100%) !important;
-  color: #ffffff;
+/* ==================== FUNDO ESCURO APENAS PARA O PORTFOLIO ==================== */
+/* Fundo azul escuro para o portfólio */
+body.page--portfolio {
+  background-color: #142850 !important;
 }
 
-.page {
-  background: transparent !important;
-}
-
-.page__content {
-  background: transparent !important;
-  max-width: 1200px !important;
-  margin: 0 auto;
+body.page--portfolio main.grid__item {
+  background-color: #142850 !important;
 }
 
 /* ==================== CONTAINER PRINCIPAL ==================== */
