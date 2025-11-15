@@ -5,7 +5,6 @@ layout: single
 classes: wide
 author_profile: false
 sidebar: null
-toc: false 
 ---
 
 <style>
@@ -29,8 +28,8 @@ body.page--certificacoes {
 }
 
 
-#ac-toc,
-#ac-toc-wrapper,
+ac-toc,
+ac-toc-wrapper,
 .ac-toc {
   display: none !important;
 }
