@@ -5,7 +5,7 @@ classes: wide
 title: "Certificações e Badges"
 author_profile: false
 sidebar:
-  nav: "" 
+nav: "" 
 ---
 
 <style>
