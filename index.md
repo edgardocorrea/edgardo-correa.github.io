@@ -121,15 +121,15 @@ header:
     padding: 10px 12px;
   }
   #textBlock .custom-excerpt {
-    font-size: 12px;
+    font-size: 6px;
     line-height: 1.3;
   }
   #typewriter, .prompt-blue {
-    font-size: 12px;
+    font-size: 6px;
   }
   .cursor-blink {
     width: 6px;
-    height: 16px;
+    height: 8px;
   }
   .custom-hero-text {
     overflow-wrap: break-word;
@@ -139,7 +139,7 @@ header:
 
 <script>
 // Frase que será "digitada"
-const text = `read -p "Analista de Sistemas com experiência em infra, redes e automação." edyone ; echo "Apaixonado por soluções eficientes"`;
+const text = `read -p "Analista de Sistemas com experiência em infra, redes e automação." edyone ; echo "Apaixonado por soluções eficientes :P"`;
 let i = 0;
 
 function typeWriterEffect() {
