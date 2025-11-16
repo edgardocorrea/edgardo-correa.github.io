@@ -110,7 +110,21 @@ body {
 
 .sobre-brilhante {
   color: #ffffff;
-  text-shadow: 0 0 10px #ffffff, 0 0 20px #00eaff, 0 0 30px #00eaff;
+  font-weight: 700;
+  text-shadow:
+    0 0 10px rgba(255, 255, 255, 0.9),
+    0 0 20px rgba(0, 234, 255, 0.8),
+    0 0 35px rgba(0, 234, 255, 0.6),
+    0 0 50px rgba(0, 234, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.sobre-brilhante:hover {
+  text-shadow:
+    0 0 15px white,
+    0 0 30px #00eaff,
+    0 0 50px #00eaff,
+    0 0 80px #00eaff;
 }
 
 .avatar-container {
@@ -623,7 +637,7 @@ body {
     <div class="accordion-header" onclick="toggleAccordion(this)">
       <div class="accordion-title">
         <span class="accordion-icon">🔷</span>
-        <span>Arsenal Técnico</span>
+        <span class="sobre-brilhante">Arsenal Técnico</span>
       </div>
       <span class="accordion-arrow">▼</span>
     </div>
@@ -715,7 +729,7 @@ body {
     <div class="accordion-header" onclick="toggleAccordion(this)">
       <div class="accordion-title">
         <span class="accordion-icon">🔷</span>
-        <span>Além do Código</span>
+        <span class="sobre-brilhante">Além do Código</span>
       </div>
       <span class="accordion-arrow">▼</span>
     </div>
@@ -754,7 +768,7 @@ body {
     <div class="accordion-header" onclick="toggleAccordion(this)">
       <div class="accordion-title">
         <span class="accordion-icon">🔷</span>
-        <span>Vamos Conectar?</span>
+        <span class="sobre-brilhante">Vamos Conectar?</span>
       </div>
       <span class="accordion-arrow">▼</span>
     </div>
