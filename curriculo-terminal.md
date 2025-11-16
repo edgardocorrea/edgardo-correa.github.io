@@ -17,9 +17,10 @@ author_profile: false
   width: 100%;
 }
 
-/* ---------------- BACKGROUND ---------------- */
+/* ==================== BACKGROUND AZUL ESCURO ==================== */
 body {
   overflow-x: hidden;
+  background: #0a1428 !important;
 }
 
 .initial-content {
@@ -59,12 +60,11 @@ body {
   position: relative;
 }
 
-/* Terminal Header */
+/* HEADER */
 .terminal-header {
   display: flex;
   gap: 8px;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
   border-bottom: 1px solid #00d4ff;
 }
 
@@ -97,7 +97,7 @@ body {
 }
 
 .terminal-line {
-  margin-bottom: 10px;
+  margin-bottom: 2px;
   opacity: 0;
   animation: fadeIn 0.3s forwards;
 }
@@ -176,7 +176,7 @@ body {
   border: 1px solid #00d4ff;
   border-radius: 4px;
   padding: 15px;
-  margin-top: 8px;
+  margin-top: 20px;
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
@@ -290,7 +290,7 @@ body {
     <span class="terminal-button btn-close"></span>
     <span class="terminal-button btn-minimize"></span>
     <span class="terminal-button btn-maximize"></span>
-    <span class="terminal-title">edgardo@carreira:~$</span>
+    <span class="terminal-title">edgardo@lnx:~$</span>
   </div>
 
   <div class="terminal-output" id="terminalOutput">
@@ -304,7 +304,7 @@ body {
   </div>
 
   <div class="terminal-input-area">
-    <span class="prompt">edgardo@carreira:~$</span>
+    <span class="prompt">edgardo@lnx:~$</span>
     <!-- PLACEHOLDER VAZIO -->
     <input type="text" class="terminal-input" id="commandInput" placeholder="Digite um comando aqui...na duvida digite ajuda..." autofocus>
     <span class="cursor"></span>
@@ -468,7 +468,7 @@ const skills = [
 function executeCommand(cmd) {
   cmd = cmd.toLowerCase().trim();
 
-  addLine(`edgardo@carreira:~$ ${cmd}`);
+  addLine(`edgardo@lnx:~$ ${cmd}`);
 
   if (cmd === "apagar") {
     terminalOutput.innerHTML = "";
