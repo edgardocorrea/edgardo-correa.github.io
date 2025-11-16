@@ -20,7 +20,6 @@ author_profile: false
 /* ==================== BACKGROUND AZUL ESCURO ==================== */
 body {
   overflow-x: hidden;
-  background: #0a1428 !important;
 }
 
 .initial-content {
@@ -296,8 +295,8 @@ body {
   <div class="terminal-output" id="terminalOutput">
     <!-- CAIXA ASCII AJUSTADA -->
     <div class="terminal-line"><span class="success">╔══════════════════════════════════════════════════════════════╗</span></div>
-    <div class="terminal-line"><span class="success">║  Bem-vindo ao Sistema de Carreira de Edgardo Correa          ║</span></div>
-    <div class="terminal-line"><span class="success">║  Analista de Sistemas | Infraestrutura & Automação           ║</span></div>
+    <div class="terminal-line"><span class="success">║  Bem-vindo ao Sistema de Informação de Edgardo Correa        ║</span></div>
+    <div class="terminal-line"><span class="success">║  Analista de Sistemas | Curriculo On-Line versão 1.3b        ║</span></div>
     <div class="terminal-line"><span class="success">╚══════════════════════════════════════════════════════════════╝</span></div>
     <div class="terminal-line"><span class="output">Sistema inicializado...</span></div>
     <div class="terminal-line"><span class="output">Digite um comando ou clique em uma sugestão abaixo ↓</span></div>
@@ -452,15 +451,15 @@ Clique no link abaixo:
 
 /* ==================== HABILIDADES COM BARRA ==================== */
 const skills = [
-  { name: 'Redes (TCP/IP, VLANs)', level: 90 },
-  { name: 'Linux (Ubuntu, CentOS)', level: 95 },
-  { name: 'Windows Server', level: 85 },
-  { name: 'PowerShell', level: 90 },
+  { name: 'Redes (TCP/IP, VLANs)', level: 80 },
+  { name: 'Linux (Ubuntu, Slackware)', level: 65 },
+  { name: 'Windows Server', level: 75 },
+  { name: 'PowerShell', level: 81 },
   { name: 'Bash Scripting', level: 85 },
-  { name: 'VMware / Hyper-V', level: 80 },
+  { name: 'VMware / Hyper-V', level: 60 },
   { name: 'Docker', level: 75 },
   { name: 'Automação', level: 88 },
-  { name: 'Segurança', level: 82 },
+  { name: 'Segurança', level: 72 },
   { name: 'Troubleshooting', level: 92 }
 ];
 
@@ -478,8 +477,8 @@ function executeCommand(cmd) {
     terminalOutput.innerHTML = "";
     // Restaura a mensagem inicial após limpar
     addLine(`<span class="success">╔══════════════════════════════════════════════════════════════╗</span>`);
-    addLine(`<span class="success">║  Bem-vindo ao Sistema de Carreira de Edgardo Correa          ║</span>`);
-    addLine(`<span class="success">║  Analista de Sistemas | Infraestrutura & Automação           ║</span>`);
+    addLine(`<span class="success">║  Bem-vindo ao Sistema de Informação de Edgardo Correa        ║</span>`);
+    addLine(`<span class="success">║  Analista de Sistemas | Curriculo On-Line versão 1.3b        ║</span>`);
     addLine(`<span class="success">╚══════════════════════════════════════════════════════════════╝</span>`);
     addLine(`<span class="output">Terminal limpo. Digite um comando ou clique em uma sugestão abaixo ↓</span>`);
     return;
