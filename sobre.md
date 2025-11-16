@@ -4,8 +4,7 @@ permalink: /sobre/
 classes: wide
 title: "Sobre mim"
 author_profile: false
-sidebar:
-  nav: "" 
+sidebar: null
 ---
 
 <style>
