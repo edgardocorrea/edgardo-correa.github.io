@@ -28,7 +28,7 @@ author:
   avatar: "/assets/images/bio-photo.jpg"
   bio: "Analista de Sistemas de Informação | Infraestrutura de Redes | Automação | Segurança"
   location: "São Paulo, SP - Brasil"
-  email: "edgardo.correa@email.com"  # ATENÇÃO: Substitua por seu email real
+  email: "edgardo.correa@email.com"  # ATENÇÃO: Email pessoal
   links:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
@@ -74,8 +74,9 @@ defaults:
       share: true
       related: true
       show_date: true
+      toc: false  # <-- FALSE
       sidebar:
-        nav: ""  # Remove sidebar de navegação
+        nav: ""
       
   # _pages (Páginas)
   - scope:
@@ -84,8 +85,9 @@ defaults:
     values:
       layout: single
       author_profile: false
+      toc: false  # <-- FALSE
       sidebar:
-        nav: ""  # Remove sidebar de navegação
+        nav: ""
   
   # _portfolio (Portfólio)
   - scope:
@@ -95,9 +97,9 @@ defaults:
       layout: single
       author_profile: false
       share: true
+      toc: false  # <-- FALSE
       sidebar:
         nav: ""
-
 # ==================== PAGINAÇÃO ====================
 paginate: 6  # CORRIGIDO: 6 é melhor para layout de 2 colunas
 paginate_path: /blog/page:num/  # MELHORADO: Adiciona /blog/ ao caminho
