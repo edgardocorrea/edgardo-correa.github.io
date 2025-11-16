@@ -467,11 +467,21 @@ const skills = [
 /* ==================== EXECUTAR COMANDO ==================== */
 function executeCommand(cmd) {
   cmd = cmd.toLowerCase().trim();
-
+  
+  // Garante que o input sempre tenha o placeholder correto
+  commandInput.placeholder = "Digite um comando aqui...na duvida digite ajuda...";
+  
+  // Adiciona o comando digitado ao terminal
   addLine(`edgardo@lnx:~$ ${cmd}`);
 
   if (cmd === "apagar") {
     terminalOutput.innerHTML = "";
+    // Restaura a mensagem inicial após limpar
+    addLine(`<span class="success">╔══════════════════════════════════════════════════════════════╗</span>`);
+    addLine(`<span class="success">║  Bem-vindo ao Sistema de Carreira de Edgardo Correa          ║</span>`);
+    addLine(`<span class="success">║  Analista de Sistemas | Infraestrutura & Automação           ║</span>`);
+    addLine(`<span class="success">╚══════════════════════════════════════════════════════════════╝</span>`);
+    addLine(`<span class="output">Terminal limpo. Digite um comando ou clique em uma sugestão abaixo ↓</span>`);
     return;
   }
 
@@ -515,6 +525,7 @@ function renderSkills() {
   });
 }
 
+// Event listener para o input
 commandInput.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
     executeCommand(commandInput.value);
@@ -522,4 +533,8 @@ commandInput.addEventListener("keypress", (e) => {
   }
 });
 
+// Inicialização para garantir que o placeholder apareça
+document.addEventListener("DOMContentLoaded", function() {
+  commandInput.placeholder = "Digite um comando aqui...na duvida digite ajuda...";
+});
 </script>
