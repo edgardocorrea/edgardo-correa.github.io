@@ -536,7 +536,7 @@ body {
 <section class="hero-section">
   <div class="avatar-container">
     <div class="avatar-glow"></div>
-    <img src="./minha_foto.jpg" alt="Logo EC" />
+    <img src="./assets/images/minha_foto.jpg" alt="Logo EC" />
   </div>
   
   <h1 class="hero-title">EDGARDO CORREA</h1>
