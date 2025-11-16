@@ -84,13 +84,12 @@ body {
   font-family: 'Courier New', monospace;
 }
 
-/* Terminal Output */
 .terminal-output {
   min-height: 400px;
   color: #00d4ff;
   font-size: 14px;
   line-height: 1.6;
-  white-space: pre; /* ← ARRUMA A CAIXA ASCII */
+  white-space: pre-wrap; /* Mudança de pre para pre-wrap */
   font-family: 'Courier New', monospace;
 }
 
@@ -98,6 +97,11 @@ body {
   margin-bottom: 2px;
   opacity: 0;
   animation: fadeIn 0.3s forwards;
+  letter-spacing: 0; /* Garante espaçamento consistente entre caracteres */
+}
+
+.success, .output, .command, .error, .warning {
+  display: inline-block; /* Ajuda a manter o espaçamento consistente */
 }
 
 @keyframes fadeIn {
@@ -472,16 +476,16 @@ function executeCommand(cmd) {
   // Adiciona o comando digitado ao terminal
   addLine(`edgardo@lnx:~$ ${cmd}`);
 
-  if (cmd === "apagar") {
-    terminalOutput.innerHTML = "";
-    // Restaura a mensagem inicial após limpar
-    addLine(`<span class="success">╔══════════════════════════════════════════════════════════════╗</span>`);
-    addLine(`<span class="success">║  Bem-vindo ao Sistema de Informação de Edgardo Correa        ║</span>`);
-    addLine(`<span class="success">║  Analista de Sistemas | Curriculo On-Line versão 1.3b        ║</span>`);
-    addLine(`<span class="success">╚══════════════════════════════════════════════════════════════╝</span>`);
-    addLine(`<span class="output">Terminal limpo. Digite um comando ou clique em uma sugestão abaixo ↓</span>`);
-    return;
-  }
+if (cmd === "apagar") {
+  terminalOutput.innerHTML = "";
+  // Restaura a mensagem inicial após limpar
+  addLine(`<span class="success">╔══════════════════════════════════════════════════════════════╗</span>`);
+  addLine(`<span class="success">║  Bem-vindo ao Sistema de Informação de Edgardo Correa        ║</span>`);
+  addLine(`<span class="success">║  Analista de Sistemas | Curriculo On-Line versão 1.3b        ║</span>`);
+  addLine(`<span class="success">╚══════════════════════════════════════════════════════════════╝</span>`);
+  addLine(`<span class="output">Terminal limpo. Digite um comando ou clique em uma sugestão abaixo ↓</span>`);
+  return;
+}
 
   if (cmd === "habilidades") {
     addLine(commands[cmd]);
