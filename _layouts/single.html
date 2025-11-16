@@ -29,8 +29,7 @@ layout: default
 
     <div class="page__inner-wrap">
       {% unless page.header.overlay_color or page.header.overlay_image %}
-        <header>
-          {% if page.title -%}
+        page.title -%}
           <h1 id="page-title" class="page__title" itemprop="headline">
             <a href="{{ page.url | absolute_url }}" itemprop="url">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</a>
           </h1>
@@ -69,10 +68,8 @@ layout: default
     {% endif %}
   </article>
 
-  {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
   {% if page.id and page.related and site.related_posts.size > 0 %}
     {% include page__related.html posts=site.related_posts %}
-  {% comment %}<!-- otherwise show recent posts if no related when `related: true` -->{% endcomment %}
   {% elsif page.id and page.related %}
     {% include page__related.html posts=site.posts %}
   {% endif %}
