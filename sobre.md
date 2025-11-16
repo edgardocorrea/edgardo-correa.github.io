@@ -3,6 +3,7 @@ layout: single
 title: ""
 permalink: /sobre/
 author_profile: false
+sidebar: null
 ---
 <div id="custom-sobre-page">
 
