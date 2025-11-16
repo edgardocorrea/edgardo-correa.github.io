@@ -60,12 +60,11 @@ body {
   position: relative;
 }
 
-/* Terminal Header */
+/* HEADER */
 .terminal-header {
   display: flex;
   gap: 8px;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
   border-bottom: 1px solid #00d4ff;
 }
 
@@ -98,7 +97,7 @@ body {
 }
 
 .terminal-line {
-  margin-bottom: 10px;
+  margin-bottom: 2px;
   opacity: 0;
   animation: fadeIn 0.3s forwards;
 }
@@ -307,7 +306,7 @@ body {
   <div class="terminal-input-area">
     <span class="prompt">edgardo@carreira:~$</span>
     <!-- PLACEHOLDER VAZIO -->
-    <input type="text" class="terminal-input" id="commandInput" placeholder="" autofocus>
+    <input type="text" class="terminal-input" id="commandInput" placeholder="Digite um comando aqui...na duvida digite ajuda..." autofocus>
     <span class="cursor"></span>
   </div>
 </div>
