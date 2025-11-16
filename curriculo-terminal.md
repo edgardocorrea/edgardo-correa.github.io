@@ -303,38 +303,24 @@ const skills = [
 function executeCommand(cmd) {
   cmd = cmd.toLowerCase().trim();
 
-  // Se for comando vazio, não faz nada
-  if (cmd === "") return;
+  addLine(`edgardo@carreira:~$ ${cmd}`);
 
-  // Sempre limpar antes de imprimir nova saída
-  terminalOutput.innerHTML = "";
-
-  // Adiciona linha do comando digitado
-  addLine(`<span class="prompt">edgardo@career:~$</span> <span class="command">${cmd}</span>`);
-
-  // Comando CLEAR mantém a tela apenas limpa
-  if (cmd === "clear") return;
-
-  // HABILIDADES precisa renderizar barras dinamicamente
-  if (cmd === "skills") {
-    addLine(commands.skills);
-    setTimeout(renderSkills, 50);
+  if (cmd === "apagar") {
+    terminalOutput.innerHTML = "";
     return;
   }
 
-  // Se o comando existir no objeto
-  if (commands[cmd]) {
+  if (cmd === "habilidades") {
     addLine(commands[cmd]);
-  } else {
-    // Comando não encontrado
-    addLine(`<span class="error">bash: ${cmd}: comando não encontrado</span>`);
-    addLine(`<span class="output">Digite <span class="command">ajuda</span> para ver os comandos disponíveis.</span>`);
+    setTimeout(renderSkills, 100);
+    return;
   }
 
-  // Scroll no final
+  if (commands[cmd]) addLine(commands[cmd]);
+  else addLine(`Comando não encontrado. Digite "ajuda".`);
+
   terminalOutput.scrollTop = terminalOutput.scrollHeight;
 }
-
 
 function addLine(text) {
   const div = document.createElement("div");
