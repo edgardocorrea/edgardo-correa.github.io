@@ -536,19 +536,19 @@ body {
 <section class="hero-section">
   <div class="avatar-container">
     <div class="avatar-glow"></div>
-    <img src="/assets/images/minha_foto.jpg" alt="Logo EC" />
+    <img src="/assets/images/minha_foto.png" alt="Logo EC" />
   </div>
   
   <h1 class="hero-title">EDGARDO CORREA</h1>
   
-  <div class="typewriter">Analista de Sistemas | Tech Enthusiast</div>
+  <div class="typewriter">Analista de Sistemas</div>
   
   <p class="hero-description">
     Transformando desafios técnicos em soluções elegantes. 
     Especializado em infraestrutura, redes e automação com paixão por inovação.
   </p>
   
-  <a href="#contato" class="cta-button">Vamos Conversar! 🚀</a>
+  <a href="#contato" class="cta-button">Entre em contato comigo.</a>
   
   <div class="scroll-indicator">
     <span style="font-size: 32px;">↓</span>
