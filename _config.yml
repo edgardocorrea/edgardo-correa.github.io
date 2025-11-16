@@ -18,9 +18,6 @@ repository: "edgardocorrea/edgardocorrea.github.io"
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 minimal_mistakes_skin: "default"  # Opções: air, aqua, contrast, dark, dirt, neon, mint, plum, sunrise
 
-# >>>>> COLOQUE A LINHA AQUI <<<<<
-author_profile: false
-
 # ==================== CONFIGURAÇÕES DE HEADER ====================
 logo: ""  # Deixe vazio para header compacto
 masthead_title: "Edgardo Correa"
