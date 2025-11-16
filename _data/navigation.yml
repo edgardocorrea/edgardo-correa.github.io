@@ -1,6 +1,6 @@
 main:
   - title: "Sobre Mim"
-    url: /
+    url: /sobre/
   - title: "Projetos"
     url: /portfolio/
   - title: "Habilidades" # NOVO
