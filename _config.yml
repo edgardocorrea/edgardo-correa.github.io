@@ -75,6 +75,7 @@ defaults:
       related: true
       show_date: true
       toc: false  # <-- FALSE
+      toc_sticky: false
       sidebar:
         nav: ""
       
@@ -86,6 +87,7 @@ defaults:
       layout: single
       author_profile: false
       toc: false  # <-- FALSE
+      toc_sticky: false
       sidebar:
         nav: ""
   
@@ -98,6 +100,7 @@ defaults:
       author_profile: false
       share: true
       toc: false  # <-- FALSE
+      toc_sticky: false
       sidebar:
         nav: ""
 # ==================== PAGINAÇÃO ====================
