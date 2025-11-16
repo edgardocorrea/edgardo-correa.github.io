@@ -77,6 +77,11 @@ body {
   z-index: 1;
 }
 
+.sobre-brilhante {
+  color: #ffffff;
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #00eaff, 0 0 30px #00eaff;
+}
+
 .avatar-container {
   width: 200px;
   height: 200px;
@@ -563,7 +568,7 @@ body {
     <div class="accordion-header" onclick="toggleAccordion(this)">
       <div class="accordion-title">
         <span class="accordion-icon">💡</span>
-        <span>Sobre Mim</span>
+        <span class="sobre-brilhante">Sobre Mim</span>
       </div>
       <span class="accordion-arrow">▼</span>
     </div>
