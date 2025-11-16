@@ -72,10 +72,9 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 60px 20px;
+  padding: 60px 20px 80px 20px;
   position: relative;
   z-index: 1;
-  padding-bottom: 120px; /* espaço para o scroll-indicator */
 }
 
 .sobre-brilhante {
@@ -196,7 +195,7 @@ body {
 
 .scroll-indicator {
   position: absolute;
-  bottom: 30px;
+  bottom: 20px;  /* MUDEI: era bottom: 30px; */
   left: 50%;
   transform: translateX(-50%);
   color: #00eaff;
@@ -213,7 +212,7 @@ body {
 .content-section {
   position: relative;
   z-index: 1;
-  margin: 80px 0;
+  margin: 80px 0 40px 0;  /* MUDEI: era margin: 80px 0; */
 }
 
 .section-accordion {
