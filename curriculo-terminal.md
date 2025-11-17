@@ -48,7 +48,7 @@ body {
 /* ==================== TERMINAL CONTAINER ==================== */
 .terminal-container {
   background: #000814;
-  border: 2px solid #00d4ff;
+  border: 2px solid #ffffff  #terminal;
   border-radius: 8px;
   padding: 20px;
   margin: 20px auto;
@@ -63,7 +63,7 @@ body {
   display: flex;
   gap: 8px;
   padding-bottom: 8px;
-  border-bottom: 1px solid #00d4ff;
+  border-bottom: 1px solid #ffffff  #terminal;
 }
 
 .terminal-button {
@@ -78,7 +78,7 @@ body {
 .btn-maximize { background: #55ff55; }
 
 .terminal-title {
-  color: #00d4ff;
+  color: #ffffff  #terminal;
   margin-left: 10px;
   font-size: 12px;
   font-family: 'Courier New', monospace;
@@ -87,7 +87,7 @@ body {
 /* Terminal Output */
 .terminal-output {
   min-height: 400px;
-  color: #00d4ff;
+  color: #ffffff  #terminal;
   font-size: 14px;
   line-height: 1.6;
   white-space: pre-wrap; /* Mantém a formatação da arte ASCII */
@@ -110,7 +110,7 @@ body {
 }
 
 .prompt {
-  color: #00d4ff;
+  color: #ffffff  #terminal;
   font-weight: bold;
 }
 
@@ -140,7 +140,7 @@ body {
   align-items: center;
   margin-top: 20px;
   padding-top: 20px;
-  border-top: 1px solid #00d4ff;
+  border-top: 1px solid #ffffff  #terminal;
 }
 
 .terminal-input {
@@ -148,12 +148,12 @@ body {
   border: 1px solid #ffffff;
   border-radius: 4px;
   padding: 5px;
-  color: #00d4ff;
+  color: #ffffff  #terminal;
   font-family: 'Courier New', monospace;
   font-size: 14px;
   flex: 1;
   outline: none;
-  caret-color: #00d4ff;
+  caret-color: #ffffff  #terminal;
   box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff;
 }
 
@@ -161,7 +161,7 @@ body {
   display: inline-block;
   width: 8px;
   height: 16px;
-  background: #00d4ff;
+  background: #ffffff  #terminal;
   animation: blink 1s infinite;
   margin-left: 2px;
 }
@@ -174,7 +174,7 @@ body {
 /* Command Suggestions */
 .command-suggestions {
   background: rgba(0, 212, 255, 0.05);
-  border: 1px solid #00d4ff;
+  border: 1px solid #ffffff  #terminal;
   border-radius: 4px;
   padding: 15px;
   margin-top: 20px;
@@ -215,7 +215,7 @@ body {
 .command-item:hover {
   background: rgba(0, 212, 255, 0.2);
   transform: translateX(5px);
-  border-color: #00d4ff;
+  border-color: #ffffff  #terminal;
   box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
 }
 
@@ -236,7 +236,7 @@ body {
   flex: 1;
   height: 22px;
   background: rgba(0, 212, 255, 0.1);
-  border: 1px solid #00d4ff;
+  border: 1px solid #ffffff  #terminal;
   border-radius: 4px;
   overflow: hidden;
   position: relative;
@@ -244,7 +244,7 @@ body {
 
 .skill-fill {
   height: 100%;
-  background: linear-gradient(90deg, #00d4ff, #00ffff);
+  background: linear-gradient(90deg, #ffffff  #terminal, #00ffff);
   transition: width 1s ease;
   display: flex;
   align-items: center;
