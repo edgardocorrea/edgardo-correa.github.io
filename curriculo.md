@@ -440,8 +440,7 @@ DOWNLOAD DO CURRÍCULO
 Preparando download...
 ✓ Currículo atualizado
 
-Clique no link abaixo:
-<span style="font-size:18px;">▶</span> <a href="https://www.linkedin.com/in/edgardocorrea/"
+<a href="https://www.linkedin.com/in/edgardocorrea/"
    target="_blank"
    style="
       display:inline-flex;
