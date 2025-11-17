@@ -1,7 +1,7 @@
 ---
 title: ""
 layout: single
-permalink: /curriculo-terminal/
+permalink: /curriculo/
 classes: wide
 author_profile: false
 ---
