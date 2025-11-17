@@ -819,7 +819,7 @@ body {
           <div class="social-description">Explore meus projetos</div>
         </a>
         
-        <a href="mailto:seu-email@exemplo.com" class="social-card email">
+        <a href="mailto:edgardo.edyone-1@yahoo.com" class="social-card email">
           <span class="social-icon">📧</span>
           <div class="social-title">Email</div>
           <div class="social-description">Envie uma mensagem direta</div>
