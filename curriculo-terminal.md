@@ -232,7 +232,7 @@ body {
 
 .skill-name {
   width: 180px;
-  color: #00ffff;
+  color: #ffffff;
   font-family: 'Courier New', monospace;
 }
 
