@@ -48,7 +48,7 @@ body {
 /* ==================== TERMINAL CONTAINER ==================== */
 .terminal-container {
   background: #000814;
-  border: 2px solid #ffffff  #terminal;
+  border: 2px solid #ffffff;
   border-radius: 8px;
   padding: 20px;
   margin: 20px auto;
@@ -63,7 +63,7 @@ body {
   display: flex;
   gap: 8px;
   padding-bottom: 8px;
-  border-bottom: 1px solid #ffffff  #terminal;
+  border-bottom: 1px solid #ffffff;
 }
 
 .terminal-button {
@@ -78,7 +78,7 @@ body {
 .btn-maximize { background: #55ff55; }
 
 .terminal-title {
-  color: #ffffff  #terminal;
+  color: #ffffff;
   margin-left: 10px;
   font-size: 12px;
   font-family: 'Courier New', monospace;
@@ -87,7 +87,7 @@ body {
 /* Terminal Output */
 .terminal-output {
   min-height: 400px;
-  color: #ffffff  #terminal;
+  color: #ffffff;
   font-size: 14px;
   line-height: 1.6;
   white-space: pre-wrap; /* Mantém a formatação da arte ASCII */
@@ -110,7 +110,7 @@ body {
 }
 
 .prompt {
-  color: #ffffff  #terminal;
+  color: #ffffff;
   font-weight: bold;
 }
 
@@ -144,7 +144,7 @@ body {
   align-items: center;
   margin-top: 20px;
   padding-top: 20px;
-  border-top: 1px solid #ffffff  #terminal;
+  border-top: 1px solid #ffffff;
 }
 
 .terminal-input {
@@ -152,12 +152,12 @@ body {
   border: 1px solid #ffffff;
   border-radius: 4px;
   padding: 5px;
-  color: #ffffff  #terminal;
+  color: #ffffff;
   font-family: 'Courier New', monospace;
   font-size: 14px;
   flex: 1;
   outline: none;
-  caret-color: #ffffff  #terminal;
+  caret-color: #ffffff;
   box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff;
 }
 
@@ -165,7 +165,7 @@ body {
   display: inline-block;
   width: 8px;
   height: 16px;
-  background: #ffffff  #terminal;
+  background: #ffffff;
   animation: blink 1s infinite;
   margin-left: 2px;
 }
@@ -178,7 +178,7 @@ body {
 /* Command Suggestions */
 .command-suggestions {
   background: rgba(0, 212, 255, 0.05);
-  border: 1px solid #ffffff  #terminal;
+  border: 1px solid #ffffff;
   border-radius: 4px;
   padding: 15px;
   margin-top: 20px;
@@ -219,7 +219,7 @@ body {
 .command-item:hover {
   background: rgba(0, 212, 255, 0.2);
   transform: translateX(5px);
-  border-color: #ffffff  #terminal;
+  border-color: #ffffff;
   box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
 }
 
@@ -240,7 +240,7 @@ body {
   flex: 1;
   height: 22px;
   background: rgba(0, 212, 255, 0.1);
-  border: 1px solid #ffffff  #terminal;
+  border: 1px solid #ffffff;
   border-radius: 4px;
   overflow: hidden;
   position: relative;
