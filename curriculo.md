@@ -440,29 +440,28 @@ DOWNLOAD DO CURRÍCULO
 Preparando download...
 ✓ Currículo atualizado
 
-<a href="https://www.linkedin.com/in/edgardocorrea/"
+<a href="https://www.linkedin.com/in/SEU_USUARIO_LINKEDIN/"
    target="_blank"
    style="
       display:inline-flex;
       align-items:center;
-      gap:10px;
-      padding:10px 16px;
+      gap:6px;
+      padding:6px 10px;
       background:#0A66C2;
       color:white;
-      border-radius:6px;
-      font-size:16px;
+      border-radius:5px;
+      font-size:14px;
       font-weight:600;
       text-decoration:none;
       font-family:Arial, sans-serif;
    "
 >
-   <!-- Ícone SVG do LinkedIn -->
-   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
+   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" viewBox="0 0 24 24">
       <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.22 8.47h4.55V24H.22V8.47zM8.54 8.47h4.36v2.11h.06c.61-1.15 2.11-2.36 4.34-2.36 4.64 0 5.5 3.05 5.5 7.02V24h-4.55v-7.77c0-1.85-.03-4.23-2.58-4.23-2.58 0-2.97 2.01-2.97 4.09V24H8.54V8.47z"/>
    </svg>
-
-   Ver / Baixar Currículo no LinkedIn
+   Ver Currículo
 </a>
+
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`,
 
