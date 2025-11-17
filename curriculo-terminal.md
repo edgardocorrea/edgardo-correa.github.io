@@ -122,6 +122,10 @@ body {
   color: #ffffff;
 }
 
+.outputw {
+  color: #006400;
+}
+
 .error {
   color: #ff5555;
 }
@@ -465,10 +469,10 @@ const skills = [
  */
 function showWelcomeMessage() {
   terminalOutput.innerHTML = ""; // Limpa o terminal antes de exibir
-  addLine(`<span class="output">╔══════════════════════════════════════════════════════════════╗</span>`);
-  addLine(`<span class="output">║  Bem-vindo ao Sistema de Informação de Edgardo Correa        ║</span>`);
-  addLine(`<span class="output">║  Analista de Sistemas | Curriculo On-Line versão 1.3b        ║</span>`);
-  addLine(`<span class="output">╚══════════════════════════════════════════════════════════════╝</span>`);
+  addLine(`<span class="outputw">╔══════════════════════════════════════════════════════════════╗</span>`);
+  addLine(`<span class="outputw">║  Bem-vindo ao Sistema de Informação de Edgardo Correa        ║</span>`);
+  addLine(`<span class="outputw">║  Analista de Sistemas | Curriculo On-Line versão 1.3b        ║</span>`);
+  addLine(`<span class="outputw">╚══════════════════════════════════════════════════════════════╝</span>`);
   addLine(`<span class="output">Sistema inicializado...</span>`);
   addLine(`<span class="output">Digite um comando ou clique em uma sugestão abaixo ↓</span>`);
 }
