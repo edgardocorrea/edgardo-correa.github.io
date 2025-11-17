@@ -312,10 +312,10 @@ body {
 <div class="command-suggestions">
   <h3>⚡ Comandos disponíveis:</h3>
   <div class="command-list">
-    <div class="command-item" onclick="executeCommand('quem')">📋 quem</div>
-    <div class="command-item" onclick="executeCommand('habilidades')">💻 habilidades</div>
+    <div class="command-item" onclick="executeCommand('quem')">👤 quem</div>
+    <div class="command-item" onclick="executeCommand('habilidades')">🖥️ habilidades</div>
     <div class="command-item" onclick="executeCommand('experiencia')">📊 experiência</div>
-    <div class="command-item" onclick="executeCommand('projetos')">🚀 projetos</div>
+    <div class="command-item" onclick="executeCommand('projetos')">📘 projetos</div>
     <div class="command-item" onclick="executeCommand('contato')">📧 contato</div>
     <div class="command-item" onclick="executeCommand('baixar')">⬇️ baixar</div>
     <div class="command-item" onclick="executeCommand('apagar')">🗑️ apagar</div>
@@ -404,7 +404,7 @@ EXPERIÊNCIA PROFISSIONAL (RESUMO)
 PROJETOS DESTAQUES
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-🚀 Modem VIVO Configuração avançada
+📘 Modem VIVO Configuração avançada
 Desbloqueio automatizado de configurações do modem Askey
 RTF8115VW REV5.
 
@@ -440,7 +440,7 @@ DOWNLOAD DO CURRÍCULO
 Preparando download...
 ✓ Currículo atualizado
 
-<a href="https://www.linkedin.com/in/SEU_USUARIO_LINKEDIN/"
+<a href="https://www.linkedin.com/in/edgardocorrea/"
    target="_blank"
    style="
       display:inline-flex;
