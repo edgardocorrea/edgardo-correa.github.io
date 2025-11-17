@@ -629,7 +629,7 @@ body {
     Especializado em infraestrutura, redes e automação com paixão por inovação.
   </p>
   
-  <a href="#contato" class="cta-button">Entre em contato comigo.</a>
+  <a href="#contato" class="cta-button">Entre em contato.</a>
   
   <div class="scroll-indicator">
     <span style="font-size: 32px;">↓</span>
@@ -666,7 +666,7 @@ body {
     <div class="accordion-header" onclick="toggleAccordion(this)">
       <div class="accordion-title">
         <span class="accordion-icon">🔷</span>
-        <span class="sobre-brilhante">Arsenal Técnico</span>
+        <span class="sobre-brilhante">Resumo hábil</span>
       </div>
       <span class="accordion-arrow">▼</span>
     </div>
@@ -678,20 +678,20 @@ body {
           <div class="skill-item">
             <div class="skill-header">
               <span class="skill-name">Windows Server</span>
-              <span class="skill-level">90%</span>
+              <span class="skill-level">75%</span>
             </div>
             <div class="skill-bar">
-              <div class="skill-fill" style="--skill-width: 90%;"></div>
+              <div class="skill-fill" style="--skill-width: 75%;"></div>
             </div>
           </div>
           
           <div class="skill-item">
             <div class="skill-header">
               <span class="skill-name">Active Directory</span>
-              <span class="skill-level">85%</span>
+              <span class="skill-level">75%</span>
             </div>
             <div class="skill-bar">
-              <div class="skill-fill" style="--skill-width: 85%;"></div>
+              <div class="skill-fill" style="--skill-width: 75%;"></div>
             </div>
           </div>
           
@@ -712,30 +712,30 @@ body {
           <div class="skill-item">
             <div class="skill-header">
               <span class="skill-name">PowerShell</span>
-              <span class="skill-level">85%</span>
+              <span class="skill-level">80%</span>
             </div>
             <div class="skill-bar">
-              <div class="skill-fill" style="--skill-width: 85%;"></div>
+              <div class="skill-fill" style="--skill-width: 80%;"></div>
             </div>
           </div>
           
           <div class="skill-item">
             <div class="skill-header">
               <span class="skill-name">Node.js</span>
-              <span class="skill-level">75%</span>
+              <span class="skill-level">72%</span>
             </div>
             <div class="skill-bar">
-              <div class="skill-fill" style="--skill-width: 75%;"></div>
+              <div class="skill-fill" style="--skill-width: 72%;"></div>
             </div>
           </div>
           
           <div class="skill-item">
             <div class="skill-header">
               <span class="skill-name">JavaScript</span>
-              <span class="skill-level">80%</span>
+              <span class="skill-level">70%</span>
             </div>
             <div class="skill-bar">
-              <div class="skill-fill" style="--skill-width: 80%;"></div>
+              <div class="skill-fill" style="--skill-width: 70%;"></div>
             </div>
           </div>
         </div>
@@ -803,7 +803,7 @@ body {
     </div>
     <div class="accordion-content">
       <p style="color: #b3d9ff; text-align: center; margin-bottom: 30px; font-size: 18px;">
-        Sempre aberto para conversas sobre tecnologia, oportunidades ou apenas trocar ideias! 🚀
+        Sempre aberto para conversas sobre tecnologia, oportunidades ou apenas trocar ideias!
       </p>
       
       <div class="social-links">
