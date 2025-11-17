@@ -441,7 +441,27 @@ Preparando download...
 ✓ Currículo atualizado
 
 Clique no link abaixo:
-👉 <a href="/assets/files/curriculo-edgardo-correa.pdf" style="color:#00ffff" download>Baixar PDF</a>
+<span style="font-size:18px;">▶</span> <a href="https://www.linkedin.com/in/edgardocorrea/"
+   target="_blank"
+   style="
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:12px 18px;
+      background:#0A66C2;
+      color:white;
+      border-radius:8px;
+      font-size:16px;
+      font-weight:600;
+      text-decoration:none;
+      font-family:Arial, sans-serif;
+   "
+>
+   <svg width="18" height="18" fill="white" viewBox="0 0 24 24">
+      <path d="M10 17l6-5-6-5v10z"/>
+   </svg>
+   Ver / Baixar Currículo no LinkedIn
+</a>
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`,
 
