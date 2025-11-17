@@ -187,14 +187,22 @@ body {
 
 .typewriter {
   font-size: 28px;
-  color: #00ff88;
-  font-weight: 600;
+  color: #ffffff; /* agora branco brilhante */
+  font-weight: 700;
   margin-bottom: 30px;
-  border-right: 3px solid #00ff88;
+
+  /* Cursor piscando melhorado */
+  border-right: 3px solid #ffffff;
+  text-shadow:
+    0 0 10px #fff,
+    0 0 20px #00eaff,
+    0 0 40px #00eaff;
+
   white-space: nowrap;
   overflow: hidden;
   animation: typing 3s steps(40) 1s 1 normal both, blink 0.7s infinite;
 }
+
 
 @keyframes typing {
   from { width: 0; }
@@ -216,8 +224,8 @@ body {
 .cta-button {
   display: inline-block;
   padding: 16px 40px;
-  background: linear-gradient(135deg, #00ff88, #00ccaa);
-  color: #000814;
+  background: #ffffff;
+  color: #000;
   font-size: 18px;
   font-weight: 700;
   text-decoration: none;
@@ -225,14 +233,30 @@ body {
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
-  box-shadow: 0 0 30px rgba(0, 255, 136, 0.4);
-  animation: ctaPulse 2s ease-in-out infinite;
+  box-shadow: 0 0 22px rgba(255, 255, 255, 0.7),
+              0 0 42px rgba(255, 255, 255, 0.9),
+              inset 0 0 15px rgba(255, 255, 255, 0.5);
 }
 
+/* Efeito clique/hover neon */
 .cta-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 40px rgba(0, 255, 136, 0.6);
+  background: #fff;
+  box-shadow: 
+    0 0 25px rgba(255,255,255,1),
+    0 0 55px rgba(255,255,255,1),
+    0 0 85px rgba(0,234,255,0.9),
+    inset 0 0 25px rgba(255,255,255,0.8);
 }
+
+.cta-button:active {
+  transform: scale(0.96);
+  box-shadow:
+    0 0 35px rgba(255,255,255,1),
+    0 0 70px rgba(0,234,255,1),
+    inset 0 0 35px rgba(255,255,255,1);
+}
+
 
 @keyframes ctaPulse {
   0%, 100% { box-shadow: 0 0 30px rgba(0, 255, 136, 0.4); }
