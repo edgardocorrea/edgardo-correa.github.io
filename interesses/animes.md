@@ -17,13 +17,12 @@ sidebar: null
 body {
   font-family: 'Inter', 'Segoe UI', sans-serif;
   overflow-x: hidden;
-  background: #0a1428;
 }
 
 .page__content {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 /* ==================== BACKGROUND ==================== */
@@ -61,21 +60,36 @@ body {
 }
 
 /* ==================== HERO BANNER ==================== */
+
+/* Ajuste da imagem SEM cortar */
 .hero-banner {
-  position: relative;
-  height: 500px; /* Aumentado para acomodar melhor a imagem */
-  border-radius: 25px;
-  overflow: hidden;
-  margin-bottom: 60px;
-  box-shadow: 0 15px 40px rgba(0, 20, 40, 0.85);
+  height: auto; /* ou fixe altura, se preferir OPTION B */
 }
 
 .hero-banner img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 30%; /* Ajustado para mostrar a parte superior da imagem */
+  height: auto;
+  object-fit: contain;
+  object-position: center;
 }
+
+/* Título azul neon */
+.hero-title {
+  font-size: 56px;
+  font-weight: 900;
+  color: #00eaff;
+  text-shadow:
+      0 0 10px #00eaff,
+      0 0 20px #00eaff,
+      0 0 30px #00eaff,
+      0 0 40px #00eaff;
+}
+
+/* Remover icon & subtitle: basta excluir do HTML */
+.hero-icon, .hero-subtitle { display: none; }
+
+
+
 
 .hero-banner::before {
   content: '';
@@ -98,17 +112,6 @@ body {
   margin-bottom: 15px;
   display: block;
   animation: float 3s ease-in-out infinite;
-}
-
-.hero-title {
-  font-size: 56px;
-  font-weight: 900;
-  background: linear-gradient(90deg, #ffffff, #00eaff, #ffffff);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradient 3s ease infinite;
-  text-shadow: 0 0 30px rgba(0, 238, 255, 0.4);
 }
 
 .hero-subtitle {
