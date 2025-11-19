@@ -1,6 +1,6 @@
 ---
 layout: single
-title: ""
+title: "Animes & Séries"
 permalink: /interesses/animes/
 author_profile: false
 sidebar: null
@@ -16,8 +16,6 @@ sidebar: null
 
 body {
   font-family: 'Inter', 'Segoe UI', sans-serif;
-  overflow-x: hidden;
-  background: #0a1428;
 }
 
 .page__content {
