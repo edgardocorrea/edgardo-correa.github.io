@@ -6,6 +6,7 @@ author_profile: false
 sidebar: null
 ---
 
+<style>
 /* ==================== BASE & RESET ==================== */
 * {
   margin: 0;
@@ -235,6 +236,10 @@ body {
 .back-button:hover {
   box-shadow: 0 10px 30px rgba(0, 238, 255, 0.6);
 }
+</style>
+
+
+
 
 <div class="particles-bg"></div>
 
