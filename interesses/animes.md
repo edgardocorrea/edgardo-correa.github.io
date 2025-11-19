@@ -74,6 +74,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .hero-banner::before {
@@ -157,12 +158,14 @@ body {
   font-weight: 900;
   color: #ffffff;
   text-shadow: 0 0 20px rgba(0, 238, 255, 0.6);
+  margin-bottom: 5px;
 }
 
 .anime-subtitle {
   font-size: 16px;
   color: #00eaff;
   font-weight: 600;
+  margin-bottom: 25px;
 }
 
 /* ==================== SLIDESHOW ==================== */
@@ -172,10 +175,13 @@ body {
   border-radius: 20px;
   margin-top: 25px;
   box-shadow: 0 15px 40px rgba(0, 238, 255, 0.25);
+  height: 400px;
 }
 
 .slide {
   display: none;
+  width: 100%;
+  height: 100%;
 }
 
 .slide.active {
@@ -184,6 +190,8 @@ body {
 
 .slide img {
   width: 100%;
+  height: 400px;
+  object-fit: cover;
   border-radius: 20px;
 }
 
@@ -329,100 +337,10 @@ body {
   .anime-title { font-size: 30px; }
   .anime-card { padding: 35px 25px; }
   .slide-arrow { font-size: 28px; padding: 6px 10px; }
+  .slideshow-container { height: 250px; }
+  .slide img { height: 250px; }
 }
-
-/* ==================== ADICIONAL ==================== */
-
-.video-player {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: #000;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.video-screen {
-  position: relative;
-  width: 100%;
-  height: calc(100% - 50px);
-}
-
-#video-thumbnail {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.video-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.3);
-}
-
-.play-button {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: rgba(0, 238, 255, 0.8);
-  border: none;
-  color: white;
-  font-size: 30px;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.play-button:hover {
-  background: rgba(0, 238, 255, 1);
-  transform: scale(1.1);
-}
-
-.video-controls {
-  display: flex;
-  align-items: center;
-  height: 50px;
-  background: rgba(0, 0, 0, 0.8);
-  padding: 0 15px;
-}
-
-.control-btn {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 18px;
-  margin-right: 15px;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.control-btn:hover {
-  color: #00eaff;
-}
-
-.progress-bar {
-  flex-grow: 1;
-  height: 5px;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 5px;
-  cursor: pointer;
-  margin-right: 15px;
-}
-
-.progress {
-  height: 100%;
-  background: #00eaff;
-  border-radius: 5px;
-  width: 0%;
-}
-
 </style>
-
 
 <div class="particles-bg"></div>
 
@@ -461,7 +379,6 @@ body {
   <section class="anime-section">
     <div class="anime-card">
       <div class="anime-header">
-        <span class="anime-logo">⚔️</span>
         <div>
           <h2 class="anime-title">BLEACH</h2>
           <p class="anime-subtitle">A Jornada do Protetor</p>
@@ -540,7 +457,6 @@ body {
   <section class="anime-section">
     <div class="anime-card">
       <div class="anime-header">
-        <span class="anime-logo">🤖</span>
         <div>
           <h2 class="anime-title">NEON GENESIS EVANGELION</h2>
           <p class="anime-subtitle">A Complexidade da Existência Humana</p>
@@ -612,7 +528,6 @@ body {
   <section class="anime-section">
     <div class="anime-card">
       <div class="anime-header">
-        <span class="anime-logo">🔦</span>
         <div>
           <h2 class="anime-title">ARQUIVO X</h2>
           <p class="anime-subtitle">A Verdade Está Lá Fora</p>
@@ -694,7 +609,6 @@ body {
   <section class="anime-section">
     <div class="anime-card">
       <div class="anime-header">
-        <span class="anime-logo">📱</span>
         <div>
           <h2 class="anime-title">BLACK MIRROR</h2>
           <p class="anime-subtitle">O Lado Sombrio da Tecnologia</p>
@@ -788,93 +702,6 @@ body {
 
 <!-- JavaScript -->
 <script>
-
-// Carregar a API do YouTube Iframe Player
-let tag = document.createElement('script');
-tag.src = "https://www.youtube.com/iframe_api";
-let firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-let player;
-
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player('youtube-iframe', {
-    events: {
-      'onReady': onPlayerReady,
-      'onStateChange': onPlayerStateChange
-    }
-  });
-}
-
-function onPlayerReady(event) {
-  // Event listener para o botão de play
-  document.getElementById('play-button').addEventListener('click', function() {
-    document.getElementById('video-overlay').style.display = 'none';
-    player.playVideo();
-  });
-  
-  // Event listener para o botão de play/pause
-  document.getElementById('play-pause-btn').addEventListener('click', function() {
-    if (player.getPlayerState() == YT.PlayerState.PLAYING) {
-      player.pauseVideo();
-      this.textContent = '▶';
-    } else {
-      player.playVideo();
-      this.textContent = '⏸';
-    }
-  });
-  
-  // Event listener para o botão de mute
-  document.getElementById('mute-btn').addEventListener('click', function() {
-    if (player.isMuted()) {
-      player.unMute();
-      this.textContent = '🔊';
-    } else {
-      player.mute();
-      this.textContent = '🔇';
-    }
-  });
-  
-  // Event listener para o botão de fullscreen
-  document.getElementById('fullscreen-btn').addEventListener('click', function() {
-    const iframe = document.getElementById('youtube-iframe');
-    if (iframe.requestFullscreen) {
-      iframe.requestFullscreen();
-    } else if (iframe.webkitRequestFullscreen) {
-      iframe.webkitRequestFullscreen();
-    } else if (iframe.mozRequestFullScreen) {
-      iframe.mozRequestFullScreen();
-    } else if (iframe.msRequestFullscreen) {
-      iframe.msRequestFullscreen();
-    }
-  });
-  
-  // Event listener para a barra de progresso
-  document.querySelector('.progress-bar').addEventListener('click', function(e) {
-    const rect = this.getBoundingClientRect();
-    const pos = (e.clientX - rect.left) / rect.width;
-    player.seekTo(pos * player.getDuration());
-  });
-}
-
-function onPlayerStateChange(event) {
-  // Atualizar o botão de play/pause
-  if (event.data == YT.PlayerState.PLAYING) {
-    document.getElementById('play-pause-btn').textContent = '⏸';
-  } else {
-    document.getElementById('play-pause-btn').textContent = '▶';
-  }
-}
-
-// Atualizar a barra de progresso
-setInterval(function() {
-  if (player && player.getPlayerState() == YT.PlayerState.PLAYING) {
-    const progress = (player.getCurrentTime() / player.getDuration()) * 100;
-    document.getElementById('video-progress').style.width = progress + '%';
-  }
-}, 100);
-
-
 // ==================== SLIDESHOW ====================
 let currentSlide = {};
 
@@ -884,6 +711,7 @@ function initSlideshow(containerId) {
   const slides = container.querySelectorAll('.slide');
   const nav = document.getElementById(containerId.replace('-slideshow', '-nav'));
 
+  // Garantir que o primeiro slide está ativo
   slides[0].classList.add('active');
 
   slides.forEach((_, index) => {
@@ -900,14 +728,18 @@ function changeSlide(containerId, direction) {
   const slides = container.querySelectorAll('.slide');
   const dots = document.getElementById(containerId.replace('-slideshow', '-nav')).querySelectorAll('.slide-dot');
 
+  // Remover classe active do slide atual
   slides[currentSlide[containerId]].classList.remove('active');
   dots[currentSlide[containerId]].classList.remove('active');
 
+  // Calcular próximo slide
   currentSlide[containerId] += direction;
 
+  // Garantir que o índice esteja dentro dos limites
   if (currentSlide[containerId] >= slides.length) currentSlide[containerId] = 0;
   if (currentSlide[containerId] < 0) currentSlide[containerId] = slides.length - 1;
 
+  // Adicionar classe active ao novo slide
   slides[currentSlide[containerId]].classList.add('active');
   dots[currentSlide[containerId]].classList.add('active');
 }
@@ -917,11 +749,14 @@ function goToSlide(containerId, index) {
   const slides = container.querySelectorAll('.slide');
   const dots = document.getElementById(containerId.replace('-slideshow', '-nav')).querySelectorAll('.slide-dot');
 
+  // Remover classe active do slide atual
   slides[currentSlide[containerId]].classList.remove('active');
   dots[currentSlide[containerId]].classList.remove('active');
 
+  // Definir novo slide
   currentSlide[containerId] = index;
 
+  // Adicionar classe active ao novo slide
   slides[index].classList.add('active');
   dots[index].classList.add('active');
 }
@@ -932,13 +767,14 @@ function autoPlay(containerId, interval = 5500) {
 
 // ==================== PAGE INIT ====================
 document.addEventListener('DOMContentLoaded', () => {
+  // Inicializar slideshows
   initSlideshow('bleach-slideshow');
   autoPlay('bleach-slideshow');
 
   initSlideshow('arquivox-slideshow');
   autoPlay('arquivox-slideshow');
 
-  // Animation entrance
+  // Animação de entrada para os cards
   const cards = document.querySelectorAll('.anime-card');
   cards.forEach((card, index) => {
     card.style.opacity = '0';
