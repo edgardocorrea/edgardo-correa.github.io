@@ -16,6 +16,8 @@ sidebar: null
 
 body {
   font-family: 'Inter', 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+  background: #0a1428;
 }
 
 .page__content {
@@ -61,7 +63,7 @@ body {
 /* ==================== HERO BANNER ==================== */
 .hero-banner {
   position: relative;
-  height: 450px;
+  height: 500px; /* Aumentado para acomodar melhor a imagem */
   border-radius: 25px;
   overflow: hidden;
   margin-bottom: 60px;
@@ -72,14 +74,14 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center 30%; /* Ajustado para mostrar a parte superior da imagem */
 }
 
 .hero-banner::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 0%, rgba(10, 20, 40, 0.85) 100%);
+  background: linear-gradient(180deg, rgba(10, 20, 40, 0.4) 0%, rgba(10, 20, 40, 0.85) 100%);
   z-index: 1;
 }
 
