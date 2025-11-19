@@ -193,12 +193,12 @@ body {
   color: #ffffff;
   border-left: 4px solid #00eaff;
   padding-left: 15px;
-  text-shadow: 0 0 8px color: #f6fbff;
+  text-shadow: 0 0 8px #00eaff;
 }
 
 .content-block p {
   font-size: 18px;
-color: #f6fbff;
+  color: #e0eaff;
 }
 
 .highlight-box {
@@ -208,7 +208,11 @@ color: #f6fbff;
 
 .highlight-box strong {
   color: #ffffff;
-  text-shadow: 0 0 8px color: #f6fbff;
+  text-shadow: 0 0 8px #00eaff;
+}
+.highlight-box h3 {
+  color: #ffffff !important;
+  text-shadow: 0 0 8px #00eaff;
 }
 
 /* ==================== TAGS ==================== */
