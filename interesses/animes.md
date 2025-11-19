@@ -17,6 +17,7 @@ sidebar: null
 body {
   font-family: 'Inter', 'Segoe UI', sans-serif;
   overflow-x: hidden;
+  background: #0a1428;
 }
 
 .page__content {
@@ -26,37 +27,32 @@ body {
 }
 
 /* ==================== BACKGROUND ==================== */
-.particles-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 0;
-  pointer-events: none;
-  background: 
-    radial-gradient(circle at 20% 30%, rgba(157, 78, 221, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(255, 0, 110, 0.15) 0%, transparent 50%);
+.initial-content {
+  position: relative;
+  background: rgba(10,20,40,0.85);
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+  backdrop-filter: blur(3px);
+  z-index: 1;
 }
 
 /* ==================== BREADCRUMB ==================== */
 .breadcrumb {
   padding: 20px 0;
-  color: #b3d9ff;
+  color: #e0eaff;
   font-size: 14px;
-  position: relative;
-  z-index: 1;
 }
 
 .breadcrumb a {
-  color: #9D4EDD;
+  color: #00eaff;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .breadcrumb a:hover {
-  color: #FF006E;
-  text-shadow: 0 0 10px rgba(255, 0, 110, 0.5);
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(0, 238, 255, 0.7);
 }
 
 .breadcrumb span {
@@ -71,24 +67,21 @@ body {
   border-radius: 25px;
   overflow: hidden;
   margin-bottom: 60px;
-  box-shadow: 0 20px 60px rgba(157, 78, 221, 0.4);
-}
-
-.hero-banner::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(180deg, transparent 0%, rgba(10, 20, 40, 0.8) 100%);
-  z-index: 1;
+  box-shadow: 0 15px 40px rgba(0, 20, 40, 0.85);
 }
 
 .hero-banner img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(10, 20, 40, 0.85) 100%);
+  z-index: 1;
 }
 
 .hero-content {
@@ -106,310 +99,239 @@ body {
   animation: float 3s ease-in-out infinite;
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
-}
-
 .hero-title {
   font-size: 56px;
   font-weight: 900;
-  background: linear-gradient(90deg, #9D4EDD, #FF006E, #9D4EDD);
+  background: linear-gradient(90deg, #ffffff, #00eaff, #ffffff);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
   animation: gradient 3s ease infinite;
-  margin-bottom: 15px;
-  text-shadow: 0 0 40px rgba(157, 78, 221, 0.6);
-}
-
-@keyframes gradient {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+  text-shadow: 0 0 30px rgba(0, 238, 255, 0.4);
 }
 
 .hero-subtitle {
   font-size: 20px;
-  color: #b3d9ff;
+  color: #e0eaff;
   font-weight: 300;
 }
 
 /* ==================== CONTENT WRAPPER ==================== */
 .content-wrapper {
-  position: relative;
-  z-index: 1;
-  background: rgba(10, 20, 40, 0.85);
+  background: rgba(10, 20, 40, 0.9);
   padding: 50px 40px;
   border-radius: 25px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 10px 40px rgba(0, 238, 255, 0.15);
   backdrop-filter: blur(10px);
-  margin-bottom: 40px;
 }
 
 /* ==================== INTRO SECTION ==================== */
-.intro-section {
-  text-align: center;
-  margin-bottom: 80px;
-}
-
 .intro-text {
   font-size: 20px;
-  color: #b3d9ff;
+  color: #e0eaff;
   line-height: 1.8;
-  max-width: 800px;
-  margin: 0 auto;
 }
 
 .intro-text strong {
-  color: #FF006E;
-  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 0 10px #00eaff;
 }
 
 /* ==================== ANIME CARDS ==================== */
-.anime-section {
-  margin-bottom: 80px;
-}
-
 .anime-card {
-  background: linear-gradient(145deg, rgba(157, 78, 221, 0.1), rgba(255, 0, 110, 0.1));
-  border: 2px solid rgba(157, 78, 221, 0.3);
+  background: linear-gradient(145deg, rgba(0, 238, 255, 0.1), rgba(255, 255, 255, 0.05));
+  border: 2px solid rgba(0, 238, 255, 0.5);
   border-radius: 25px;
-  padding: 40px;
-  margin-bottom: 50px;
-  transition: all 0.4s ease;
+  padding: 50px 45px;
+  margin-bottom: 70px;
+  transition: 0.4s ease;
 }
 
 .anime-card:hover {
   transform: translateY(-10px);
-  border-color: #9D4EDD;
-  box-shadow: 0 20px 50px rgba(157, 78, 221, 0.4);
-}
-
-.anime-header {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 30px;
-  padding-bottom: 20px;
-  border-bottom: 2px solid rgba(157, 78, 221, 0.3);
-}
-
-.anime-logo {
-  font-size: 48px;
+  box-shadow: 0 20px 50px rgba(0, 238, 255, 0.4);
 }
 
 .anime-title {
   font-size: 36px;
   font-weight: 900;
-  color: #9D4EDD;
-  text-shadow: 0 0 20px rgba(157, 78, 221, 0.5);
+  color: #ffffff;
+  text-shadow: 0 0 20px rgba(0, 238, 255, 0.6);
 }
 
 .anime-subtitle {
   font-size: 16px;
-  color: #FF006E;
+  color: #00eaff;
   font-weight: 600;
-  margin-top: 5px;
 }
 
 /* ==================== SLIDESHOW ==================== */
 .slideshow-container {
   position: relative;
-  width: 100%;
-  max-width: 900px;
-  margin: 30px auto;
-  border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 15px 40px rgba(157, 78, 221, 0.3);
+  border-radius: 20px;
+  margin-top: 25px;
+  box-shadow: 0 15px 40px rgba(0, 238, 255, 0.25);
 }
 
 .slide {
   display: none;
-  position: relative;
 }
 
 .slide.active {
   display: block;
-  animation: fadeIn 0.8s ease;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
 }
 
 .slide img {
   width: 100%;
-  height: 500px;
-  object-fit: cover;
+  border-radius: 20px;
 }
 
 .slide-caption {
   position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
-  color: white;
-  padding: 30px 20px 20px;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+  color: #ffffff;
   font-size: 16px;
-  text-align: center;
-}
-
-.slide-nav {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.slide-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: rgba(157, 78, 221, 0.3);
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.slide-dot.active {
-  background: #9D4EDD;
-  box-shadow: 0 0 15px #9D4EDD;
-  transform: scale(1.3);
+  letter-spacing: 1px;
 }
 
 .slide-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(157, 78, 221, 0.8);
-  color: white;
+  background: rgba(0, 238, 255, 0.2);
   border: none;
-  font-size: 24px;
-  padding: 15px 20px;
+  font-size: 40px;
+  color: #ffffff;
+  padding: 10px 18px;
   cursor: pointer;
-  transition: all 0.3s;
-  z-index: 10;
+  transition: 0.3s;
 }
 
 .slide-arrow:hover {
-  background: #9D4EDD;
-  box-shadow: 0 0 20px #9D4EDD;
+  background: rgba(0, 238, 255, 0.5);
 }
 
-.slide-arrow.prev { left: 10px; border-radius: 0 10px 10px 0; }
-.slide-arrow.next { right: 10px; border-radius: 10px 0 0 10px; }
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.slide-nav {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.slide-dot {
+  height: 12px;
+  width: 12px;
+  margin: 4px;
+  background: rgba(0, 238, 255, 0.3);
+  border-radius: 50%;
+  display: inline-block;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.slide-dot.active {
+  background: #00eaff;
+  box-shadow: 0 0 15px #00eaff;
+}
 
 /* ==================== VIDEO EMBED ==================== */
 .video-container {
-  position: relative;
-  width: 100%;
-  max-width: 900px;
-  margin: 30px auto;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  height: 0;
-  border-radius: 15px;
+  margin: 25px 0 35px;
+  aspect-ratio: 16 / 9;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 15px 40px rgba(255, 0, 110, 0.3);
-}
-
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  box-shadow: 0 15px 40px rgba(0, 238, 255, 0.25);
 }
 
 /* ==================== CONTENT BLOCKS ==================== */
-.content-block {
-  margin: 30px 0;
-}
-
 .content-block h3 {
   font-size: 28px;
-  color: #FF006E;
-  margin-bottom: 20px;
-  padding-left: 20px;
-  border-left: 4px solid #9D4EDD;
+  color: #ffffff;
+  border-left: 4px solid #00eaff;
+  padding-left: 15px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 8px #00eaff;
 }
 
 .content-block p {
   font-size: 18px;
-  color: #b3d9ff;
-  line-height: 1.8;
-  margin-bottom: 15px;
+  color: #e0eaff;
+  margin-bottom: 12px;
+  line-height: 1.75;
 }
 
+/* ==================== HIGHLIGHT BOX ==================== */
 .highlight-box {
-  background: rgba(157, 78, 221, 0.15);
-  border-left: 4px solid #9D4EDD;
-  padding: 20px 25px;
-  margin: 25px 0;
-  border-radius: 10px;
+  background: rgba(0, 238, 255, 0.18);
+  border-left: 4px solid #00eaff;
+  padding: 25px;
+  border-radius: 15px;
+  margin: 30px 0;
+}
+
+.highlight-box p {
+  color: #f8fbff;
+  line-height: 1.75;
 }
 
 .highlight-box strong {
-  color: #FF006E;
+  color: #ffffff;
 }
 
 /* ==================== TAGS ==================== */
-.tags-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 25px 0;
-}
-
 .tag {
-  background: rgba(157, 78, 221, 0.2);
-  border: 1px solid #9D4EDD;
-  color: #9D4EDD;
-  padding: 8px 16px;
-  border-radius: 20px;
+  display: inline-block;
+  padding: 6px 14px;
+  margin: 6px;
+  border-radius: 12px;
+  background: rgba(0, 238, 255, 0.2);
+  border: 1px solid #00eaff;
+  color: #00eaff;
   font-size: 14px;
-  font-weight: 600;
-  transition: all 0.3s;
+  transition: 0.3s;
 }
 
 .tag:hover {
-  background: rgba(157, 78, 221, 0.4);
-  box-shadow: 0 0 15px rgba(157, 78, 221, 0.5);
-  transform: translateY(-2px);
+  background: rgba(0, 238, 255, 0.4);
+  box-shadow: 0 0 15px rgba(0, 238, 255, 0.7);
 }
 
 /* ==================== BACK BUTTON ==================== */
 .back-button {
   display: inline-block;
-  margin-top: 40px;
-  padding: 15px 35px;
-  background: linear-gradient(135deg, #9D4EDD, #FF006E);
-  color: white;
+  padding: 14px 24px;
+  background: linear-gradient(135deg, #00eaff, #0f1b31);
+  color: #ffffff;
+  border-radius: 12px;
   text-decoration: none;
-  border-radius: 50px;
-  font-weight: 700;
-  font-size: 16px;
-  transition: all 0.3s;
-  box-shadow: 0 5px 20px rgba(157, 78, 221, 0.4);
+  box-shadow: 0 5px 20px rgba(0, 238, 255, 0.35);
+  transition: 0.3s;
 }
 
 .back-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(157, 78, 221, 0.6);
+  box-shadow: 0 10px 30px rgba(0, 238, 255, 0.6);
 }
 
-/* ==================== RESPONSIVE ==================== */
+/* ==================== RESPONSIVIDADE ==================== */
 @media (max-width: 768px) {
-  .hero-banner { height: 300px; }
-  .hero-title { font-size: 36px; }
-  .hero-content { left: 20px; bottom: 20px; }
-  .content-wrapper { padding: 30px 20px; }
-  .anime-card { padding: 25px; }
-  .anime-title { font-size: 28px; }
-  .slide img { height: 300px; }
+  .hero-title { font-size: 38px; }
+  .hero-subtitle { font-size: 16px; }
+  .anime-title { font-size: 30px; }
+  .anime-card { padding: 35px 25px; }
+  .slide-arrow { font-size: 28px; padding: 6px 10px; }
 }
 </style>
+
 
 <div class="particles-bg"></div>
 
@@ -775,22 +697,23 @@ body {
 
 <!-- JavaScript -->
 <script>
-// Slideshow functionality
+// ==================== SLIDESHOW ====================
 let currentSlide = {};
 
 function initSlideshow(containerId) {
   currentSlide[containerId] = 0;
   const container = document.getElementById(containerId);
   const slides = container.querySelectorAll('.slide');
-  const navContainer = document.getElementById(containerId.replace('-slideshow', '-nav'));
-  
-  // Create dots
+  const nav = document.getElementById(containerId.replace('-slideshow', '-nav'));
+
+  slides[0].classList.add('active');
+
   slides.forEach((_, index) => {
     const dot = document.createElement('span');
     dot.className = 'slide-dot';
     if (index === 0) dot.classList.add('active');
     dot.onclick = () => goToSlide(containerId, index);
-    navContainer.appendChild(dot);
+    nav.appendChild(dot);
   });
 }
 
@@ -798,15 +721,15 @@ function changeSlide(containerId, direction) {
   const container = document.getElementById(containerId);
   const slides = container.querySelectorAll('.slide');
   const dots = document.getElementById(containerId.replace('-slideshow', '-nav')).querySelectorAll('.slide-dot');
-  
+
   slides[currentSlide[containerId]].classList.remove('active');
   dots[currentSlide[containerId]].classList.remove('active');
-  
+
   currentSlide[containerId] += direction;
-  
+
   if (currentSlide[containerId] >= slides.length) currentSlide[containerId] = 0;
   if (currentSlide[containerId] < 0) currentSlide[containerId] = slides.length - 1;
-  
+
   slides[currentSlide[containerId]].classList.add('active');
   dots[currentSlide[containerId]].classList.add('active');
 }
@@ -815,29 +738,29 @@ function goToSlide(containerId, index) {
   const container = document.getElementById(containerId);
   const slides = container.querySelectorAll('.slide');
   const dots = document.getElementById(containerId.replace('-slideshow', '-nav')).querySelectorAll('.slide-dot');
-  
+
   slides[currentSlide[containerId]].classList.remove('active');
   dots[currentSlide[containerId]].classList.remove('active');
-  
+
   currentSlide[containerId] = index;
-  
-  slides[currentSlide[containerId]].classList.add('active');
-  dots[currentSlide[containerId]].classList.add('active');
+
+  slides[index].classList.add('active');
+  dots[index].classList.add('active');
 }
 
-// Auto-play slideshow
-function autoPlaySlideshow(containerId, interval = 5000) {
-  setInterval(() => {
-    changeSlide(containerId, 1);
-  }, interval);
+function autoPlay(containerId, interval = 5500) {
+  setInterval(() => changeSlide(containerId, 1), interval);
 }
 
-// Initialize on load
+// ==================== PAGE INIT ====================
 document.addEventListener('DOMContentLoaded', () => {
   initSlideshow('bleach-slideshow');
-  autoPlaySlideshow('bleach-slideshow', 5000);
-  
-  // Scroll animations
+  autoPlay('bleach-slideshow');
+
+  initSlideshow('arquivox-slideshow');
+  autoPlay('arquivox-slideshow');
+
+  // Animation entrance
   const cards = document.querySelectorAll('.anime-card');
   cards.forEach((card, index) => {
     card.style.opacity = '0';
@@ -848,21 +771,5 @@ document.addEventListener('DOMContentLoaded', () => {
       card.style.transform = 'translateY(0)';
     }, index * 200);
   });
-});
-
-// Parallax effect
-let ticking = false;
-window.addEventListener('scroll', () => {
-  if (!ticking) {
-    window.requestAnimationFrame(() => {
-      const scrolled = window.pageYOffset;
-      const parallaxBg = document.querySelector('.particles-bg');
-      if (parallaxBg) {
-        parallaxBg.style.transform = `translateY(${scrolled * 0.2}px)`;
-      }
-      ticking = false;
-    });
-    ticking = true;
-  }
 });
 </script>
