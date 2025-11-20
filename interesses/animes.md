@@ -22,7 +22,7 @@ body {
 .page__content {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 0px;
 }
 
 /* ==================== BACKGROUND ==================== */
@@ -60,25 +60,21 @@ body {
 }
 
 /* ==================== HERO BANNER ==================== */
-
-/* Ajuste da imagem SEM cortar */
 .hero-banner {
-  height: auto; /* ou fixe altura, se preferir OPTION B */
+  position: relative;
+  height: 500px; /* Aumentado para acomodar melhor a imagem */
+  border-radius: 25px;
+  overflow: hidden;
+  margin-bottom: 60px;
+  box-shadow: 0 15px 40px rgba(0, 20, 40, 0.85);
 }
 
 .hero-banner img {
   width: 100%;
-  height: auto;
-  object-fit: contain;
-  object-position: center;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%; /* Ajustado para mostrar a parte superior da imagem */
 }
-
-
-/* Remover icon & subtitle: basta excluir do HTML */
-.hero-icon, .hero-subtitle { display: none; }
-
-
-
 
 .hero-banner::before {
   content: '';
