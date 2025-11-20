@@ -73,17 +73,6 @@ body {
   object-position: center;
 }
 
-/* Título azul neon */
-.hero-title {
-  font-size: 56px;
-  font-weight: 900;
-  color: #00eaff;
-  text-shadow:
-      0 0 10px #00eaff,
-      0 0 20px #00eaff,
-      0 0 30px #00eaff,
-      0 0 40px #00eaff;
-}
 
 /* Remover icon & subtitle: basta excluir do HTML */
 .hero-icon, .hero-subtitle { display: none; }
@@ -112,6 +101,17 @@ body {
   margin-bottom: 15px;
   display: block;
   animation: float 3s ease-in-out infinite;
+}
+
+.hero-title {
+  font-size: 56px;
+  font-weight: 900;
+  background: linear-gradient(90deg, #ffffff, #00eaff, #ffffff);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 3s ease infinite;
+  text-shadow: 0 0 30px rgba(0, 238, 255, 0.4);
 }
 
 .hero-subtitle {
