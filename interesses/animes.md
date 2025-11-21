@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Animes & Séries"
+title: ""
 permalink: /interesses/animes/
 author_profile: false
 sidebar: null
@@ -34,29 +34,6 @@ body {
   box-shadow: 0 8px 25px rgba(0,0,0,0.6);
   backdrop-filter: blur(3px);
   z-index: 1;
-}
-
-/* ==================== BREADCRUMB ==================== */
-.breadcrumb {
-  padding: 20px 0;
-  color: #e0eaff;
-  font-size: 14px;
-}
-
-.breadcrumb a {
-  color: #00eaff;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.breadcrumb a:hover {
-  color: #ffffff;
-  text-shadow: 0 0 10px rgba(0, 238, 255, 0.7);
-}
-
-.breadcrumb span {
-  margin: 0 8px;
-  color: #666;
 }
 
 /* ==================== HERO BANNER ==================== */
@@ -452,15 +429,6 @@ body {
 </style>
 
 <div class="particles-bg"></div>
-
-<!-- Breadcrumb -->
-<nav class="breadcrumb">
-  <a href="/">Início</a>
-  <span>›</span>
-  <a href="/sobre/#contato">Interesses</a>
-  <span>›</span>
-  <span>Animes & Séries</span>
-</nav>
 
 <!-- Hero Banner -->
 <div class="hero-banner">
