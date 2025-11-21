@@ -45,6 +45,46 @@ body.page--portfolio main.grid__item {
   background-color: #142850 !important;
 }
 
+/* ==================== TÍTULO COM EFEITO NEON ==================== */
+.page-title {
+  text-align: center;
+  margin: 40px 0;
+  position: relative;
+}
+
+.page-title h1 {
+  font-size: 56px;
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 
+    0 0 10px #4da6ff,
+    0 0 20px #4da6ff,
+    0 0 30px #4da6ff,
+    0 0 40px #0088cc;
+  animation: neon-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes neon-glow {
+  from {
+    text-shadow: 
+      0 0 10px #4da6ff,
+      0 0 20px #4da6ff,
+      0 0 30px #4da6ff,
+      0 0 40px #0088cc;
+  }
+  to {
+    text-shadow: 
+      0 0 5px #4da6ff,
+      0 0 10px #4da6ff,
+      0 0 15px #4da6ff,
+      0 0 20px #0088cc,
+      0 0 35px #0088cc,
+      0 0 40px #0088cc;
+  }
+}
+
 /* ====================MUDANÇA FEITA ==================== */
 
 /* Customizações só para /portfolio/ */
@@ -67,7 +107,7 @@ body.page--portfolio main.grid__item {
 /* ==================== TÍTULO PRINCIPAL ==================== */
 .page__title {
   text-align: center;
-  font-size: 48px !important;
+  font-size:48px !important;
   color: #ffffff !important;
   margin-bottom: 20px !important;
   text-shadow: 2px 2px 10px rgba(77, 166, 255, 0.5);
@@ -165,7 +205,7 @@ body.page--portfolio main.grid__item {
 /* ==================== DESCRIÇÃO ==================== */
 .project-description {
   color: #cccccc;
-  font-size: 16px;
+  font-size:16px;
   line-height: 1.6;
   margin-bottom: 20px;
   text-align: center;
@@ -186,7 +226,7 @@ body.page--portfolio main.grid__item {
   color: #4da6ff;
   padding: 6px 12px;
   border-radius: 20px;
-  font-size: 13px;
+  font-size:13px;
   font-weight: 600;
   transition: all 0.3s ease;
 }
@@ -278,6 +318,10 @@ body.page--portfolio main.grid__item {
   .btn-custom {
     width: 100%;
   }
+  
+  .page-title h1 {
+    font-size: 42px;
+  }
 }
 
 /* ==================== ANIMAÇÃO DE ENTRADA ==================== */
@@ -302,9 +346,10 @@ body.page--portfolio main.grid__item {
 .project-card:nth-child(4) { animation-delay: 0.4s; }
 </style>
 
-
-
-
+<!-- Título com Efeito Neon -->
+<div class="page-title">
+  <h1>Meus Projetos</h1>
+</div>
 
 <!-- Introdução -->
 <p class="intro-text">
@@ -357,7 +402,7 @@ body.page--portfolio main.grid__item {
     <h2 class="project-title">Limpeza Avançada Windows</h2>
     
     <p class="project-description">
-      Script Grafico automatizado para limpeza profunda do Windows. Remove arquivos temporários, cache, logs e otimiza o sistema operacional com interface intuitiva e opções avançadas de personalização.
+      Script Gráfico automatizado para limpeza profunda do Windows. Remove arquivos temporários, cache, logs e otimiza o sistema operacional com interface intuitiva e opções avançadas de personalização.
     </p>
     
     <div class="tech-tags">
