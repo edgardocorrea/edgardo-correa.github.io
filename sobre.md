@@ -8,7 +8,7 @@ sidebar: null
 <div id="custom-sobre-page">
 
 <style>
-/* Reset & Base */
+/* Reset e Estilos Base */
 html, body {
   overflow-x: hidden;
   overflow-y: auto;
@@ -42,7 +42,7 @@ body {
   padding: 0 20px;
 }
 
-/* Particles Background */
+/* Fundo com Partículas */
 .particles-bg {
   position: fixed;
   top: 0;
@@ -82,7 +82,7 @@ body {
   100% { opacity: 1; transform: scale(1.05); }
 }
 
-/* Hero Section */
+/* Seção Principal (Hero) */
 .hero-section {
   display: flex;
   flex-direction: column;
@@ -138,6 +138,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  /* CORREÇÃO: Removido o parêntese extra */
   filter: drop-shadow(0 0 30px rgba(0, 234, 255, 0.8));
   z-index: 2;
 }
@@ -243,12 +244,12 @@ body {
   transform: translateX(-50%);
   color: #00eaff;
   animation: bounce 2s infinite;
-  cursor: pointer; /* ADICIONADO: Indica que é clicável */
-  transition: transform 0.3s ease; /* ADICIONADO: Animação suave no hover */
+  cursor: pointer; /* Indica que o elemento é clicável */
+  transition: transform 0.3s ease; /* Animação suave ao passar o mouse */
 }
 
 .scroll-indicator:hover {
-  transform: translateX(-50%) scale(1.2); /* ADICIONADO: Efeito de zoom no hover */
+  transform: translateX(-50%) scale(1.2); /* Efeito de zoom ao passar o mouse */
 }
 
 @keyframes bounce {
@@ -257,7 +258,7 @@ body {
   60% { transform: translateX(-50%) translateY(-10px); }
 }
 
-/* Expandable Sections */
+/* Seções Expansíveis (Acordeão) */
 .content-section {
   position: relative;
   z-index: 1;
@@ -327,7 +328,7 @@ body {
   padding: 0 30px 30px 30px;
 }
 
-/* Interest Cards */
+/* Cards de Interesses */
 .interests-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -363,7 +364,7 @@ body {
   font-size: 18px;
 }
 
-/* Social Links */
+/* Links para Redes Sociais */
 .social-links {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -431,7 +432,7 @@ body {
   font-size: 14px;
 }
 
-/* Modal Secreto */
+/* Modal Secreto (Easter Egg) */
 .modal-overlay {
   display: none; /* Escondido por padrão */
   position: fixed;
@@ -511,7 +512,7 @@ body {
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
 }
 
-/* Responsive */
+/* Estilos Responsivos */
 @media (max-width: 768px) {
   .hero-title { font-size: 42px; }
   .typewriter { font-size: 20px; }
@@ -522,10 +523,10 @@ body {
 }
 </style>
 
-<!-- Background Particles -->
+<!-- Fundo com Partículas -->
 <div class="particles-bg"></div>
 
-<!-- Hero Section -->
+<!-- Seção Principal -->
 <section class="hero-section">
   <div class="avatar-container">
     <div class="avatar-glow"></div>
@@ -543,16 +544,16 @@ body {
   
   <a href="#contato" class="cta-button">Entre em contato.</a>
   
-  <!-- ALTERADO: Adicionado onclick para abrir o modal -->
+  <!-- Indicador de rolagem que abre o modal secreto -->
   <div class="scroll-indicator" onclick="showSecretModal()">
     <span style="font-size: 32px;">↓</span>
   </div>
 </section>
 
-<!-- Main Content -->
+<!-- Conteúdo Principal -->
 <div class="content-section">
 
-  <!-- About Me -->
+  <!-- Sobre Mim -->
   <div class="section-accordion">
     <div class="accordion-header" onclick="toggleAccordion(this)">
       <div class="accordion-title">
@@ -576,7 +577,7 @@ body {
     </div>
   </div>
 
-  <!-- Interests -->
+  <!-- Interesses -->
   <div class="section-accordion">
     <div class="accordion-header" onclick="toggleAccordion(this)">
       <div class="accordion-title">
@@ -615,7 +616,7 @@ body {
     </div>
   </div>
 
-  <!-- Contact -->
+  <!-- Contato -->
   <div class="section-accordion" id="contato">
     <div class="accordion-header" onclick="toggleAccordion(this)">
       <div class="accordion-title">
@@ -653,9 +654,7 @@ body {
 
 </div>
 
-<!-- A dica foi removida daqui -->
-
-</div> <!-- End of Wrapper -->
+<!-- Fim do Container Principal -->
 
 <!-- Modal Secreto (Easter Egg) -->
 <div id="secretModal" class="modal-overlay">
@@ -663,30 +662,32 @@ body {
     <span class="close-modal" onclick="closeSecretModal()">&times;</span>
     <h2 class="modal-title">// Canal Direto Desbloqueado</h2>
     <div class="modal-body">
-      <p>Parabéns! Você não é apenas um visitante, é um explorador.</p>
-      <p>Se você é um recrutador e acredita que boas ideias e código limpo podem mudar o mundo, você veio ao lugar certo. Meu e-mail está aberto para conversas sobre como podemos colaborar.</p>
+      <p><b>Parabéns!</b> Parece que você encontrou o botão secreto — poucas pessoas chegam até aqui, então pontos pela curiosidade!</p>
+      <p>Se você é recrutador, seja muito bem-vindo. Prometo que aqui não tem pegadinha: só boas conversas, ideias frescas e um código que tenta (com bastante esforço) se manter limpo.</p>
+      <p>Meu e-mail está aberto caso queira trocar uma ideia, falar sobre oportunidades ou simplesmente descobrir se eu sou tão simpático quanto esse texto sugere. 😉</p>
     </div>
-    <a href="mailto:edgardo.edyone-1@yahoo.com?subject=Canal%20Direto%20Desbloqueado%20-%20Vaga%20de%20TI&body=Olá%20Edgardo,%20achei%20seu%20perfil%20e%20o%20Canal%20Direto%20no%20seu%20site.%20Gostaria%20de%20conversar%20sobre%20uma%20oportunidade." class="modal-cta-button">Enviar E-mail Agora</a>
+    <a href="mailto:edgardo.edyone-1@yahoo.com?subject=Canal%20Direto%20Desbloqueado" class="modal-cta-button">Enviar E-mail Agora</a>
   </div>
 </div>
 
-<!-- Funcionalidade do Acordeão -->
+<!-- Funcionalidades do Script -->
 <script>
+// Função para alternar a abertura/fechamento dos acordeões
 function toggleAccordion(header) {
   const accordion = header.parentElement;
   const allAccordions = document.querySelectorAll('.section-accordion');
   
-  // Fecha todos os outros acordeões
+  // Fecha os outros acordeões abertos
   allAccordions.forEach(acc => {
     if (acc !== accordion && acc.classList.contains('active')) {
       acc.classList.remove('active');
     }
   });
   
-  // Alterna o acordeão clicado
+  // Abre ou fecha o acordeão clicado
   accordion.classList.toggle('active');
   
-  // Rolagem suave para o acordeão
+  // Rola a página suavemente até o acordeão
   if (accordion.classList.contains('active')) {
     setTimeout(() => {
       accordion.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -694,7 +695,7 @@ function toggleAccordion(header) {
   }
 }
 
-// Rolagem suave para âncoras
+// Rolagem suave para links âncora
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -702,7 +703,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     if (target) {
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       
-      // Abre o acordeão se for um link para uma seção
+      // Se o link aponta para um acordeão, abre-o
       const accordion = target.closest('.section-accordion');
       if (accordion && !accordion.classList.contains('active')) {
         accordion.querySelector('.accordion-header').click();
@@ -711,7 +712,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Efeito de Máquina de Escrever
+// Efeito de digitação (Máquina de Escrever)
 const typewriterElement = document.querySelector('.typewriter');
 if (typewriterElement) {
   const text = typewriterElement.textContent;
@@ -732,7 +733,7 @@ if (typewriterElement) {
   }, 1000);
 }
 
-// Efeito de Parallax na Rolagem
+// Efeito de Parallax ao rolar a página
 let isScrollTicking = false;
 window.addEventListener('scroll', () => {
   if (!isScrollTicking) {
@@ -748,7 +749,7 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// Intersection Observer para Animações
+// Anima elementos ao entrarem na tela (Intersection Observer)
 const observerOptions = {
   threshold: 0.2,
   rootMargin: '0px 0px -100px 0px'
@@ -763,7 +764,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
-// Observa todos os cards animáveis
+// Aplica o observador aos cards
 document.querySelectorAll('.interest-card, .social-card').forEach(el => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(30px)';
@@ -771,7 +772,7 @@ document.querySelectorAll('.interest-card, .social-card').forEach(el => {
   observer.observe(el);
 });
 
-// FUNÇÕES DO MODAL SECRETO (Easter Egg)
+// Funções do Modal Secreto
 function showSecretModal() {
   document.getElementById('secretModal').style.display = 'flex';
 }
@@ -780,7 +781,7 @@ function closeSecretModal() {
   document.getElementById('secretModal').style.display = 'none';
 }
 
-// Fecha o modal se o usuário clicar fora dele
+// Fecha o modal ao clicar no fundo
 window.onclick = function(event) {
   const modal = document.getElementById('secretModal');
   if (event.target == modal) {
