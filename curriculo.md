@@ -67,8 +67,8 @@ body {
   border: 2px solid #ffffff;
   border-radius: 8px;
   padding: 20px;
-  margin: 20px auto;
-  max-width: 900px;
+  margin: 10px auto; /* ALTERADO: Reduzido de 20px para 10px */
+  max-width: 95vw; /* ALTERADO: De 900px para 95vw (95% da largura da tela) */
   width: 100%;
   box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
   position: relative;
@@ -102,7 +102,7 @@ body {
 
 /* Saída do Terminal */
 .terminal-output {
-  min-height: 400px;
+  min-height: 300px; /* ALTERADO: Reduzido de 400px para 300px */
   color: #ffffff;
   font-size: 14px;
   line-height: 1.6;
@@ -172,8 +172,8 @@ body {
   border: 1px solid #ffffff;
   border-radius: 4px;
   padding: 15px;
-  margin-top: 20px;
-  max-width: 900px;
+  margin-top: 10px; /* ALTERADO: Reduzido de 20px para 10px */
+  max-width: 95vw; /* ALTERADO: Para manter a consistência com o terminal */
   margin-left: auto;
   margin-right: auto;
 }
