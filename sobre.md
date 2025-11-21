@@ -1,6 +1,6 @@
 ---
-layout: single
 title: "Sobre Mim"
+layout: single
 permalink: /sobre/
 author_profile: false
 sidebar: null
@@ -663,7 +663,7 @@ body {
     <h2 class="modal-title">// Canal Direto Desbloqueado</h2>
     <div class="modal-body">
       <p><b>Parabéns!</b> Parece que você encontrou o botão secreto — poucas pessoas chegam até aqui, então pontos pela curiosidade!</p>
-      <p>Se você é recrutador, seja muito bem-vindo. Prometo que aqui não tem pegadinha: só boas conversas, ideias frescas e um código que tenta (com bastante esforço) se manter limpo.</p>
+      <p>Se você é recrutador, seja muito bem-vindo. Prometo que aqui não tem pegadinha: só boas conversas, ideias frescas e um código divertido (com bastante esforço) se manter claro.</p>
       <p>Meu e-mail está aberto caso queira trocar uma ideia, falar sobre oportunidades ou simplesmente descobrir se eu sou tão simpático quanto esse texto sugere. 😉</p>
     </div>
     <a href="mailto:edgardo.edyone-1@yahoo.com?subject=Canal%20Direto%20Desbloqueado" class="modal-cta-button">Enviar E-mail Agora</a>
@@ -695,7 +695,7 @@ function toggleAccordion(header) {
   }
 }
 
-// Rolagem suave para links âncora
+// Rolagem suave para links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -712,7 +712,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Efeito de digitação (Máquina de Escrever)
+// Efeito de digitação
 const typewriterElement = document.querySelector('.typewriter');
 if (typewriterElement) {
   const text = typewriterElement.textContent;
