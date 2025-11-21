@@ -1,7 +1,7 @@
 ---
 title: "" # Força título vazio
 excerpt: "" # Força excerpt vazio
-layout: wide
+layout: single
 header:
   overlay_color: "rgba(0,0,0,0.4)"
   overlay_filter: 0.3
@@ -215,4 +215,5 @@ window.addEventListener('resize', () => {
   canvas.height = window.innerHeight;
 });
 </script>
+
 
