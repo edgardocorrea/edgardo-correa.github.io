@@ -345,7 +345,7 @@ HABILIDADES TÉCNICAS
 <div id="skillsContainer"></div>
 
 Outras competências:
-  • Virtualização (VMware, Hyper-V)
+  • Virtualização (VMware)
   • Containers (Docker)
   • Git & GitHub
   • Troubleshooting avançado
@@ -354,7 +354,7 @@ Outras competências:
 
   experiencia: `
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-EXPERIÊNCIA PROFISSIONAL (RESUMO)
+EXPERIÊNCIA PROFISSIONAL (RESUMO TÉCNICO)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 📍 Analista de Suporte Técnico
