@@ -1,7 +1,7 @@
 ---
 title: "" # Força título vazio
 excerpt: "" # Força excerpt vazio
-layout: single
+layout: splash
 header:
   overlay_color: "rgba(0,0,0,0.4)"
   overlay_filter: 0.3
@@ -25,6 +25,12 @@ header:
 </div>
 
 <style>
+/* CORREÇÃO: Faz o container do layout 'splash' ocupar a largura total da tela */
+.page__hero {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
 /* Efeito de ruído no canvas */
 #noiseCanvas {
   position: absolute;
@@ -151,17 +157,17 @@ header:
   }
 
   .hero-description .custom-excerpt {
-    font-size: 13px; /* CORREÇÃO: Fonte legível */
+    font-size: 13px; /* Fonte legível */
     line-height: 1.4;
   }
 
   #typewriter, .command-prompt {
-    font-size: 12px; /* CORREÇÃO: Fonte legível */
+    font-size: 12px; /* Fonte legível */
   }
 
   .cursor-blink {
     width: 6px;
-    height: 16px;
+    height:16px;
   }
 }
 </style>
@@ -177,7 +183,7 @@ function typeWriterEffect() {
     i++;
     setTimeout(typeWriterEffect, 55); // velocidade da digitação
   } else {
-    // CORREÇÃO: Usa querySelector para a classe
+    // Usa querySelector para a classe
     document.querySelector(".hero-description").style.display = "block";
   }
 }
@@ -215,5 +221,3 @@ window.addEventListener('resize', () => {
   canvas.height = window.innerHeight;
 });
 </script>
-
-
