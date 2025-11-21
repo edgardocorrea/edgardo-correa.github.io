@@ -171,16 +171,16 @@ body {
   background: rgba(0, 212, 255, 0.05);
   border: 1px solid #ffffff;
   border-radius: 4px;
-  padding: 15px;
-  margin-top: 10px; /* ALTERADO: Reduzido de 20px para 10px */
-  max-width: 95vw; /* ALTERADO: Para manter a consistência com o terminal */
+  padding: 10px; /* ALTERADO: Reduzido de 15px para 10px para menos altura */
+  margin-top: 8px; /* ALTERADO: Reduzido de 10px para 8px para menos espaçamento */
+  max-width: 95vw; /* Mantido para consistência com o terminal */
   margin-left: auto;
   margin-right: auto;
 }
 
 .command-suggestions h3 {
   color: #ffffff;
-  margin-bottom: 10px;
+  margin-bottom: 8px; /* ALTERADO: Reduzido de 10px para 8px */
   font-size: 18px;
   font-weight: 700;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
@@ -189,12 +189,12 @@ body {
 .command-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+  gap: 8px; /* ALTERADO: Reduzido de 10px para 8px para aproximar os botões */
 }
 
 .command-item {
   color: #00ffff;
-  padding: 8px;
+  padding: 6px 8px; /* ALTERADO: Reduzido de 8px para um padding mais compacto */
   background: rgba(0, 212, 255, 0.1);
   border-radius: 4px;
   cursor: pointer;
@@ -258,7 +258,7 @@ body {
     padding: 15px;
   }
   .terminal-output { font-size: 12px; }
-  .command-list { grid-template-columns: repeat(2, 1fr); }
+  .command-list { grid-template-columns: repeat(2, 1fr); } /* ALTERADO: Em tablets/notebooks pequenos, passa para 2 colunas */
   .skill-name { width: 120px; font-size: 12px; }
 }
 
