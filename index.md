@@ -12,12 +12,12 @@ header:
   <canvas id="noiseCanvas"></canvas>
   <img src="/assets/images/banner-home.jpg" alt="Notebook Banner" class="hero-img">
 
-  <div class="custom-hero-text">
-    <span class="prompt-blue">edgardo@lnx:~$</span>
+  <div class="hero-text-overlay">
+    <span class="command-prompt">edgardo@lnx:~$</span>
     <span id="typewriter"></span>
     <span class="cursor-blink"></span>
 
-    <div id="textBlock" style="display: none;">
+    <div class="hero-description" style="display: none;">
       <p class="custom-excerpt">
       </p>
     </div>
@@ -25,7 +25,7 @@ header:
 </div>
 
 <style>
-/* Canvas de ruído digital */
+/* Efeito de ruído no canvas */
 #noiseCanvas {
   position: absolute;
   top: 0;
@@ -38,7 +38,7 @@ header:
   opacity: 0.15; /* intensidade do ruído */
 }
 
-/* Imagem com borda neon azul-escuro e cantos arredondados */
+/* Estilo da imagem principal com efeito neon */
 .hero-img {
   position: relative;
   z-index: 8;
@@ -66,11 +66,8 @@ header:
   }
 }
 
-
-
-
-/* Estilo para o texto customizado */
-.custom-hero-text {
+/* Container do texto sobre a imagem */
+.hero-text-overlay {
   position: absolute;
   top: 50%;  
   left: 50%;
@@ -94,8 +91,8 @@ header:
   20%, 22%, 24%, 55% { opacity: 0.85; }
 }
 
-/* Prompt azul neon */
-.prompt-blue {
+/* Prompt de comando */
+.command-prompt {
   color: #00aaff;
   font-weight: bold;
 }
@@ -106,7 +103,7 @@ header:
 }
 
 /* Texto descritivo */
-#textBlock .custom-excerpt {
+.hero-description .custom-excerpt {
   color: #b8eaff;
   font-size: 16px;
   line-height: 1.5;
@@ -114,9 +111,7 @@ header:
   text-shadow: 0 0 8px #00d4ff88;
 }
 
-/* ==================== CURSOS PISCANDO ==================== */
-
-/* Cursor piscando */
+/* Cursor Piscante */
 .cursor-blink {
   display: inline-block;
   width: 10px;
@@ -133,38 +128,35 @@ header:
 
 /* Responsivo - Tablets */
 @media (max-width: 768px) {
-  .custom-hero-text {
+  .hero-text-overlay {
     width: 70%;
     top: 40%;
     padding: 15px 20px;
   }
-  #textBlock .custom-excerpt {
+  .hero-description .custom-excerpt {
     font-size: 14px;
   }
-  #typewriter, .prompt-blue {
+  #typewriter, .command-prompt {
     font-size: 14px;
   }
 }
 
 /* Responsivo - Celulares */
 @media (max-width: 480px) {
-  .custom-hero-text {
-    display: inline-block;       /* Permite ajustar ao conteúdo */
-    width: fit-content;          /* Largura se adapta ao texto */
-    max-width: 70%;              /* Nunca ultrapassa 90% da tela */
-    top: 50%;                    /* Ajusta posição vertical */
-    padding: 1px 3px;           /* Espaço interno */
-    overflow-wrap: break-word;   /* Quebra palavras longas */
-    text-align: center;          /* Centraliza o texto dentro do retângulo */
+  .hero-text-overlay {
+    width: 85%; /* Largura maior para telas pequenas */
+    top: 50%;
+    padding: 10px 15px;
+    text-align: center; /* Centraliza o texto no mobile */
   }
 
-  #textBlock .custom-excerpt {
-    font-size: 8px;             /* Ajuste de fonte */
-    line-height: 1.2;
+  .hero-description .custom-excerpt {
+    font-size: 13px; /* CORREÇÃO: Fonte legível */
+    line-height: 1.4;
   }
 
-  #typewriter, .prompt-blue {
-    font-size: 7px;
+  #typewriter, .command-prompt {
+    font-size: 12px; /* CORREÇÃO: Fonte legível */
   }
 
   .cursor-blink {
@@ -172,31 +164,31 @@ header:
     height: 16px;
   }
 }
-
 </style>
 
 <script>
-// Frase que será "digitada"
-const text = `read -p "Analista de Sistemas com experiência em infra, redes e automação." edyone ; echo "Apaixonado por soluções eficientes :P"`;
+// Texto para o efeito de digitação
+const typewriterText = `read -p "Analista de Sistemas com experiência em infra, redes e automação." edyone ; echo "Apaixonado por soluções eficientes :P"`;
 let i = 0;
 
 function typeWriterEffect() {
-  if (i < text.length) {
-    document.getElementById("typewriter").innerHTML += text.charAt(i);
+  if (i < typewriterText.length) {
+    document.getElementById("typewriter").innerHTML += typewriterText.charAt(i);
     i++;
     setTimeout(typeWriterEffect, 55); // velocidade da digitação
   } else {
-    document.getElementById("textBlock").style.display = "block";
+    // CORREÇÃO: Usa querySelector para a classe
+    document.querySelector(".hero-description").style.display = "block";
   }
 }
 
 window.onload = () => {
   typeWriterEffect();
-  startNoise();
+  initNoiseEffect();
 };
 
-// Efeito de ruído digital animado
-function startNoise() {
+// Inicia e anima o efeito de ruído
+function initNoiseEffect() {
   const canvas = document.getElementById('noiseCanvas');
   const ctx = canvas.getContext('2d');
 
@@ -223,5 +215,3 @@ window.addEventListener('resize', () => {
   canvas.height = window.innerHeight;
 });
 </script>
-
-
