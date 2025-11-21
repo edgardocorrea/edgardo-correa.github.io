@@ -1,6 +1,6 @@
 ---
 layout: single
-title: ""
+title: "Sobre Mim"
 permalink: /sobre/
 author_profile: false
 sidebar: null
@@ -8,7 +8,7 @@ sidebar: null
 <div id="custom-sobre-page">
 
 <style>
-/* ==================== RESET & BASE ==================== */
+/* Reset & Base */
 html, body {
   overflow-x: hidden;
   overflow-y: auto;
@@ -26,7 +26,7 @@ body {
   position: relative;
 }
 
-  .initial-content {
+.initial-content {
   position: relative;
   background: rgba(10,20,40,0.85);
   padding: 30px 25px;
@@ -34,7 +34,7 @@ body {
   box-shadow: 0 8px 25px rgba(0,0,0,0.6);
   backdrop-filter: blur(3px);
   z-index: 1;
-  }
+}
 
 .page__content {
   max-width: 1200px;
@@ -42,7 +42,7 @@ body {
   padding: 0 20px;
 }
 
-/* ==================== PARTÍCULAS DE FUNDO ==================== */
+/* Particles Background */
 .particles-bg {
   position: fixed;
   top: 0;
@@ -69,27 +69,17 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  
-  /* Fundo liso escuro com leve iluminação */
   background: 
     radial-gradient(circle at 25% 20%, rgba(0, 234, 255, 0.10), transparent 60%),
     radial-gradient(circle at 80% 80%, rgba(0, 102, 255, 0.10), transparent 60%),
     radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.06), transparent 70%);
-  
-  /* Movimento suave para dar vida */
   animation: softGlow 12s ease-in-out infinite alternate;
   filter: blur(4px);
 }
 
 @keyframes softGlow {
-  0% {
-    opacity: 0.7;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1.05);
-  }
+  0% { opacity: 0.7; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1.05); }
 }
 
 @keyframes gridMove {
@@ -97,7 +87,7 @@ body {
   100% { transform: translate(40px, 40px); }
 }
 
-/* ==================== HERO SECTION ==================== */
+/* Hero Section */
 .hero-section {
   display: flex;
   flex-direction: column;
@@ -109,7 +99,7 @@ body {
   z-index: 1;
 }
 
-.sobre-brilhante {
+.neon-text {
   color: #ffffff;
   font-weight: 700;
   text-shadow:
@@ -120,7 +110,7 @@ body {
   transition: all 0.3s ease;
 }
 
-.sobre-brilhante:hover {
+.neon-text:hover {
   text-shadow:
     0 0 15px white,
     0 0 30px #00eaff,
@@ -177,7 +167,8 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: gradient 3s ease infinite;
-  text-shadow: 0 0 40px rgba(0, 234, 255, 0.5);
+  /* CORREÇÃO: Usar drop-shadow para o efeito neon */
+  filter: drop-shadow(0 0 40px rgba(0, 234, 255, 0.8));
 }
 
 @keyframes gradient {
@@ -187,26 +178,17 @@ body {
 
 .typewriter {
   font-size: 28px;
-  color: #ffffff; /* branco simples */
+  color: #ffffff;
   font-weight: 700;
   margin-bottom: 30px;
-
-  /* Cursor piscando branco simples */
   border-right: 3px solid #ffffff;
-
-  /* Fundo completamente transparente */
   background: transparent !important;
   background-color: transparent !important;
-
   white-space: nowrap;
   overflow: hidden;
-
-  /* Sem brilho */
   text-shadow: none !important;
-
   animation: typing 3s steps(40) 1s 1 normal both, blink 0.7s infinite;
 }
-
 
 @keyframes typing {
   from { width: 0; }
@@ -242,7 +224,6 @@ body {
               inset 0 0 15px rgba(255, 255, 255, 0.5);
 }
 
-/* Efeito clique/hover neon */
 .cta-button:hover {
   transform: translateY(-3px);
   background: #fff;
@@ -261,7 +242,6 @@ body {
     inset 0 0 35px rgba(255,255,255,1);
 }
 
-
 @keyframes ctaPulse {
   0%, 100% { box-shadow: 0 0 30px rgba(0, 255, 136, 0.4); }
   50% { box-shadow: 0 0 50px rgba(0, 255, 136, 0.8); }
@@ -269,7 +249,7 @@ body {
 
 .scroll-indicator {
   position: absolute;
-  bottom: 20px;  /* MUDEI: era bottom: 30px; */
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   color: #00eaff;
@@ -282,11 +262,11 @@ body {
   60% { transform: translateX(-50%) translateY(-10px); }
 }
 
-/* ==================== SEÇÕES EXPANSÍVEIS ==================== */
+/* Expandable Sections */
 .content-section {
   position: relative;
   z-index: 1;
-  margin: 80px 0 40px 0;  /* MUDEI: era margin: 80px 0; */
+  margin: 80px 0 40px 0;
 }
 
 .section-accordion {
@@ -352,7 +332,7 @@ body {
   padding: 0 30px 30px 30px;
 }
 
-/* ==================== TIMELINE ==================== */
+/* Timeline */
 .timeline {
   position: relative;
   padding: 20px 0;
@@ -386,14 +366,8 @@ body {
 .timeline-item:nth-child(3) { animation-delay: 0.6s; }
 
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .timeline-content {
@@ -435,7 +409,7 @@ body {
   margin-bottom: 10px;
 }
 
-/* ==================== SKILLS ==================== */
+/* Skills */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -488,7 +462,7 @@ body {
   to { width: var(--skill-width); }
 }
 
-/* ==================== CARDS DE INTERESSE ==================== */
+/* Interest Cards */
 .interests-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -524,7 +498,7 @@ body {
   font-size: 18px;
 }
 
-/* ==================== LINKS SOCIAIS ==================== */
+/* Social Links */
 .social-links {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -592,7 +566,7 @@ body {
   font-size: 14px;
 }
 
-/* ==================== RESPONSIVO ==================== */
+/* Responsive */
 @media (max-width: 768px) {
   .hero-title { font-size: 42px; }
   .typewriter { font-size: 20px; }
@@ -608,9 +582,7 @@ body {
 }
 </style>
 
-
-
-<!-- Partículas de Fundo -->
+<!-- Background Particles -->
 <div class="particles-bg"></div>
 
 <!-- Hero Section -->
@@ -636,15 +608,15 @@ body {
   </div>
 </section>
 
-<!-- Conteúdo Principal -->
+<!-- Main Content -->
 <div class="content-section">
 
-  <!-- Sobre Mim -->
+  <!-- About Me -->
   <div class="section-accordion">
     <div class="accordion-header" onclick="toggleAccordion(this)">
       <div class="accordion-title">
         <span class="accordion-icon">🔷</span>
-        <span class="sobre-brilhante">Sobre Mim</span>
+        <span class="neon-text">Sobre Mim</span>
       </div>
       <span class="accordion-arrow">▼</span>
     </div>
@@ -663,12 +635,12 @@ body {
     </div>
   </div>
 
-  <!-- Habilidades -->
+  <!-- Skills -->
   <div class="section-accordion">
     <div class="accordion-header" onclick="toggleAccordion(this)">
       <div class="accordion-title">
         <span class="accordion-icon">🔷</span>
-        <span class="sobre-brilhante">Resumo hábil</span>
+        <span class="neon-text">Resumo hábil</span>
       </div>
       <span class="accordion-arrow">▼</span>
     </div>
@@ -755,12 +727,12 @@ body {
     </div>
   </div>
 
-  <!-- Interesses -->
+  <!-- Interests -->
   <div class="section-accordion">
     <div class="accordion-header" onclick="toggleAccordion(this)">
       <div class="accordion-title">
         <span class="accordion-icon">🔷</span>
-        <span class="sobre-brilhante">Além do Código</span>
+        <span class="neon-text">Além do Código</span>
       </div>
       <span class="accordion-arrow">▼</span>
     </div>
@@ -794,12 +766,12 @@ body {
     </div>
   </div>
 
-  <!-- Contato -->
+  <!-- Contact -->
   <div class="section-accordion" id="contato">
     <div class="accordion-header" onclick="toggleAccordion(this)">
       <div class="accordion-title">
         <span class="accordion-icon">🔷</span>
-        <span class="sobre-brilhante">Vamos Conectar?</span>
+        <span class="neon-text">Vamos Conectar?</span>
       </div>
       <span class="accordion-arrow">▼</span>
     </div>
@@ -831,25 +803,25 @@ body {
   </div>
 
 </div>
-</div> <!-- FIM DO WRAPPER -->
+</div> <!-- End of Wrapper -->
 
-<!-- Script para Acordeão -->
+<!-- Accordion Functionality -->
 <script>
 function toggleAccordion(header) {
   const accordion = header.parentElement;
   const allAccordions = document.querySelectorAll('.section-accordion');
   
-  // Fecha todos os outros acordeões
+  // Close all other accordions
   allAccordions.forEach(acc => {
     if (acc !== accordion && acc.classList.contains('active')) {
       acc.classList.remove('active');
     }
   });
   
-  // Toggle do acordeão clicado
+  // Toggle the clicked accordion
   accordion.classList.toggle('active');
   
-  // Smooth scroll para o acordeão
+  // Smooth scroll to the accordion
   if (accordion.classList.contains('active')) {
     setTimeout(() => {
       accordion.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -857,7 +829,7 @@ function toggleAccordion(header) {
   }
 }
 
-// Animação das skills quando a seção é aberta
+// Animate skills when the section is opened
 document.querySelectorAll('.section-accordion').forEach(accordion => {
   accordion.addEventListener('transitionend', function(e) {
     if (e.propertyName === 'max-height' && this.classList.contains('active')) {
@@ -871,7 +843,7 @@ document.querySelectorAll('.section-accordion').forEach(accordion => {
   });
 });
 
-// Smooth scroll para âncoras
+// Smooth scroll for anchors
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -879,7 +851,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     if (target) {
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       
-      // Abre o acordeão se for um link para seção
+      // Open accordion if it's a link to a section
       const accordion = target.closest('.section-accordion');
       if (accordion && !accordion.classList.contains('active')) {
         accordion.querySelector('.accordion-header').click();
@@ -888,44 +860,44 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Efeito de typewriter no hero
-const typewriterText = document.querySelector('.typewriter');
-if (typewriterText) {
-  const text = typewriterText.textContent;
-  typewriterText.textContent = '';
-  typewriterText.style.width = '0';
+// Typewriter Effect
+const typewriterElement = document.querySelector('.typewriter');
+if (typewriterElement) {
+  const text = typewriterElement.textContent;
+  typewriterElement.textContent = '';
+  typewriterElement.style.width = '0';
   
   setTimeout(() => {
-    typewriterText.style.width = '100%';
+    typewriterElement.style.width = '100%';
     let i = 0;
-    const typing = setInterval(() => {
+    const typingInterval = setInterval(() => {
       if (i < text.length) {
-        typewriterText.textContent += text.charAt(i);
+        typewriterElement.textContent += text.charAt(i);
         i++;
       } else {
-        clearInterval(typing);
+        clearInterval(typingInterval);
       }
     }, 100);
   }, 1000);
 }
 
-// Parallax suave no scroll
-let ticking = false;
+// Parallax Effect on Scroll
+let isScrollTicking = false;
 window.addEventListener('scroll', () => {
-  if (!ticking) {
+  if (!isScrollTicking) {
     window.requestAnimationFrame(() => {
       const scrolled = window.pageYOffset;
       const parallaxBg = document.querySelector('.particles-bg');
       if (parallaxBg) {
         parallaxBg.style.transform = `translateY(${scrolled * 0.2}px)`;
       }
-      ticking = false;
+      isScrollTicking = false;
     });
-    ticking = true;
+    isScrollTicking = true;
   }
 });
 
-// Intersection Observer para animações ao entrar na viewport
+// Intersection Observer for Animations
 const observerOptions = {
   threshold: 0.2,
   rootMargin: '0px 0px -100px 0px'
@@ -940,7 +912,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
-// Observa todos os cards e elementos animáveis
+// Observe all animatable cards
 document.querySelectorAll('.interest-card, .social-card').forEach(el => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(30px)';
@@ -948,28 +920,36 @@ document.querySelectorAll('.interest-card, .social-card').forEach(el => {
   observer.observe(el);
 });
 
-// Easter Egg: Konami Code
-let konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
-let konamiIndex = 0;
+// Konami Code Easter Egg
+const konamiCodeSequence = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+let konamiCodePosition = 0;
+let hasTriggeredEasterEgg = false;
 
 document.addEventListener('keydown', (e) => {
-  if (e.key === konamiCode[konamiIndex]) {
-    konamiIndex++;
-    if (konamiIndex === konamiCode.length) {
-      // Easter Egg ativado!
-      document.body.style.animation = 'rainbow 2s linear infinite';
-      setTimeout(() => {
-        alert('🎉 Easter Egg encontrado! Você é curioso(a) hein! 🚀');
-        document.body.style.animation = '';
-      }, 100);
-      konamiIndex = 0;
+  if (hasTriggeredEasterEgg) return;
+
+  if (e.key === konamiCodeSequence[konamiCodePosition]) {
+    konamiCodePosition++;
+    if (konamiCodePosition === konamiCodeSequence.length) {
+      triggerEasterEgg();
+      konamiCodePosition = 0;
     }
   } else {
-    konamiIndex = 0;
+    konamiCodePosition = 0;
   }
 });
 
-// Animação rainbow para easter egg
+function triggerEasterEgg() {
+  hasTriggeredEasterEgg = true;
+  document.body.style.animation = 'rainbow 2s linear infinite';
+  setTimeout(() => {
+    alert('🎉 Easter Egg encontrado! Você é curioso(a) hein! 🚀');
+    document.body.style.animation = '';
+    hasTriggeredEasterEgg = false; // Allow re-triggering
+  }, 100);
+}
+
+// Rainbow Animation for Easter Egg
 const style = document.createElement('style');
 style.textContent = `
   @keyframes rainbow {
