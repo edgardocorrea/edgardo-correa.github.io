@@ -19,6 +19,7 @@ remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 minimal_mistakes_skin: "default"  # Opções: air, aqua, contrast, dark, dirt, neon, mint, plum, sunrise
 
 # ==================== CONFIGURAÇÕES DE HEADER ====================
+breadcrumbs: false  # DESATIVAR BREADCRUMB
 logo: ""  # Deixe vazio para header compacto
 masthead_title: "Edgardo Correa"
 
