@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Currículo On-Line"
 layout: single
 permalink: /curriculo/
 classes: wide
@@ -7,7 +7,11 @@ author_profile: false
 ---
 
 <style>
-/* ==================== CENTRALIZAÇÃO GLOBAL ==================== */
+/* Estilos Globais e de Layout */
+body {
+  overflow-x: hidden;
+}
+
 .page,
 .page__content {
   display: flex;
@@ -15,11 +19,7 @@ author_profile: false
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-}
-
-/* ==================== BACKGROUND AZUL ESCURO ==================== */
-body {
-  overflow-x: hidden;
+  background: transparent;
 }
 
 .initial-content {
@@ -29,23 +29,37 @@ body {
   box-shadow: 0 8px 25px rgba(0,0,0,0.6);
   backdrop-filter: blur(3px);
   z-index: 1;
-}
-
-.page {
-  background: transparent;
+  width: 100%;
+  max-width: 1000px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .page__content {
-  background: transparent;
   padding: 20px;
-  max-width: 100%;
 }
 
 .page__title {
-  display: none;
+  display: block; /* Garante que o título seja exibido */
+  color: #00d4ff;
+  font-family: 'Courier New', monospace;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  animation: neon-flicker 1.5s infinite alternate;
 }
 
-/* ==================== TERMINAL CONTAINER ==================== */
+@keyframes neon-flicker {
+  from {
+    text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 30px #00d4ff, 0 0 40px #00a8cc;
+  }
+  to {
+    text-shadow: 0 0 5px #00d4ff, 0 0 10px #00d4ff, 0 0 15px #00d4ff, 0 0 20px #00a8cc;
+  }
+}
+
+/* Container do Terminal */
 .terminal-container {
   background: #000814;
   border: 2px solid #ffffff;
@@ -58,12 +72,13 @@ body {
   position: relative;
 }
 
-/* HEADER */
+/* Cabeçalho do Terminal */
 .terminal-header {
   display: flex;
   gap: 8px;
   padding-bottom: 8px;
   border-bottom: 1px solid #ffffff;
+  align-items: center;
 }
 
 .terminal-button {
@@ -84,13 +99,13 @@ body {
   font-family: 'Courier New', monospace;
 }
 
-/* Terminal Output */
+/* Saída do Terminal */
 .terminal-output {
   min-height: 400px;
   color: #ffffff;
   font-size: 14px;
   line-height: 1.6;
-  white-space: pre-wrap; /* Mantém a formatação da arte ASCII */
+  white-space: pre-wrap;
   font-family: 'Courier New', monospace;
 }
 
@@ -98,47 +113,22 @@ body {
   margin-bottom: 2px;
   opacity: 0;
   animation: fadeIn 0.3s forwards;
-  letter-spacing: 0; /* Garante espaçamento consistente */
-}
-
-.success, .output, .command, .error, .warning {
-  display: inline-block; /* Ajuda a manter o espaçamento consistente */
 }
 
 @keyframes fadeIn {
   to { opacity: 1; }
 }
 
-.prompt {
-  color: #ffffff;
-  font-weight: bold;
-}
+/* Estilos de Texto do Terminal */
+.prompt { color: #ffffff; font-weight: bold; }
+.command { color: #ffffff; }
+.output { color: #ffffff; }
+.outputw { color: #00FF00; }
+.error { color: #ff5555; }
+.success { color: #ffffff; }
+.warning { color: #ffff55; }
 
-.command {
-  color: #ffffff;
-}
-
-.output {
-  color: #ffffff;
-}
-
-.outputw {
-  color: #00FF00;
-}
-
-.error {
-  color: #ff5555;
-}
-
-.success {
-  color: #ffffff; /* Alterado de verde para branco */
-}
-
-.warning {
-  color: #ffff55;
-}
-
-/* Terminal Input */
+/* Área de Input do Terminal */
 .terminal-input-area {
   display: flex;
   align-items: center;
@@ -175,7 +165,7 @@ body {
   51%, 100% { opacity: 0; }
 }
 
-/* Command Suggestions */
+/* Sugestões de Comandos */
 .command-suggestions {
   background: rgba(0, 212, 255, 0.05);
   border: 1px solid #ffffff;
@@ -223,7 +213,7 @@ body {
   box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
 }
 
-/* Skills Bar */
+/* Barra de Habilidades */
 .skill-bar {
   display: flex;
   align-items: center;
@@ -260,36 +250,23 @@ body {
   box-shadow: 0 0 15px rgba(0, 123, 255, 0.8);
 }
 
-/* RESPONSIVE */
+/* Responsividade */
 @media (max-width: 768px) {
   .terminal-container {
     margin: 10px;
     padding: 15px;
   }
-
-  .terminal-output {
-    font-size: 12px;
-  }
-
-  .command-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .skill-name {
-    width: 120px;
-    font-size: 12px;
-  }
+  .terminal-output { font-size: 12px; }
+  .command-list { grid-template-columns: repeat(2, 1fr); }
+  .skill-name { width: 120px; font-size: 12px; }
 }
 
 @media (max-width: 480px) {
-  .command-item {
-    font-size: 12px;
-    padding: 6px;
-  }
+  .command-item { font-size: 12px; padding: 6px; }
 }
 </style>
 
-<!-- ==================== TERMINAL ==================== -->
+<!-- Terminal Interativo -->
 <div class="terminal-container">
   <div class="terminal-header">
     <span class="terminal-button btn-close"></span>
@@ -297,39 +274,36 @@ body {
     <span class="terminal-button btn-maximize"></span>
     <span class="terminal-title">edgardo@lnx:~$</span>
   </div>
-
-  <!-- IMPORTANTE: Deixe este div vazio. O JavaScript vai preenchê-lo. -->
   <div class="terminal-output" id="terminalOutput"></div>
-
   <div class="terminal-input-area">
     <span class="prompt">edgardo@lnx:~$</span>
-    <input type="text" class="terminal-input" id="commandInput" placeholder="Digite um comando aqui...na duvida digite ajuda..." autofocus>
+    <input type="text" class="terminal-input" id="commandInput" placeholder="Digite um comando... (na dúvida, digite 'ajuda')" autofocus>
     <span class="cursor"></span>
   </div>
 </div>
 
-<!-- ==================== SUGESTÕES ==================== -->
+<!-- Sugestões de Comandos -->
 <div class="command-suggestions">
   <h3>⚡ Comandos disponíveis:</h3>
   <div class="command-list">
-    <div class="command-item" onclick="executeCommand('quem')">👤 quem</div>
-    <div class="command-item" onclick="executeCommand('habilidades')">🖥️ habilidades</div>
-    <div class="command-item" onclick="executeCommand('experiencia')">📊 experiência</div>
-    <div class="command-item" onclick="executeCommand('projetos')">📘 projetos</div>
-    <div class="command-item" onclick="executeCommand('contato')">📧 contato</div>
-    <div class="command-item" onclick="executeCommand('baixar')">⬇️ baixar</div>
-    <div class="command-item" onclick="executeCommand('apagar')">🗑️ apagar</div>
-    <div class="command-item" onclick="executeCommand('ajuda')">❓ ajuda</div>
+    <div class="command-item" onclick="processCommand('quem')">👤 quem</div>
+    <div class="command-item" onclick="processCommand('habilidades')">🖥️ habilidades</div>
+    <div class="command-item" onclick="processCommand('experiencia')">📊 experiência</div>
+    <div class="command-item" onclick="processCommand('projetos')">📘 projetos</div>
+    <div class="command-item" onclick="processCommand('contato')">📧 contato</div>
+    <div class="command-item" onclick="processCommand('baixar')">⬇️ baixar</div>
+    <div class="command-item" onclick="processCommand('apagar')">🗑️ apagar</div>
+    <div class="command-item" onclick="processCommand('ajuda')">❓ ajuda</div>
   </div>
 </div>
 
 <script>
-/* ==================== VARIÁVEIS GLOBAIS ==================== */
+/* Variáveis Globais */
 const terminalOutput = document.getElementById("terminalOutput");
 const commandInput = document.getElementById("commandInput");
 
-/* ==================== BANCO DE COMANDOS ==================== */
-const commands = {
+/* Banco de Respostas dos Comandos */
+const commandResponses = {
   ajuda: `
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 COMANDOS DISPONÍVEIS:
@@ -462,13 +436,12 @@ Preparando download...
    Ver Currículo
 </a>
 
-
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`,
 
   apagar: "CLEAR_SCREEN"
 };
 
-/* ==================== DADOS DAS HABILIDADES ==================== */
+/* Dados das Habilidades */
 const skills = [
   { name: 'Redes (TCP/IP, VLANs)', level: 80 },
   { name: 'Linux (Ubuntu, Slackware)', level: 65 },
@@ -482,53 +455,47 @@ const skills = [
   { name: 'Troubleshooting', level: 92 }
 ];
 
-/* ==================== FUNÇÕES PRINCIPAIS ==================== */
+/* Funções Principais */
 
 /**
- * Exibe a mensagem de boas-vindas no terminal.
+ * Exibe a mensagem de boas-vindas ao carregar a página.
  */
 function showWelcomeMessage() {
-  terminalOutput.innerHTML = ""; // Limpa o terminal antes de exibir
+  terminalOutput.innerHTML = "";
   addLine(`<span class="outputw">╔══════════════════════════════════════════════════════════════╗</span>`);
   addLine(`<span class="outputw">║  Bem-vindo ao Sistema de Informação de Edgardo Correa        ║</span>`);
-  addLine(`<span class="outputw">║  Analista de Sistemas | Curriculo On-Line versão 1.3b        ║</span>`);
+  addLine(`<span class="outputw">║  Analista de Sistemas | Currículo On-Line versão 1.3b       ║</span>`);
   addLine(`<span class="outputw">╚══════════════════════════════════════════════════════════════╝</span>`);
   addLine(`<span class="output">Sistema inicializado...</span>`);
   addLine(`<span class="output">Digite um comando ou clique em uma sugestão abaixo ↓</span>`);
 }
 
 /**
- * Executa o comando digitado pelo usuário.
- * @param {string} cmd - O comando a ser executado.
+ * Processa o comando digitado pelo usuário e exibe a resposta.
+ * @param {string} cmd - O comando a ser processado.
  */
-function executeCommand(cmd) {
+function processCommand(cmd) {
   cmd = cmd.toLowerCase().trim();
 
-  // Se o comando for 'apagar', apenas mostra a mensagem de boas-vindas.
   if (cmd === "apagar") {
     showWelcomeMessage();
     commandInput.value = "";
     return;
   }
 
-  // Para qualquer outro comando, limpa a tela primeiro.
   terminalOutput.innerHTML = '';
-
-  // Exibe o comando que foi digitado.
   addLine(`edgardo@lnx:~$ ${cmd}`);
 
-  // Processa e exibe o resultado do comando.
   if (cmd === "habilidades") {
-    addLine(commands[cmd]);
+    addLine(commandResponses[cmd]);
     setTimeout(() => renderSkills(), 100);
-  } else if (commands[cmd]) {
-    addLine(commands[cmd]);
+  } else if (commandResponses[cmd]) {
+    addLine(commandResponses[cmd]);
   } else if (cmd !== "") {
     addLine(`<span class="error">bash: ${cmd}: comando não encontrado</span>`);
     addLine(`<span class="warning">Digite "ajuda" para ver os comandos.</span>`);
   }
 
-  // Limpa o campo de input para o próximo comando.
   commandInput.value = "";
 }
 
@@ -545,69 +512,52 @@ function addLine(content) {
 }
 
 /**
- * Renderiza as barras de habilidades com animação.
+ * Renderiza as barras de progresso das habilidades com animação.
  */
 function renderSkills() {
   const container = document.getElementById("skillsContainer");
   if (!container) return;
 
   container.innerHTML = "";
-  
-  // Cria um fragmento de documento para melhorar o desempenho
   const fragment = document.createDocumentFragment();
   
   skills.forEach((skill, index) => {
-    // Cria a barra de habilidades
     const skillBar = document.createElement("div");
     skillBar.className = "skill-bar";
     
-    // Cria o nome da habilidade
     const skillName = document.createElement("span");
     skillName.className = "skill-name";
     skillName.textContent = skill.name;
     
-    // Cria o contêiner da barra de progresso
     const skillProgress = document.createElement("div");
     skillProgress.className = "skill-progress";
     
-    // Cria a barra de preenchimento
     const skillFill = document.createElement("div");
     skillFill.className = "skill-fill";
-    skillFill.style.width = "0%"; // Começa com 0% para a animação
-    skillFill.textContent = skill.level + "%"; // Adiciona o texto da porcentagem
+    skillFill.style.width = "0%";
+    skillFill.textContent = `${skill.level}%`;
     
-    // Adiciona a barra de preenchimento ao contêiner
     skillProgress.appendChild(skillFill);
-    
-    // Adiciona o nome e a barra ao elemento principal
     skillBar.appendChild(skillName);
     skillBar.appendChild(skillProgress);
-    
-    // Adiciona a barra completa ao fragmento
     fragment.appendChild(skillBar);
     
-    // Anima a barra após um pequeno atraso
     setTimeout(() => {
-      skillFill.style.width = skill.level + "%";
+      skillFill.style.width = `${skill.level}%`;
     }, 100 * index);
   });
   
-  // Adiciona todas as barras ao contêiner de uma vez
   container.appendChild(fragment);
 }
 
-/* ==================== EVENT LISTENERS ==================== */
-
-// Executa o comando ao pressionar Enter.
+/* Event Listeners */
 commandInput.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
-    executeCommand(commandInput.value);
+    processCommand(commandInput.value);
   }
 });
 
-// Inicializa o terminal quando a página carrega.
 document.addEventListener("DOMContentLoaded", function() {
-  commandInput.placeholder = "Digite um comando aqui...na duvida digite ajuda...";
   showWelcomeMessage();
 });
 </script>
