@@ -23,7 +23,7 @@ body.page--habilidades {
   position: relative;
 }
 
-/* Bloco inicial (initial-content) – fundo azul, sem hover animado */
+/* Bloco inicial (initial-content) */
 .initial-content {
   position: relative;
   background: var(--darker-bg);
@@ -87,10 +87,10 @@ body.page--habilidades {
   text-shadow: 2px 2px 10px rgba(77, 166, 255, 0.5);
 }
 
-/* ==================== CARDS DE HABILIDADES ==================== */
-.notice--info,
-.notice--success,
-.notice--warning {
+/* ==================== CARDS DE HABILIDADES (NOMES ATUALIZADOS) ==================== */
+.skill-card--infra,
+.skill-card--systems,
+.skill-card--automation {
   background: var(--darker-bg);
   border-radius: 15px;
   padding: 30px 25px;
@@ -101,8 +101,8 @@ body.page--habilidades {
   transition: all 0.4s ease;
 }
 
-/* Efeito neon apenas no card de Infraestrutura & Redes (notice--info) */
-.notice--info::before {
+/* Efeito neon apenas no card de Infraestrutura & Redes */
+.skill-card--infra::before {
   content: "";
   position: absolute;
   top: -50%;
@@ -119,16 +119,16 @@ body.page--habilidades {
   border-radius: 20px;
 }
 
-/* Efeito hover para todos os cards */
-.notice--info:hover,
-.notice--success:hover,
-.notice--warning:hover {
+/* Hover para todos os cards */
+.skill-card--infra:hover,
+.skill-card--systems:hover,
+.skill-card--automation:hover {
   box-shadow: 0 15px 50px rgba(77, 166, 255, 0.5);
   transform: translateY(-5px) scale(1.02);
 }
 
 /* ==================== TÍTULOS ==================== */
-/* Título "Principais Habilidades" (ou h2/h3) com cor branca normal */
+/* Título secundário com cor branca normal */
 .intro-text, 
 h2, h3 {
   color: var(--light-text);
@@ -139,9 +139,9 @@ h2, h3 {
 }
 
 /* Títulos dentro dos cards */
-.notice--info h4,
-.notice--success h4,
-.notice--warning h4 {
+.skill-card--infra h4,
+.skill-card--systems h4,
+.skill-card--automation h4 {
   position: relative;
   z-index: 1;
   color: var(--gray-text);
@@ -151,17 +151,17 @@ h2, h3 {
 
 /* ==================== LISTAS ==================== */
 /* Remover a bolinha padrão dos <li> */
-.notice--info ul,
-.notice--success ul,
-.notice--warning ul {
+.skill-card--infra ul,
+.skill-card--systems ul,
+.skill-card--automation ul {
   list-style: none;
   padding-left: 0;
 }
 
 /* Estilo personalizado para os itens da lista */
-.notice--info li,
-.notice--success li,
-.notice--warning li {
+.skill-card--infra li,
+.skill-card--systems li,
+.skill-card--automation li {
   position: relative;
   z-index: 1;
   color: var(--gray-text);
@@ -170,9 +170,9 @@ h2, h3 {
 }
 
 /* Bolinha neon personalizada */
-.notice--info li::before,
-.notice--success li::before,
-.notice--warning li::before {
+.skill-card--infra li::before,
+.skill-card--systems li::before,
+.skill-card--automation li::before {
   content: "•";
   position: absolute;
   left: 0;
@@ -197,9 +197,9 @@ h2, h3 {
 /* ==================== RESPONSIVIDADE ==================== */
 @media (max-width: 768px) {
   .initial-content,
-  .notice--info,
-  .notice--success,
-  .notice--warning {
+  .skill-card--infra,
+  .skill-card--systems,
+  .skill-card--automation {
     padding: 20px 15px;
   }
   
@@ -221,8 +221,8 @@ h2, h3 {
 <!-- Título Secundário -->
 <h2>💻 Principais Habilidades</h2>
 
-<!-- Cards de Habilidades -->
-<div class="notice--info">
+<!-- Cards de Habilidades com Nomes Sugestivos -->
+<div class="skill-card--infra">
   <h4>Infraestrutura & Redes</h4>
   <ul>
     <li>Configuração de switches, routers e firewalls</li>
@@ -232,7 +232,7 @@ h2, h3 {
   </ul>
 </div>
 
-<div class="notice--success">
+<div class="skill-card--systems">
   <h4>Sistemas & Virtualização</h4>
   <ul>
     <li>Linux (Slackware, Ubuntu, CentOS)</li>
@@ -241,7 +241,7 @@ h2, h3 {
   </ul>
 </div>
 
-<div class="notice--warning">
+<div class="skill-card--automation">
   <h4>Automação & Scripting</h4>
   <ul>
     <li>PowerShell para automação Windows</li>
