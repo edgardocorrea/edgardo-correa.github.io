@@ -1,6 +1,6 @@
 ---
 layout: single
-title: ""
+title: "Animes & Séries"
 permalink: /interesses/animes/
 author_profile: false
 sidebar: null
@@ -17,6 +17,7 @@ sidebar: null
 body {
   font-family: 'Inter', 'Segoe UI', sans-serif;
   overflow-x: hidden;
+  background: #0a1428;
 }
 
 .page__content {
@@ -34,6 +35,46 @@ body {
   box-shadow: 0 8px 25px rgba(0,0,0,0.6);
   backdrop-filter: blur(3px);
   z-index: 1;
+}
+
+/* ==================== TÍTULO DA PÁGINA ==================== */
+.page-title {
+  text-align: center;
+  margin: 40px 0;
+  position: relative;
+}
+
+.page-title h1 {
+  font-size: 56px;
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 
+    0 0 10px #00eaff,
+    0 0 20px #00eaff,
+    0 0 30px #00eaff,
+    0 0 40px #0077b6;
+  animation: neon-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes neon-glow {
+  from {
+    text-shadow: 
+      0 0 10px #00eaff,
+      0 0 20px #00eaff,
+      0 0 30px #00eaff,
+      0 0 40px #0077b6;
+  }
+  to {
+    text-shadow: 
+      0 0 5px #00eaff,
+      0 0 10px #00eaff,
+      0 0 15px #00eaff,
+      0 0 20px #0077b6,
+      0 0 35px #0077b6,
+      0 0 40px #0077b6;
+  }
 }
 
 /* ==================== HERO BANNER ==================== */
@@ -418,6 +459,7 @@ body {
 
 /* ==================== RESPONSIVIDADE ==================== */
 @media (max-width: 768px) {
+  .page-title h1 { font-size: 42px; }
   .hero-title { font-size: 38px; }
   .hero-subtitle { font-size: 16px; }
   .anime-title { font-size: 30px; }
@@ -429,6 +471,11 @@ body {
 </style>
 
 <div class="particles-bg"></div>
+
+<!-- Título da Página com Efeito Neon -->
+<div class="page-title">
+  <h1>Animes & Séries</h1>
+</div>
 
 <!-- Hero Banner -->
 <div class="hero-banner">
