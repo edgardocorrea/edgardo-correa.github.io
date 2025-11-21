@@ -67,8 +67,8 @@ body {
   border: 2px solid #ffffff;
   border-radius: 8px;
   padding: 20px;
-  margin: 10px auto; /* ALTERADO: Reduzido de 20px para 10px */
-  max-width: 95vw; /* ALTERADO: De 900px para 95vw (95% da largura da tela) */
+  margin: 10px auto 8px auto; /* ALTERADO: Adicionado margin-bottom: 8px para espaçar */
+  max-width: 95vw; /* Largura máxima de 95% da tela */
   width: 100%;
   box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
   position: relative;
@@ -171,17 +171,17 @@ body {
   background: rgba(0, 212, 255, 0.05);
   border: 1px solid #ffffff;
   border-radius: 4px;
-  padding: 10px; /* ALTERADO: Reduzido de 15px para 10px para menos altura */
-  margin-top: 8px; /* ALTERADO: Reduzido de 10px para 8px para menos espaçamento */
-  max-width: 95vw; /* Mantido para consistência com o terminal */
-  margin-left: auto;
-  margin-right: auto;
+  padding: 8px; /* ALTERADO: Padding reduzido para 8px */
+  margin: 0 auto 10px auto; /* ALTERADO: Margin-top 0 para colar no terminal, max-width para alinhar */
+  max-width: 95vw; /* ALTERADO: Mesma largura máxima do terminal para alinhamento perfeito */
+  width: 100%;
+  box-sizing: border-box; /* Garante que o padding não aumente a largura total */
 }
 
 .command-suggestions h3 {
   color: #ffffff;
-  margin-bottom: 8px; /* ALTERADO: Reduzido de 10px para 8px */
-  font-size: 18px;
+  margin-bottom: 6px; /* ALTERADO: Margin-bottom reduzido */
+  font-size: 16px; /* ALTERADO: Tamanho do título reduzido */
   font-weight: 700;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
@@ -189,18 +189,19 @@ body {
 .command-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 8px; /* ALTERADO: Reduzido de 10px para 8px para aproximar os botões */
+  gap: 6px; /* ALTERADO: Espaço entre os botões reduzido */
 }
 
 .command-item {
   color: #00ffff;
-  padding: 6px 8px; /* ALTERADO: Reduzido de 8px para um padding mais compacto */
+  padding: 4px 6px; /* ALTERADO: Padding dos botões reduzido para mais compactação */
   background: rgba(0, 212, 255, 0.1);
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.3s;
   border: 1px solid transparent;
   font-family: 'Courier New', monospace;
+  font-size: 12px; /* ALTERADO: Fonte dos botões reduzida */
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
@@ -258,7 +259,7 @@ body {
     padding: 15px;
   }
   .terminal-output { font-size: 12px; }
-  .command-list { grid-template-columns: repeat(2, 1fr); } /* ALTERADO: Em tablets/notebooks pequenos, passa para 2 colunas */
+  .command-list { grid-template-columns: repeat(2, 1fr); } /* Em telas menores, 2 colunas */
   .skill-name { width: 120px; font-size: 12px; }
 }
 
