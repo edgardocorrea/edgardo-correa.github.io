@@ -7,7 +7,21 @@ sidebar: null
 ---
 
 <style>
-/* ==================== FUNDO AZUL PARA INITIAL-CONTENT ==================== */
+/* ==================== VARIÁVEIS CSS ==================== */
+:root {
+  --primary-color: #4da6ff;
+  --secondary-color: #0088cc;
+  --dark-bg: #142850;
+  --darker-bg: #0a1428;
+  --light-text: #ffffff;
+  --gray-text: #cccccc;
+  --card-bg-start: rgba(20, 40, 80, 0.8);
+  --card-bg-end: rgba(10, 20, 40, 0.9);
+  --success-gradient: linear-gradient(135deg, #00cc66, #00aa55);
+  --warning-gradient: linear-gradient(135deg, #ffcc00, #ff9900);
+}
+
+/* ==================== CONFIGURAÇÕES GERAIS ==================== */
 .initial-content {
   position: relative;
   background: rgba(10,20,40,0.85);
@@ -18,31 +32,28 @@ sidebar: null
   z-index: 1;
 }
 
-/* ====================  FORÇAR CENTRALIZAÇÃO VIA CSS ==================== */
-
-/* 1. Oculta completamente a barra lateral e seu contêiner */
+/* Ocultar barra lateral */
 .sidebar, .sidebar__wrapper {
   display: none !important;
 }
 
-/* 2. Força o conteúdo principal a ocupar a largura total da grade */
+/* Forçar conteúdo principal a ocupar largura total */
 .page--portfolio main.grid__item {
-  grid-column: 1 / -1; /* Isso significa "começar na primeira linha da grade e ir até a última" */
+  grid-column: 1 / -1;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1100px; /* Mantém seu controle de largura máxima */
+  max-width: 1100px;
   padding-left: 20px;
   padding-right: 20px;
 }
 
-/* ==================== FUNDO ESCURO APENAS PARA O PORTFOLIO ==================== */
-/* Fundo azul escuro para o portfólio */
+/* Configuração de fundo para página de portfólio */
 body.page--portfolio {
-  background-color: #142850 !important;
+  background-color: var(--dark-bg) !important;
 }
 
 body.page--portfolio main.grid__item {
-  background-color: #142850 !important;
+  background-color: var(--dark-bg) !important;
 }
 
 /* ==================== TÍTULO COM EFEITO NEON ==================== */
@@ -55,73 +66,54 @@ body.page--portfolio main.grid__item {
 .page-title h1 {
   font-size: 56px;
   font-weight: 900;
-  color: #ffffff;
+  color: var(--light-text);
   text-transform: uppercase;
   letter-spacing: 2px;
   text-shadow: 
-    0 0 10px #4da6ff,
-    0 0 20px #4da6ff,
-    0 0 30px #4da6ff,
-    0 0 40px #0088cc;
+    0 0 10px var(--primary-color),
+    0 0 20px var(--primary-color),
+    0 0 30px var(--primary-color),
+    0 0 40px var(--secondary-color);
   animation: neon-glow 2s ease-in-out infinite alternate;
 }
 
 @keyframes neon-glow {
   from {
     text-shadow: 
-      0 0 10px #4da6ff,
-      0 0 20px #4da6ff,
-      0 0 30px #4da6ff,
-      0 0 40px #0088cc;
+      0 0 10px var(--primary-color),
+      0 0 20px var(--primary-color),
+      0 0 30px var(--primary-color),
+      0 0 40px var(--secondary-color);
   }
   to {
     text-shadow: 
-      0 0 5px #4da6ff,
-      0 0 10px #4da6ff,
-      0 0 15px #4da6ff,
-      0 0 20px #0088cc,
-      0 0 35px #0088cc,
-      0 0 40px #0088cc;
+      0 0 5px var(--primary-color),
+      0 0 10px var(--primary-color),
+      0 0 15px var(--primary-color),
+      0 0 20px var(--secondary-color),
+      0 0 35px var(--secondary-color),
+      0 0 40px var(--secondary-color);
   }
 }
 
-/* ====================MUDANÇA FEITA ==================== */
-
-/* Customizações só para /portfolio/ */
-
-  /* CORREÇÃO DOS BOTÕES: Organizar verticalmente */
-  .project-buttons {
-    display: flex;
-    flex-direction: column; /* Garante que os botões fiquem em coluna */
-    gap: 10px;
-    align-items: center;
-    margin-top: 25px;
-  }
-
-  .btn-custom {
-    width: 100%;
-    max-width: 240px;
-    text-align: center;
-  }
-
-/* ==================== TÍTULO PRINCIPAL ==================== */
+/* Manter regra duplicada conforme solicitado */
 .page__title {
   text-align: center;
-  font-size:48px !important;
-  color: #ffffff !important;
+  font-size: 48px !important;
+  color: var(--light-text) !important;
   margin-bottom: 20px !important;
   text-shadow: 2px 2px 10px rgba(77, 166, 255, 0.5);
-  background: linear-gradient(90deg, #4da6ff, #00ccff);
+  background: linear-gradient(90deg, var(--primary-color), #00ccff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* ==================== SUBTÍTULO ==================== */
+/* ==================== CONTEÚDO INTRODUTÓRIO ==================== */
 .intro-text {
   text-align: center;
   font-size: 20px;
-  color: #cccccc;
+  color: var(--gray-text);
   margin-bottom: 50px;
   max-width: 800px;
   margin-left: auto;
@@ -133,16 +125,16 @@ body.page--portfolio main.grid__item {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  margin: 40px 0; /* Margem vertical ajustada, pois o padding está no pai */
+  margin: 40px 0;
   width: 100%;
   box-sizing: border-box;
 }
 
-/* ==================== CARD DE PROJETO ==================== */
+/* ==================== CARDS DE PROJETOS ==================== */
 .project-card {
   width: 100%;
   box-sizing: border-box;
-  background: linear-gradient(145deg, rgba(20, 40, 80, 0.8), rgba(10, 20, 40, 0.9));
+  background: linear-gradient(145deg, var(--card-bg-start), var(--card-bg-end));
   border: 2px solid transparent;
   border-radius: 15px;
   padding: 30px;
@@ -161,7 +153,7 @@ body.page--portfolio main.grid__item {
   bottom: 0;
   border-radius: 15px;
   padding: 2px;
-  background: linear-gradient(135deg, #4da6ff, #00ccff, #4da6ff);
+  background: linear-gradient(135deg, var(--primary-color), #00ccff, var(--primary-color));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -179,7 +171,7 @@ body.page--portfolio main.grid__item {
   box-shadow: 0 15px 50px rgba(77, 166, 255, 0.4);
 }
 
-/* ==================== ÍCONE DO PROJETO ==================== */
+/* ==================== ÍCONES E TÍTULOS DE PROJETOS ==================== */
 .project-icon {
   width: 80px;
   height: 80px;
@@ -187,25 +179,23 @@ body.page--portfolio main.grid__item {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #4da6ff, #0088cc);
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   border-radius: 20px;
   font-size: 40px;
   box-shadow: 0 5px 20px rgba(77, 166, 255, 0.3);
 }
 
-/* ==================== TÍTULO DO PROJETO ==================== */
 .project-title {
   font-size: 28px !important;
-  color: #ffffff !important;
+  color: var(--light-text) !important;
   margin: 20px 0 15px 0 !important;
   text-align: center;
   font-weight: 700;
 }
 
-/* ==================== DESCRIÇÃO ==================== */
 .project-description {
-  color: #cccccc;
-  font-size:16px;
+  color: var(--gray-text);
+  font-size: 16px; /* Espaço corrigido */
   line-height: 1.6;
   margin-bottom: 20px;
   text-align: center;
@@ -222,11 +212,11 @@ body.page--portfolio main.grid__item {
 
 .tech-tag {
   background: rgba(77, 166, 255, 0.2);
-  border: 1px solid #4da6ff;
-  color: #4da6ff;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
   padding: 6px 12px;
   border-radius: 20px;
-  font-size:13px;
+  font-size: 13px; /* Espaço corrigido */
   font-weight: 600;
   transition: all 0.3s ease;
 }
@@ -236,8 +226,14 @@ body.page--portfolio main.grid__item {
   transform: scale(1.05);
 }
 
-/* ==================== BOTÕES ==================== */
-/* A regra .project-buttons foi movida para dentro de .page--portfolio para evitar conflitos. */
+/* ==================== BOTÕES E INTERAÇÕES ==================== */
+.project-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin-top: 25px;
+}
 
 .btn-custom {
   display: inline-flex;
@@ -251,39 +247,47 @@ body.page--portfolio main.grid__item {
   text-decoration: none;
   transition: all 0.3s ease;
   border: 2px solid;
+  width: 100%;
+  max-width: 240px;
+  text-align: center;
 }
 
 .btn-github {
   background: linear-gradient(135deg, #333333, #1a1a1a);
-  color: #ffffff;
+  color: var(--light-text);
   border-color: #333333;
-}
-
-.btn-github:hover {
-  background: linear-gradient(135deg, #4da6ff, #0088cc);
-  border-color: #4da6ff;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 20px rgba(77, 166, 255, 0.4);
 }
 
 .btn-demo {
   background: transparent;
-  color: #4da6ff;
-  border-color: #4da6ff;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* Consolidar efeitos hover para otimização */
+.btn-github:hover,
+.btn-demo:hover,
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(77, 166, 255, 0.4);
+}
+
+.btn-github:hover {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-color: var(--primary-color);
 }
 
 .btn-demo:hover {
   background: rgba(77, 166, 255, 0.1);
-  transform: translateY(-2px);
 }
 
-/* ==================== STATUS BADGE ==================== */
+/* ==================== BADGES DE STATUS ==================== */
 .status-badge {
   position: absolute;
   top: 20px;
   right: 20px;
-  background: linear-gradient(135deg, #00cc66, #00aa55);
-  color: #ffffff;
+  background: var(--success-gradient);
+  color: var(--light-text);
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 12px;
@@ -291,40 +295,7 @@ body.page--portfolio main.grid__item {
   box-shadow: 0 3px 10px rgba(0, 204, 102, 0.3);
 }
 
-/* ==================== RESPONSIVO ==================== */
-@media (max-width: 768px) {
-  .page--portfolio main.grid__item {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-  
-  .page__title {
-    font-size: 36px !important;
-  }
-  
-  .intro-text {
-    font-size: 18px;
-  }
-  
-  .project-card {
-    padding: 25px;
-  }
-  
-  .btn-custom {
-    width: 100%;
-  }
-  
-  .page-title h1 {
-    font-size: 42px;
-  }
-}
-
-/* ==================== ANIMAÇÃO DE ENTRADA ==================== */
+/* ==================== ANIMAÇÕES ==================== */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -344,6 +315,39 @@ body.page--portfolio main.grid__item {
 .project-card:nth-child(2) { animation-delay: 0.2s; }
 .project-card:nth-child(3) { animation-delay: 0.3s; }
 .project-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* ==================== RESPONSIVIDADE ==================== */
+@media (max-width: 768px) {
+  .page--portfolio main.grid__item {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .page__title {
+    font-size: 36px !important;
+  }
+  
+  .page-title h1 {
+    font-size: 42px;
+  }
+  
+  .intro-text {
+    font-size: 18px;
+  }
+  
+  .project-card {
+    padding: 25px;
+  }
+  
+  .btn-custom {
+    width: 100%;
+  }
+}
 </style>
 
 <!-- Título com Efeito Neon -->
@@ -422,9 +426,9 @@ body.page--portfolio main.grid__item {
     </div>
   </div>
 
-  <!-- Projeto 3: (Adicione mais projetos aqui) -->
+  <!-- Projeto 3: Outros Projetos -->
   <div class="project-card">
-    <span class="status-badge" style="background: linear-gradient(135deg, #ffcc00, #ff9900);">⏳ Em Breve</span>
+    <span class="status-badge" style="background: var(--warning-gradient);">⏳ Em Breve</span>
     
     <div class="project-icon">
       🔧
