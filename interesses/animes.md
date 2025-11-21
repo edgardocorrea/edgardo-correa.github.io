@@ -77,9 +77,11 @@ body {
 }
 
 /* ==================== HERO BANNER ==================== */
+/* ==================== HERO BANNER ==================== */
 .hero-banner {
   position: relative;
   height: 500px; /* Aumentado para acomodar melhor a imagem */
+  min-height: 400px; /* Altura mínima para telas pequenas */
   border-radius: 25px;
   overflow: hidden;
   margin-bottom: 60px;
@@ -91,6 +93,11 @@ body {
   height: 100%;
   object-fit: cover;
   object-position: center 30%; /* Ajustado para mostrar a parte superior da imagem */
+  transition: transform 0.5s ease;
+}
+
+.hero-banner:hover img {
+  transform: scale(1.05); /* Efeito sutil de zoom ao passar o mouse */
 }
 
 .hero-banner::before {
@@ -116,21 +123,92 @@ body {
   animation: float 3s ease-in-out infinite;
 }
 
-.hero-title {
-  font-size: 56px;
-  font-weight: 900;
-  background: linear-gradient(90deg, #ffffff, #00eaff, #ffffff);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradient 3s ease infinite;
-  text-shadow: 0 0 30px rgba(0, 238, 255, 0.4);
-}
-
 .hero-subtitle {
   font-size: 20px;
   color: #e0eaff;
   font-weight: 300;
+}
+
+/* ==================== RESPONSIVIDADE ==================== */
+@media (max-width: 1200px) {
+  .hero-banner {
+    height: 450px;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-banner {
+    height: 400px;
+  }
+  
+  .hero-content {
+    left: 30px;
+    bottom: 30px;
+  }
+  
+  .hero-icon {
+    font-size: 56px;
+  }
+  
+  .hero-subtitle {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-banner {
+    height: 350px;
+    min-height: 300px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+  }
+  
+  .hero-banner img {
+    object-position: center 25%; /* Ajuste para telas menores */
+  }
+  
+  .hero-content {
+    left: 20px;
+    bottom: 20px;
+    max-width: 80%;
+  }
+  
+  .hero-icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  
+  .hero-subtitle {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-banner {
+    height: 300px;
+    min-height: 250px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .hero-banner img {
+    object-position: center 20%; /* Ajuste para telas muito pequenas */
+  }
+  
+  .hero-content {
+    left: 15px;
+    bottom: 15px;
+    max-width: 90%;
+  }
+  
+  .hero-icon {
+    font-size: 40px;
+    margin-bottom: 8px;
+  }
+  
+  .hero-subtitle {
+    font-size: 14px;
+  }
 }
 
 /* ==================== CONTENT WRAPPER ==================== */
@@ -459,8 +537,6 @@ body {
 /* ==================== RESPONSIVIDADE ==================== */
 @media (max-width: 768px) {
   .page-title h1 { font-size: 42px; }
-  .hero-title { font-size: 38px; }
-  .hero-subtitle { font-size: 16px; }
   .anime-title { font-size: 30px; }
   .anime-card { padding: 35px 25px; }
   .slide-arrow { font-size: 28px; padding: 6px 10px; }
