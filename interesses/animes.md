@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Animes & Séries"
+title: ""
 permalink: /interesses/animes/
 author_profile: false
 sidebar: null
