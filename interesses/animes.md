@@ -481,7 +481,6 @@ body {
   <img src="/assets/images/interesses/animes-banner.jpg" alt="Animes Banner">
   <div class="hero-content">
     <span class="hero-icon">🎭</span>
-    <h1 class="hero-title">Animes & Séries</h1>
     <p class="hero-subtitle">Histórias que transcendem a tela e inspiram a vida</p>
   </div>
 </div>
